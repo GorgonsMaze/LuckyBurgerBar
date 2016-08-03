@@ -19,6 +19,7 @@
                 </div><%--/col-md-8--%>
                 <div class="col-md-2"></div>
             </div>
+
         </section>
          <section class="map-section">
             <div class="row">
