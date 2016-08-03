@@ -43,8 +43,7 @@
                             <li><a href="#">Dinner Menu</a></li>
                         </ul>
                     </li>
-
-
+                    <!-- Drinks Section -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Craft Beers <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -57,6 +56,9 @@
                             <li><a href="#">Frosted Brew for Wargs</a></li>
                         </ul>
                     </li>
+                    <li class=""><a href="#">Reservations</a></li>
+                    <li class=""><a href="#">Directions</a></li>
+                    <li class=""><a href="#">Contact</a></li>
                 </ul>
                 <!-- Navbar right align -->
                 <ul class="nav navbar-nav navbar-right">
@@ -74,51 +76,16 @@
             <p><a class="btn btn-danger btn-lg">Learn More!</a></p>
         </div>
 
-        <section class="card-section">
-            <div class="row">
-                <h1 class="text-center">Our Approach</h1>
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <p>Sausage salami rump, landjaeger ball tip tri-tip kielbasa filet mignon tenderloin corned beef leberkas pig.
-                               Spare ribs shoulder ground round kielbasa, filet mignon venison turducken biltong turkey shank andouille rump pork. 
-                                Tri-tip short loin prosciutto, alcatra landjaeger flank tail shank chuck capicola venison sausage turkey bresaola</p><br />
-                            <p> Pig salami pancetta pastrami turducken tongue, leberkas ball tip t-bone turkey tail pork loin.
-                                 Spare ribs shoulder ground round kielbasa, filet mignon venison turducken biltong turkey shank andouille rump pork. 
-                                Tri-tip short loin prosciutto, alcatra landjaeger flank tail shank chuck capicola venison sausage turkey bresaola</p>
-                        </div>
-                    </div><!-- /panel -->
-                </div><!-- /col-md-8 -->
-                <div class="col-md-2"></div>
-            </div>
-        </section>
 
-        <section class="map-section">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <p>Sausage salami rump, landjaeger ball tip tri-tip kielbasa filet mignon tenderloin corned beef leberkas pig.
-                               Spare ribs shoulder ground round kielbasa, filet mignon venison turducken biltong turkey shank andouille rump pork. 
-                                Tri-tip short loin prosciutto, alcatra landjaeger flank tail shank chuck capicola venison sausage turkey bresaola</p><br />
-                            <p> Pig salami pancetta pastrami turducken tongue, leberkas ball tip t-bone turkey tail pork loin.
-                                 Spare ribs shoulder ground round kielbasa, filet mignon venison turducken biltong turkey shank andouille rump pork. 
-                                Tri-tip short loin prosciutto, alcatra landjaeger flank tail shank chuck capicola venison sausage turkey bresaola</p>
-                        </div>
-                    </div><!-- /panel -->
-                </div><!-- /col-md-8 -->
-                <div class="col-md-2"></div>
-            </div>
-        </section>
        
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
-        </asp:ContentPlaceHolder>
-        <div class="container-fluid">
-
+        <div class="red">
+            <div>Content goes here</div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
         </div>
+
     </div>
     </form>
 </body>
