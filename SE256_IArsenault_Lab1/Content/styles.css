@@ -4,6 +4,9 @@ body {
 .Monoton {
     font-family: 'Monoton', cursive;
 }
+.white-text {
+    color: #ffffff !important;
+}
 h1,h5 {
     color: #ffffff !important;
 }
@@ -92,7 +95,7 @@ ul >.nav >.navbar-nav >.navbar-right {
 }
 
 .red {
-    height: 800px;
+    padding-top: 20px;
     background-color: #ff0101;
 }
 

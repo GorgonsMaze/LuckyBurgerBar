@@ -22,9 +22,16 @@ namespace SE256_IArsenault_Lab1
             routes.Ignore("{resource}.axd/{*pathInfo}");
             // map static pages
             routes.MapPageRoute("Home", "Home", "~/Default.aspx");
-            routes.MapPageRoute("Login", "Login", "~/Login.aspx");
-
+            routes.MapPageRoute("LunchMenu", "Lunch-Menu", "~/LunchMenu.aspx");
+            routes.MapPageRoute("DinnerMenu", "Dinner-Menu", "~/DinnerMenu.aspx");
+            routes.MapPageRoute("Reservation", "Reservation", "~/Reservation.aspx");
+            routes.MapPageRoute("Directions", "Directions", "~/Directions.aspx");
+            routes.MapPageRoute("About", "About", "~/About.aspx");
+            routes.MapPageRoute("ContactUs", "Contact-Us", "~/Contact.aspx");
+            //routes.MapPageRoute("Reservations", "Reservations", "~/Reservations.aspx"); Reservation lists for admin
+            routes.MapPageRoute("SignIn", "Sign-In", "~/Login.aspx");
             routes.MapPageRoute("ForgotPassword", "Forgot-Password", "~/ForgotPassword.aspx");
+            //routes.MapPageRoute("SignUp", "Sign-Up", "~/Signup.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)
