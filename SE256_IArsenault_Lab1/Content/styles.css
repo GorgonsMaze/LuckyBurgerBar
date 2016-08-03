@@ -1,7 +1,9 @@
 ﻿/* Ian Arsenaults Stylesheet */
 body {
 }
-
+.Monoton {
+    font-family: 'Monoton', cursive;
+}
 h1,h5 {
     color: #ffffff !important;
 }
@@ -23,6 +25,10 @@ h1,h5 {
 }
 ul >.nav >.navbar-nav >.navbar-right {
     padding-right: 15px !important;
+}
+
+.img-brand {
+    padding-right: 0 !important;
 }
 /* Need to change responsiveness of Bannner background image */
 /* Parrallax / Banner Styling 
@@ -88,4 +94,33 @@ ul >.nav >.navbar-nav >.navbar-right {
 .red {
     height: 800px;
     background-color: #ff0101;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+  -webkit-box-shadow: inset 0 -2px 0 #ff0101 !important;
+  box-shadow: inset 0 -2px 0 #ff0101 !important;
+}
+
+input[type="checkbox"]:focus:after,
+.checkbox input[type="checkbox"]:focus:after,
+.checkbox-inline input[type="checkbox"]:focus:after {
+  border-color: #ff0101 !important;
+}
+
+input[type="checkbox"]:checked:after,
+.checkbox input[type="checkbox"]:checked:after,
+.checkbox-inline input[type="checkbox"]:checked:after {
+  background-color: #ff0101 !important;
+  border-color: #ff0101 !important;
 }
