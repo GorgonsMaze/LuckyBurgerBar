@@ -4,43 +4,46 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Contact Us!</h1>
      <div class="container-fluid">
-        <section class="card-section">
-            <div class="row">
-                <h1 class="text-center">Our Approach</h1>
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <p>Sausage salami rump, landjaeger ball tip tri-tip kielbasa filet mignon tenderloin corned beef leberkas pig.
-                               Spare ribs shoulder ground round kielbasa, filet mignon venison turducken biltong turkey shank andouille rump pork. 
-                                Tri-tip short loin prosciutto, alcatra landjaeger flank tail shank chuck capicola venison sausage turkey bresaola</p><br />
-                            <p> Pig salami pancetta pastrami turducken tongue, leberkas ball tip t-bone turkey tail pork loin.
-                                 Spare ribs shoulder ground round kielbasa, filet mignon venison turducken biltong turkey shank andouille rump pork. 
-                                Tri-tip short loin prosciutto, alcatra landjaeger flank tail shank chuck capicola venison sausage turkey bresaola</p>
-                        </div>
-                    </div> <%--/panel--%>
-                </div><%--/col-md-8--%>
-                <div class="col-md-2"></div>
-            </div>
+         <!-- Button trigger modal -->
+<button type="button" class="btn btn-default btn-lg" id="mbtn1" data-toggle="modal" data-target="#myModal">Contact Us
+<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+</button>
 
-        </section>
-         <section class="map-section">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <p>Sausage salami rump, landjaeger ball tip tri-tip kielbasa filet mignon tenderloin corned beef leberkas pig.
-                               Spare ribs shoulder ground round kielbasa, filet mignon venison turducken biltong turkey shank andouille rump pork. 
-                                Tri-tip short loin prosciutto, alcatra landjaeger flank tail shank chuck capicola venison sausage turkey bresaola</p><br />
-                            <p> Pig salami pancetta pastrami turducken tongue, leberkas ball tip t-bone turkey tail pork loin.
-                                 Spare ribs shoulder ground round kielbasa, filet mignon venison turducken biltong turkey shank andouille rump pork. 
-                                Tri-tip short loin prosciutto, alcatra landjaeger flank tail shank chuck capicola venison sausage turkey bresaola</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </section>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog" role="document">
+       <div class="modal-content">
+           <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               <h4 class="modal-title" id="myModalLabel">Send us a message!</h4>
+           </div>
+           <div class="modal-body">
+
+               <form class="openSans">
+                   <div class="form-group">
+                       <label for="exampleInputEmail1">Name</label>
+                       <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                   </div>
+                   <div class="form-group">
+                       <label for="exampleInputEmail1">Email address</label>
+                       <input type="email" class="form-control" id="exampleInputEmail1" placeholder="yourname@example.com">
+                   </div>
+                   <div class="form-group">
+                       <label for="textArea1">Message</label>
+                       <textarea id="textArea1"  class="form-control" rows="6" placeholder="Type your message here..."></textarea>
+                       <!--<input type="text" class="form-control" rows="6" placeholder="Type your message here.....">-->
+                   </div>
+               </form>
+           </div>
+           <div class="modal-footer">
+               <%--<button type="button" class="btn btn-default" data-dismiss="modal">Send</button>--%>
+               <button type="button" class="btn btn-danger">Send</button>
+           </div>
+       </div>
+   </div>
+</div>
+
+
+
     </div>
 </asp:Content>

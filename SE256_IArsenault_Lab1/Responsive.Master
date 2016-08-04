@@ -20,7 +20,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div class="main">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -29,10 +29,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <a class="navbar-brand img-brand" href="Home">
+                 <a class="navbar-brand img-brand hiden-sm hidden-xs" href="Home">
                      <img alt="Brand" width="20" height="20" src="http://downloads.andyroid.net/website/v2//wp-content/uploads/2015/08/Burger-Cafe-2-icon.png">
                  </a>
-                  <a class="navbar-brand" href="Home">Chuckies Chicken Cafe</a>
+                  <a class="navbar-brand" href="Home">Lucky Burger Bar</a>
             </div><!-- /navbar collapsable icon -->
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -46,7 +46,6 @@
                             <li><a href="Dinner-Menu">Dinner Menu</a></li>
                         </ul>
                     </li>
-          
                     <li class=""><a href="Reservation">Reservations</a></li>
                     <li class=""><a href="Directions">Directions</a></li>
                     <li class=""><a href="Contact-Us">Contact</a></li>
@@ -59,9 +58,9 @@
             </div><!-- /collapsible nav buttons -->
         </nav><!-- /navigation -->
         <div class="parallax"></div>
-        <div class="jumbotron">
+        <div class="jumbotron dark-overlay">
             <div class="text-shadow">
-                <h1 class="Monoton">Clucky Burger Bar</h1>
+                <h1 class="Monoton">Lucky Burger Bar</h1>
                 <h5>Serving the best food'n'things in the world!</h5>
             </div><br />
             <p><a class="btn btn-danger btn-lg">Learn More!</a></p>
