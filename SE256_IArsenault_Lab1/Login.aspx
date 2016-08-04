@@ -7,7 +7,7 @@
                     <div class="panel-body">
                         <form class="form-horizontal">
                             <fieldset>
-                                <legend>Login Please</legend>
+                                <legend class="text-center">Login Please</legend>
                                 <div class="form-group">
                                   <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                                   <div class="col-lg-10">
@@ -28,7 +28,7 @@
                                 <div class="form-group">
                                     <div class="col-lg-10 col-lg-offset-2 text-center">
                                         <button type="submit" class="btn btn-danger">Sign-in</button>
-                                    </div>
+                                    </div><br />
                                     <div class="col-lg-10 col-lg-offset-2 text-center">
                                         <a href="forgot-password" type="button" class="btn btn-default">Forgot Password?</a>
                                     </div>
