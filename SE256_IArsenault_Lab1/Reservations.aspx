@@ -1,16 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Responsive.Master" AutoEventWireup="true" CodeBehind="Reservations.aspx.cs" Inherits="SE256_IArsenault_Lab1.Reservations" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
-        <h1>Reservation List....</h1>
+        <section class="reservations">
+        </section>
+        <h1 class="text-center">Reservation List....</h1>
         <table class="table table-striped table-hover ">
             <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Column heading</th>
-                  <th>Column heading</th>
-                  <th>Column heading</th>
+                    <th>#</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,7 +29,7 @@
                     <td>Column content</td>
                     <td>Column content</td>
                 </tr>
-                <tr class="info"> 
+                <tr class="info">
                     <td>3</td>
                     <td>Column content</td>
                     <td>Column content</td>
@@ -57,6 +60,6 @@
                     <td>Column content</td>
                 </tr>
             </tbody>
-        </table> 
+        </table>
     </div>
 </asp:Content>
