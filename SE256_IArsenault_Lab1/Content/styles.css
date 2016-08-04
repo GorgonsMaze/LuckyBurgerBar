@@ -1,9 +1,11 @@
 ﻿/* Ian Arsenaults Stylesheet */
 body {
 }
+
 .main {
     margin-right: -20px;
 }
+
 h1,
 h2,
 h3,
@@ -16,37 +18,46 @@ h6,
 .h4,
 .h5,
 .h6 {
-   font-family: inherit;
-   font-weight: 400;
-   line-height: 1.1;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.1;
 }
+
 h1 {
-   font-size: 5.9vw;
+    font-size: 5.9vw;
 }
+
 .dark-overlay h1 {
-   font-size: 5.9vw;
-   color: #ffffff;
+    font-size: 5.9vw;
+    color: #ffffff;
 }
+
 h2 {
-   font-size: 3.0vh;
+    font-size: 3.0vh;
 }
+
 h3 {
-   font-size: 2.3vw;
+    font-size: 2.3vw;
 }
+
 p {
     font-size: 2vmin;
 }
+
 .row {
-   margin-left: 0;
-   margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
+
 .Monoton {
     font-family: 'Monoton', cursive;
 }
+
 .white-text {
     color: #ffffff !important;
 }
-h1,h5 {
+
+h1, h5 {
     color: #ffffff !important;
 }
 /* Gets rid of padding on top and bottom of drop down content */
@@ -62,10 +73,12 @@ h1,h5 {
 .dropdown-menu .divider {
     margin: 0 !important;
 }
+
 .navbar {
     padding-right: 15px !important;
 }
-ul >.nav >.navbar-nav >.navbar-right {
+
+ul > .nav > .navbar-nav > .navbar-right {
     padding-right: 15px !important;
 }
 /* Hamberger Icon - literal hamburger*/
@@ -73,27 +86,28 @@ ul >.nav >.navbar-nav >.navbar-right {
     padding-right: 0 !important;
 }
 
-.nav-btn-hvr a{
+.nav-btn-hvr a {
     transition: all 0.6s ease-in-out !important;
 }
-.nav-btn-hvr a:hover {
-    background-color: #e9e8e8 !important;
-    text-decoration: underline !important;
-}
+
+    .nav-btn-hvr a:hover {
+        background-color: #e9e8e8 !important;
+        text-decoration: underline !important;
+    }
 /* Need to change responsiveness of Bannner background image */
 /* Parrallax / Banner Styling  */
 .parallax {
     /* Free use hi-res images from unsplash.com */
-   background: url("https://hd.unsplash.com/photo-1428660386617-8d277e7deaf2") no-repeat !important;
-   position: fixed !important;
-   width: 100% !important;
-   /*margin-top: 5px !important; */
-   left: 0 !important;
-   background-size: 100% !important;
-   background-position: 0 0;
-   height: 100% !important;
-   z-index: -1 !important; 
-   margin-bottom:0 !important;
+    background: url("https://hd.unsplash.com/photo-1428660386617-8d277e7deaf2") no-repeat !important;
+    position: fixed !important;
+    width: 100% !important;
+    /*margin-top: 5px !important; */
+    left: 0 !important;
+    background-size: 100% !important;
+    background-position: 0 0;
+    height: 100% !important;
+    z-index: -1 !important;
+    margin-bottom: 0 !important;
 }
 /*
 .jumbotron {
@@ -115,53 +129,61 @@ ul >.nav >.navbar-nav >.navbar-right {
 }*/
 
 .jumbotron {
-   padding-top: 100px;
-   padding-left: 30px !important;
-   margin-top: 50px !important;
-   height: 500px;
-   background: rgba(0,0,0,0.35) !important;
-  /* background: url("https://hd.unsplash.com/photo-1428660386617-8d277e7deaf2") no-repeat !important; */
-   margin-bottom: 0 !important;
-   transition: all 3s ease-in-out;
-}
-.jumbotron:hover {
-    background: transparent !important;
+    padding-top: 100px;
+    padding-left: 30px !important;
+    margin-top: 50px !important;
+    height: 500px;
+    background: rgba(0,0,0,0.35) !important;
+    /* background: url("https://hd.unsplash.com/photo-1428660386617-8d277e7deaf2") no-repeat !important; */
+    margin-bottom: 0 !important;
+    transition: all 3s ease-in-out;
 }
 
-@media only screen
-and (max-width: 576px) {
-   p {
-       font-size: 3vmin;
-   }
-   .jumbotron {
-       height: 350px !important;
-   }
-}
+    .jumbotron:hover {
+        background: transparent !important;
+    }
 
-@media only screen
-    and (min-width: 483px)
-    and (max-width: 598px) {
-       .jumbotron {
-           padding-top: 50px !important;
-           height: 350px !important;
-       }
-}
+@media only screen and (max-width: 576px) {
+    p {
+        font-size: 3vmin;
+    }
 
-@media only screen
-    and (min-width: 300px)
-    and (max-width: 482px) {
-       .jumbotron {
-           padding-top: 50px !important;
-           height: 290px !important;
-       }
-}
-@media only screen
-    and (min-width: 1200px) {
-    .parallax {
-       background-position: 0px -50px !important;
+    .jumbotron {
+        height: 350px !important;
     }
 }
 
+@media only screen and (min-width: 483px) and (max-width: 598px) {
+    .jumbotron {
+        padding-top: 50px !important;
+        height: 350px !important;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 482px) {
+    .jumbotron {
+        padding-top: 50px !important;
+        height: 290px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .parallax {
+        background-position: 0px -50px !important;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .parallax {
+        background-position: 0px -100px !important;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .parallax {
+        background-position: 0px -160px !important;
+    }
+}
 
 /* Jumbotron Text Shadow */
 .text-shadow {
@@ -175,7 +197,6 @@ and (max-width: 576px) {
 /*  Directions or Google Map section */
 .map-section {
     background-color: #ff0101;
-
 }
 
 .red {
@@ -195,19 +216,61 @@ input[type=number]:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus {
-  -webkit-box-shadow: inset 0 -2px 0 #ff0101 !important;
-  box-shadow: inset 0 -2px 0 #ff0101 !important;
+    -webkit-box-shadow: inset 0 -2px 0 #ff0101 !important;
+    box-shadow: inset 0 -2px 0 #ff0101 !important;
 }
 
 input[type="checkbox"]:focus:after,
 .checkbox input[type="checkbox"]:focus:after,
 .checkbox-inline input[type="checkbox"]:focus:after {
-  border-color: #ff0101 !important;
+    border-color: #ff0101 !important;
 }
 
 input[type="checkbox"]:checked:after,
 .checkbox input[type="checkbox"]:checked:after,
 .checkbox-inline input[type="checkbox"]:checked:after {
-  background-color: #ff0101 !important;
-  border-color: #ff0101 !important;
+    background-color: #ff0101 !important;
+    border-color: #ff0101 !important;
+}
+
+.pwrd {
+    padding-top: 20px;
+}
+
+.btn {
+    margin: 10px !important;
+}
+/* About Section */
+
+/* Lunch Section */
+.lunch {
+    height: 500px !important;
+}
+/* Dinner Section */
+.dinner {
+    height: 500px !important;
+}
+/* Reservations Section */
+.reservations {
+}
+/* Reservation Section */
+.reservation {
+}
+/* Directions Section */
+.directions {
+    height: 500px;
+}
+/* Contact Section */
+.contact {
+    height: 500px;
+}
+/* Login Section */
+/* Signup Section */
+.signup {
+}
+/* User Section */
+.user {
+}
+/* Users Section */
+.users {
 }
