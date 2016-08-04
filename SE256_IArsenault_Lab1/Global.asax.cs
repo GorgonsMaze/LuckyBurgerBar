@@ -24,11 +24,11 @@ namespace SE256_IArsenault_Lab1
             routes.MapPageRoute("Home", "Home", "~/Default.aspx");
             routes.MapPageRoute("LunchMenu", "Lunch-Menu", "~/LunchMenu.aspx");
             routes.MapPageRoute("DinnerMenu", "Dinner-Menu", "~/DinnerMenu.aspx");
-            routes.MapPageRoute("Reservation", "Reservation", "~/Reservation.aspx");
+            routes.MapPageRoute("Reservations", "Reservations", "~/Reservations.aspx");
+            //routes.MapPageRoute("Reservation", "Reservation", "~/Reservation.aspx");  Reservation lists for admin?
             routes.MapPageRoute("Directions", "Directions", "~/Directions.aspx");
             routes.MapPageRoute("About", "About", "~/About.aspx");
             routes.MapPageRoute("ContactUs", "Contact-Us", "~/Contact.aspx");
-            //routes.MapPageRoute("Reservations", "Reservations", "~/Reservations.aspx"); Reservation lists for admin
             routes.MapPageRoute("SignIn", "Sign-In", "~/Login.aspx");
             routes.MapPageRoute("ForgotPassword", "Forgot-Password", "~/ForgotPassword.aspx");
             //routes.MapPageRoute("SignUp", "Sign-Up", "~/Signup.aspx");

@@ -72,6 +72,14 @@ ul >.nav >.navbar-nav >.navbar-right {
 .img-brand {
     padding-right: 0 !important;
 }
+
+.nav-btn-hvr a{
+    transition: all 0.6s ease-in-out !important;
+}
+.nav-btn-hvr a:hover {
+    background-color: #e9e8e8 !important;
+    text-decoration: underline !important;
+}
 /* Need to change responsiveness of Bannner background image */
 /* Parrallax / Banner Styling  */
 .parallax {

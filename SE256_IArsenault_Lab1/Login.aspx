@@ -7,7 +7,7 @@
                     <div class="panel-body">
                         <form class="form-horizontal">
                             <fieldset>
-                                <legend>Login Please</legend>
+                                <legend class="text-center">Login Please</legend>
                                 <div class="form-group">
                                   <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                                   <div class="col-lg-10">
@@ -15,21 +15,21 @@
                                   </div>
                                 </div>
                                 <div class="form-group">
-                                  <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                                  <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" /><br />
-                                    <div class="checkbox text-center">
-                                      <label>
-                                        <input type="checkbox" /> Remember Me
-                                      </label>
+                                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                    <div class="col-lg-12">
+                                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" /><br />
+                                        <div class="checkbox text-center">
+                                            <label>
+                                                <input type="checkbox" /> Remember Me
+                                            </label>
+                                        </div>
                                     </div>
-                                  </div>
                                 </div><br />
                                 <div class="form-group">
                                     <div class="col-lg-10 col-lg-offset-2 text-center">
                                         <button type="submit" class="btn btn-danger">Sign-in</button>
-                                    </div>
-                                     <div class="col-lg-10 col-lg-offset-2 text-center">
+                                    </div><br />
+                                    <div class="col-lg-10 col-lg-offset-2 text-center">
                                         <a href="forgot-password" type="button" class="btn btn-default">Forgot Password?</a>
                                     </div>
                                 </div>
