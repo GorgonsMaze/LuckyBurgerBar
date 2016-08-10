@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -96,8 +97,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Burger-Cafe-2-icon.png" />
+    <Content Include="Images\favicon.ico" />
     <Content Include="Login.aspx" />
     <Content Include="LunchMenu.aspx" />
+    <Content Include="MenuItem.aspx" />
+    <Content Include="MenuItems.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -105,10 +110,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Reservation.aspx" />
     <Content Include="Reservations.aspx" />
+    <Content Include="ResMgmt.aspx" />
     <Content Include="Responsive.Master" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Section.aspx" />
+    <Content Include="Sections.aspx" />
+    <Content Include="Table.aspx" />
+    <Content Include="Tables.aspx" />
     <Content Include="User.aspx" />
     <Content Include="Users.aspx" />
     <Content Include="Web.config" />
@@ -120,6 +130,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -173,6 +190,20 @@
     <Compile Include="LunchMenu.aspx.designer.cs">
       <DependentUpon>LunchMenu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MenuItem.aspx.cs">
+      <DependentUpon>MenuItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuItem.aspx.designer.cs">
+      <DependentUpon>MenuItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuItems.aspx.cs">
+      <DependentUpon>MenuItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuItems.aspx.designer.cs">
+      <DependentUpon>MenuItems.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.aspx.cs">
       <DependentUpon>Reservation.aspx</DependentUpon>
@@ -188,12 +219,47 @@
     <Compile Include="Reservations.aspx.designer.cs">
       <DependentUpon>Reservations.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ResMgmt.aspx.cs">
+      <DependentUpon>ResMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResMgmt.aspx.designer.cs">
+      <DependentUpon>ResMgmt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Responsive.Master.cs">
       <DependentUpon>Responsive.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Responsive.Master.designer.cs">
       <DependentUpon>Responsive.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Section.aspx.cs">
+      <DependentUpon>Section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Section.aspx.designer.cs">
+      <DependentUpon>Section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sections.aspx.cs">
+      <DependentUpon>Sections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sections.aspx.designer.cs">
+      <DependentUpon>Sections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Table.aspx.cs">
+      <DependentUpon>Table.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Table.aspx.designer.cs">
+      <DependentUpon>Table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tables.aspx.cs">
+      <DependentUpon>Tables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tables.aspx.designer.cs">
+      <DependentUpon>Tables.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>

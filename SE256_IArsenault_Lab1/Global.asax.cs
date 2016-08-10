@@ -21,17 +21,29 @@ namespace SE256_IArsenault_Lab1
             //ignore Websource.axd file
             routes.Ignore("{resource}.axd/{*pathInfo}");
             // map static pages
+            // User pages
             routes.MapPageRoute("Home", "Home", "~/Default.aspx");
-            routes.MapPageRoute("LunchMenu", "Lunch-Menu", "~/LunchMenu.aspx");
-            routes.MapPageRoute("DinnerMenu", "Dinner-Menu", "~/DinnerMenu.aspx");
+            routes.MapPageRoute("Lunch-Menu123", "Lunch-Menu", "~/LunchMenu.aspx");
+            routes.MapPageRoute("Dinner-Menu", "Dinner-Menu", "~/DinnerMenu.aspx");
             routes.MapPageRoute("Reservations", "Reservations", "~/Reservations.aspx");
-            //routes.MapPageRoute("Reservation", "Reservation", "~/Reservation.aspx");  Reservation lists for admin?
+            routes.MapPageRoute("Reservation", "Reservation", "~/Reservation.aspx"); 
             routes.MapPageRoute("Directions", "Directions", "~/Directions.aspx");
             routes.MapPageRoute("About", "About", "~/About.aspx");
-            routes.MapPageRoute("ContactUs", "Contact-Us", "~/Contact.aspx");
-            routes.MapPageRoute("SignIn", "Sign-In", "~/Login.aspx");
-            routes.MapPageRoute("ForgotPassword", "Forgot-Password", "~/ForgotPassword.aspx");
-            //routes.MapPageRoute("SignUp", "Sign-Up", "~/Signup.aspx");
+            routes.MapPageRoute("Contact-Us", "Contact-Us", "~/Contact.aspx");
+            routes.MapPageRoute("Sign-In", "Sign-In", "~/Login.aspx");
+            routes.MapPageRoute("Forgot-Password", "Forgot-Password", "~/ForgotPassword.aspx");
+            routes.MapPageRoute("Sign-Up", "Sign-Up", "~/Signup.aspx");
+            //Amin pages 
+            routes.MapPageRoute("MenuItems", "Admin/Menu-Items", "~/MenuItems.aspx");
+            routes.MapPageRoute("MenuItem", "Admin/Menu-Item", "~/MenuItem.aspx");
+            routes.MapPageRoute("Sections", "Admin/Sections", "~/Sections.aspx");
+            routes.MapPageRoute("Section", "Admin/Section", "~/Section.aspx");
+            routes.MapPageRoute("Tables", "Admin/Tables", "~/Tables.aspx");
+            routes.MapPageRoute("Table", "Admin/Table", "~/Table.aspx");
+            routes.MapPageRoute("Reservation-Management", "Admin/Res-Mgmt", "~/ResMgmt.aspx");
+            routes.MapPageRoute("Users", "Admin/Users", "~/Users.aspx");
+            routes.MapPageRoute("User", "Admin/User", "~/User.aspx");
+
         }
 
         protected void Session_Start(object sender, EventArgs e)

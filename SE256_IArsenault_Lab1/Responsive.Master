@@ -7,6 +7,8 @@
     <title>SE256 Lab One | Ian Arsenault</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%--Favicon--%>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
     <%--- Bootstrap Paper Theme Stylesheet ---%>
     <link type="text/css" href="Content/bootstrap.css" rel="stylesheet" />
     <%---- My Stylesheet ---%>
@@ -30,7 +32,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand img-brand hiden-sm hidden-xs" href="Home">
-                        <img alt="Brand" width="20" height="20" src="http://downloads.andyroid.net/website/v2//wp-content/uploads/2015/08/Burger-Cafe-2-icon.png">
+                        <img alt="Brand" width="20" height="20" src="Images/Burger-Cafe-2-icon.png">
                     </a>
                     <a class="navbar-brand" href="Home">Lucky Burger Bar</a>
                 </div>
@@ -67,7 +69,11 @@
                     <h5>Top Notch, Constitutional Burgers and Beer!</h5>
                 </div>
                 <br />
-                <p><a class="btn btn-danger btn-lg">Learn More!</a></p>
+                <p><a type="button" class="btn btn-danger btn-lg" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Learn More!</a></p>
+
+
+
             </div>
 
 
@@ -76,13 +82,14 @@
             <div class="red">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
+                                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Stuff Goes here." data-original-title="" title="">Bottom</button>
                 <br />
                 <hr />
                 <%--Footer--%>
                 <footer>
                     <div class="row">
                         <div class="col-lg-12">
-                            <p class="white-text text-center">Copyright &copy; 2016 Clucky's Burger Bar </p>
+                            <p class="white-text text-center">Copyright &copy; 2016 Lucky Burger Bar </p>
                         </div>
                     </div>
                 </footer>

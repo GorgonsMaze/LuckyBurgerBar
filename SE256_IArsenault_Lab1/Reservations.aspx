@@ -5,9 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
         <section class="reservations">
-        </section>
-        <h1 class="text-center">Reservation List....</h1>
-        <table class="table table-striped table-hover ">
+              <h1 class="text-center">Reservation List....</h1>
+            <div class="well well-lg">
+                <table class="table table-striped table-hover ">
             <thead>
                 <tr>
                     <th>#</th>
@@ -61,5 +61,7 @@
                 </tr>
             </tbody>
         </table>
+            </div>
+        </section>
     </div>
 </asp:Content>
