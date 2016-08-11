@@ -1,6 +1,4 @@
 ﻿/* Ian Arsenaults Stylesheet */
-body {
-}
 
 .main {
     margin-right: -20px;
@@ -23,25 +21,15 @@ h6,
     line-height: 1.1;
 }
 
-h1 {
-    font-size: 5.9vw;
-}
+
 
 .dark-overlay h1 {
     font-size: 5.9vw;
     color: #ffffff;
 }
 
-h2 {
-    font-size: 3.0vh;
-}
-
-h3 {
-    font-size: 2.3vw;
-}
-
-p {
-    font-size: 2vmin;
+.dark-overlay > .text-shadow > h5 {
+    color: #ffffff;
 }
 
 .row {
@@ -58,7 +46,26 @@ p {
 }
 
 h1, h5 {
-    color: #ffffff !important;
+    color: #ffffff;
+}
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 23px;
+    line-height: 1.846;
+    background-color: #ffffff;
+    border: 3px solid transparent !important;
+    border-radius: 3px;
+    -webkit-transition: border 0.5s ease-in-out;
+    -o-transition: border 0.5s ease-in-out;
+    transition: border 0.5s ease-in-out;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+    border-color: #ffb958 !important;
 }
 /* Gets rid of padding on top and bottom of drop down content */
 .navbar-nav > li > .dropdown-menu {
@@ -87,6 +94,8 @@ ul > .nav > .navbar-nav > .navbar-right {
 }
 
 .nav-btn-hvr a {
+    -webkit-transition: all 0.6s ease-in-out !important;
+    -o-transition: all 0.6s ease-in-out !important;
     transition: all 0.6s ease-in-out !important;
 }
 
@@ -94,7 +103,7 @@ ul > .nav > .navbar-nav > .navbar-right {
         background-color: #e9e8e8 !important;
         text-decoration: underline !important;
     }
-/* Need to change responsiveness of Bannner background image */
+
 /* Parrallax / Banner Styling  */
 .parallax {
     /* Free use hi-res images from unsplash.com */
@@ -109,24 +118,6 @@ ul > .nav > .navbar-nav > .navbar-right {
     z-index: -1 !important;
     margin-bottom: 0 !important;
 }
-/*
-.jumbotron {
-   padding-top: 100px !important;
-   padding-left: 30px !important;
-   margin-top: 50px !important;
-   height: 500px !important;
-   /*background-color: rgba(0,0,0,1) !important;
-   background: url("https://hd.unsplash.com/photo-1428660386617-8d277e7deaf2") no-repeat !important;
-    /* position: fixed !important; 
-    height: 100%;
-   width: 100% !important;
-   /*margin-top: 5px !important;
-   left: 0 !important;
-   background-size: 100% !important;
-   background-position: 0 0 !important;
-   margin-bottom: 0 !important;
-   transition: all 3s ease-in-out;
-}*/
 
 .jumbotron {
     padding-top: 100px;
@@ -139,9 +130,9 @@ ul > .nav > .navbar-nav > .navbar-right {
     transition: all 3s ease-in-out;
 }
 
-    .jumbotron:hover {
-        background: transparent !important;
-    }
+.jumbotron:hover {
+    background: transparent !important;
+}
 
 @media only screen and (max-width: 576px) {
     p {
@@ -268,9 +259,106 @@ input[type="checkbox"]:checked:after,
 /* Signup Section */
 .signup {
 }
-/* User Section */
-.user {
+
+
+
+/**
+    Administration Pages Styling
+*/
+body {
+    background-color: rgba(199,30,30,0.79); !important;
 }
-/* Users Section */
-.users {
+.administration {
+    padding: 0 !important;
+    border-left: 5px solid rgba(255,0,0,0.42);
+    border-right: 5px solid rgba(255,0,0,0.42);
+}
+.admin-content-section > .container > h1, h2, h3, h4, h5, h6 {
+    color: #000;
+}
+
+.admin-content-section > .container > h2 {
+    font-size: 4.0vw !important;
+}
+
+.container > .navbar {
+    background-color: #eee !important;
+}
+
+.admin-nav-text {
+    color: #ff0101 !important;
+}
+
+.admin-content-section {
+    background-color: #f6f6f6 !important;
+    color: #000 !important;
+    max-height: 100%;
+}
+
+.container > nav.navbar.admin-nav {
+    min-height: 84px !important;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+
+/*
+    Menu Items Section
+*/
+.menu-item-section {
+     height: 700px;
+}
+
+/*
+    Men Item Section
+*/
+.menu-items-section {
+     height: 700px;
+}
+/*
+    Sections section
+*/
+.sections-container {
+     height: 700px;
+}
+
+/*
+    Section section
+*/
+.section-container {
+     height: 700px;
+}
+/*
+    Tables Section
+*/
+.tables-section {
+    height: 700px;
+}
+
+/*
+    Table Section
+*/
+.table-section {
+    height: 700px;
+}
+
+/*
+    Reservation Management Section
+*/
+.res-mgmt-section {
+     height: 700px;
+}
+
+/*
+    Users Section
+*/
+/* User Section */
+.users-section {
+     height: 700px;
+}
+
+/*
+    User Section
+*/
+.user-section {
+     height: 700px;
 }
