@@ -9,24 +9,17 @@
                         <fieldset>
                             <legend class="text-center">Login Please</legend>
                             <div class="form-group">
-                                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                  <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email" />
+                                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
                                 </div>
-
-                                <%--ADDED LABEL AND TEXTBOX HERERE ------%>
-                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-                                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                                 
-
                             </div>
+
                             <div class="form-group">
-                                <label for="inputPassword" class="col-lg-2 control-label pwrd">Password</label>
+                                 <asp:Label ID="lblPassword" runat="server" Text="Password" CssClass="col-lg-2 control-label pwrd"></asp:Label>
                                 <div class="col-lg-12">
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" /><br />
+                                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox><br />
+                                    <%--MAKE SURE THIS WORKS OR IS TAKEN OFF BEFORE FINAL--%>
                                     <div class="checkbox text-center">
                                         <label>
                                             <input type="checkbox" />
