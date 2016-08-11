@@ -13,6 +13,15 @@
                                 <div class="col-lg-12">
                                     <input type="text" class="form-control" id="inputEmail" placeholder="Email" />
                                 </div>
+
+                                <%--ADDED LABEL AND TEXTBOX HERERE ------%>
+                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                 
+
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword" class="col-lg-2 control-label pwrd">Password</label>
@@ -26,7 +35,10 @@
                                     </div>
                                 </div>
                             </div>
+
                             <br />
+
+
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
                                     <button type="submit" class="btn btn-danger">Sign-in</button>
