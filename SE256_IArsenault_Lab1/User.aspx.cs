@@ -14,11 +14,17 @@ namespace SE256_IArsenault_Lab1
             if (!IsPostBack)
             {
                 ddlStates.Items.Insert(0, "Please Select a State...");
+
+                // Set the drop down of states to index 0
                 ddlStates.SelectedIndex = 0;
+
                 // Changes Color of selected index 
                 ddlStates.Items[0].Attributes["style"] = "color:grey";
-                // Set index 0 to disabled
+
+                // Disable index[0] as a choice in the drop down
                 ddlStates.Items[0].Attributes["disabled"] = "true";
+
+
 
             }
 

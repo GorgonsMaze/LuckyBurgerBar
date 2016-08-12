@@ -22,13 +22,22 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.Label lblTableName;
         
         /// <summary>
-        /// txtTabelName control.
+        /// txtTableName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTabelName;
+        protected global::System.Web.UI.WebControls.TextBox txtTableName;
+        
+        /// <summary>
+        /// rfvTableName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTableName;
         
         /// <summary>
         /// lblTableDesc control.
@@ -49,6 +58,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtTableDesc;
         
         /// <summary>
+        /// rfvTableDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTableDesc;
+        
+        /// <summary>
         /// lblTableSeatCount control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTableSeatCount;
+        
+        /// <summary>
+        /// rfvTableSeatCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTableSeatCount;
         
         /// <summary>
         /// chkTableIsActive control.

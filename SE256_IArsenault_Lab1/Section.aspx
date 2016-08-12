@@ -16,6 +16,7 @@
                                 <asp:Label ID="lblSecName" runat="server" Text="Name" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtSecName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvSecName" runat="server" ErrorMessage="* Please enter section name" CssClass="alert" ControlToValidate="txtSecName"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <%-- Name Text Input--%>
@@ -23,6 +24,8 @@
                                 <asp:Label ID="lblSecDesc" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtSecDesc" runat="server" CssClass="form-control" placeholder="Description"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvSecDesc" runat="server" ErrorMessage="* Please eneter section description" CssClass="alert" ControlToValidate="txtSecDesc"></asp:RequiredFieldValidator>
+
                                 </div>
 
 
@@ -37,7 +40,7 @@
                                 <%-- Button Group--%>
                                 <div class="form-group">
                                     <div class="col-lg-12 text-center">
-                                        <asp:Button ID="btnSecCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
+                                        <asp:Button ID="btnSecCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" CausesValidation="false" />
 
                                         <%--Type="submit" ???--%>
                                         <%--Update--%>

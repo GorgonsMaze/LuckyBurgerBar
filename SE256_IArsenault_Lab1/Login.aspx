@@ -15,8 +15,7 @@
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Username"></asp:TextBox>
                                     <%--email validator--%>
-                                    <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="* Please enter username" 
-                                        CssClass=" alert" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="* Please enter username" CssClass="alert" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>

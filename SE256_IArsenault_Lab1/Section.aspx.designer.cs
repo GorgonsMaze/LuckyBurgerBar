@@ -31,6 +31,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtSecName;
         
         /// <summary>
+        /// rfvSecName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSecName;
+        
+        /// <summary>
         /// lblSecDesc control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSecDesc;
+        
+        /// <summary>
+        /// rfvSecDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSecDesc;
         
         /// <summary>
         /// chkSecActive control.

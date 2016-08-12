@@ -89,7 +89,7 @@
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
                                     <%-- Cancel--%>
-                                    <asp:Button ID="btnCancelMenuItem" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
+                                    <asp:Button ID="btnCancelMenuItem" CausesValidation="false" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
                                     <%--Type="submit" ???--%>
                                     <%--Update--%>
                                     <asp:Button ID="btnUpdateMenuItem" runat="server" CssClass="btn btn-danger" Text="Update" />
