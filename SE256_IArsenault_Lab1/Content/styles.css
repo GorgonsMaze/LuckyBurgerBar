@@ -23,6 +23,15 @@ h6,
 
 
 
+.hoverable-dark {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.4s ease-in-out, border 0.12s ease-in-out;
+}
+
+.hoverable-dark:hover {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+
 .dark-overlay h1 {
     font-size: 5.9vw;
     color: #ffffff;
@@ -67,7 +76,7 @@ a.thumbnail:focus,
 a.thumbnail.active {
     border-color: #ffb958 !important;
 }
-/* Gets rid of padding on top and bottom of drop down content */
+/* Gets rid of padding on top and bottom of drop down content div */
 .navbar-nav > li > .dropdown-menu {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -231,6 +240,19 @@ input[type="checkbox"]:checked:after,
 .btn {
     margin: 10px !important;
 }
+/* Required Field Label */
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
 /* About Section */
 
 /* Lunch Section */
@@ -377,4 +399,5 @@ body {
     width: 100%;
     color: #cfcfcf;
     padding-bottom: 5px;
+    margin-top: 5px;
 }

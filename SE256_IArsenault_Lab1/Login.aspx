@@ -4,7 +4,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-default">
+                <%-- Begin Panel--%>
+                <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
                         <fieldset>
                             <legend class="text-center">Login Please</legend>
@@ -13,15 +14,25 @@
                                 <asp:Label ID="lblUsername" runat="server" Text="Username" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Username"></asp:TextBox>
+                                    <%--email validator--%>
+                                    <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Please enter username" Display="None" CssClass="label label-danger" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+
                                 </div>
                             </div>
+
+
                             <%--Password Text Input--%>
                             <div class="form-group">
                                 <asp:Label ID="lblPassword" runat="server" Text="Password" CssClass="col-lg-2 control-label pwrd"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox><br />
+                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                                    <%--password validator--%>
+                                    <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="Please enter password" Display="None" CssClass="label label-danger" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+
+
                                     <%--MAKE SURE THIS WORKS OR IS TAKEN OFF BEFORE FINAL--%>
                                     <div class="checkbox text-center">
+                                        <%-- Checbbox - Remember Me--%>
                                         <asp:CheckBox ID="ckbxRememberMe" runat="server" /><asp:Label ID="lblRememberMe" runat="server" Text="Remember Me"></asp:Label>
                                     </div>
                                 </div>
@@ -32,19 +43,23 @@
                             <%-- Button Group--%>
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
+                                    <%--Cancel--%>
+                                    <asp:Button ID="btnForgotPassword" PostBackUrl="~/ForgotPassword.aspx" runat="server" href="/Forgot-Password" CssClass="btn btn-default" Text="Forgot Password?" />
+
                                     <%--Type="submit" ???--%>
+                                    <%--Login/Signin--%>
                                     <asp:Button ID="btnSignIn" runat="server" CssClass="btn btn-danger" Text="Log In" />
                                 </div>
-
-                                <div class="col-lg-12 text-center">
+                                <%--<div class="col-lg-12 text-center">
                                     <asp:Button ID="btnForgotPassword" PostBackUrl="~/ForgotPassword.aspx" runat="server" href="/Forgot-Password" CssClass="btn btn-default" Text="Forgot Password?" />
-                                </div>
+                                </div>--%>
                             </div>
                         </fieldset>
                     </div>
                 </div>
+                <%--End Panel--%>
             </div>
         </div>
     </div>
-
+    <%-- End Container--%>
 </asp:Content>

@@ -7,7 +7,7 @@
         <h2 class="text-center">Section</h2>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-default">
+                <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
                         <fieldset>
                             <legend class="text-center">Section Entry</legend>
@@ -20,9 +20,9 @@
                             </div>
                             <%-- Name Text Input--%>
                             <div class="form-group">
-                                <asp:Label ID="lblDesc" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
+                                <asp:Label ID="lblSecDesc" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtDesc" runat="server" CssClass="form-control" placeholder="Description"></asp:TextBox>
+                                    <asp:TextBox ID="txtSecDesc" runat="server" CssClass="form-control" placeholder="Description"></asp:TextBox>
                                 </div>
 
 
@@ -37,14 +37,16 @@
                                 <%-- Button Group--%>
                                 <div class="form-group">
                                     <div class="col-lg-12 text-center">
+                                        <asp:Button ID="btnSecCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
+
                                         <%--Type="submit" ???--%>
                                         <%--Update--%>
-                                        <asp:Button ID="btnUpdateSec" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                        <asp:Button ID="btnSecUpdate" runat="server" CssClass="btn btn-danger" Text="Update" />
                                     </div>
                                     <%-- Cancel--%>
-                                    <div class="col-lg-12 text-center">
-                                        <asp:Button ID="btnCancelSec" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
-                                    </div>
+                                    <%--  <div class="col-lg-12 text-center">
+                                        <asp:Button ID="btnSecCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
+                                    </div>--%>
                                 </div>
                         </fieldset>
                     </div>

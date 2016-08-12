@@ -6,9 +6,10 @@
     <div class="container table-section">
         <h2 class="text-center">Table list</h2>
 
-         <div class="row">
+        <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-default">
+                <%-- Begin Panel--%>
+                <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
                         <fieldset>
                             <legend class="text-center">Fill out Table Information</legend>
@@ -20,7 +21,7 @@
                                 </div>
                             </div>
 
-                             <%--  Table Description Text Input--%>
+                            <%--  Table Description Text Input--%>
                             <div class="form-group">
                                 <asp:Label ID="lblTableDesc" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
@@ -28,15 +29,15 @@
                                 </div>
                             </div>
 
-                            
-                             <%--  Table Seat Count Text Input--%>
+
+                            <%--  Table Seat Count Text Input--%>
                             <div class="form-group">
                                 <asp:Label ID="lblTableSeatCount" runat="server" Text="Seat Count" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtTableSeatCount" runat="server" CssClass="form-control" placeholder="Seat Count"></asp:TextBox>
                                 </div>
                             </div>
-                         
+
 
                             <%-- Table Is Active Checbox Input--%>
                             <div class="form-group">
@@ -45,25 +46,29 @@
                                 </div>
                             </div>
 
-                        
+
 
                             <%--  Table Button Group--%>
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
                                     <%--Type="submit" ???--%>
+                                    <%-- Cancel--%>
+                                    <asp:Button ID="btnTableCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
+
                                     <%--Update--%>
                                     <asp:Button ID="btnTableUpdate" runat="server" CssClass="btn btn-danger" Text="Update" />
                                 </div>
                                 <%-- Cancel--%>
-                                <div class="col-lg-12 text-center">
+                                <%--  <div class="col-lg-12 text-center">
                                     <asp:Button ID="btnTableCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
-                                </div>
+                                </div>--%>
                             </div>
                         </fieldset>
                     </div>
                 </div>
+                <%-- End Panel--%>
             </div>
         </div>
-      
     </div>
+    <%--End Container--%>
 </asp:Content>

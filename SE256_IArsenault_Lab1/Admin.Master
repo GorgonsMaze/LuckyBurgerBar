@@ -32,7 +32,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand img-brand hiden-sm hidden-xs" href="#!">
-                        <img alt="Brand" width="20" height="20" src="http://downloads.andyroid.net/website/v2//wp-content/uploads/2015/08/Burger-Cafe-2-icon.png">
+                        <img alt="Brand" width="20" height="20" src="/Images/Burger-Cafe-2-icon.png">
                         <%--http://downloads.andyroid.net/website/v2//wp-content/uploads/2015/08/Burger-Cafe-2-icon.png--%>
                     </a>
                     <a class="navbar-brand" href="#!">Lucky Burger Bar -<span class="admin-nav-text">Admin</span></a>

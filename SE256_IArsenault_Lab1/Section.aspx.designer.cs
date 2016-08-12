@@ -31,22 +31,22 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtSecName;
         
         /// <summary>
-        /// lblDesc control.
+        /// lblSecDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDesc;
+        protected global::System.Web.UI.WebControls.Label lblSecDesc;
         
         /// <summary>
-        /// txtDesc control.
+        /// txtSecDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesc;
+        protected global::System.Web.UI.WebControls.TextBox txtSecDesc;
         
         /// <summary>
         /// chkSecActive control.
@@ -67,21 +67,21 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.Label lblSecActive;
         
         /// <summary>
-        /// btnUpdateSec control.
+        /// btnSecCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateSec;
+        protected global::System.Web.UI.WebControls.Button btnSecCancel;
         
         /// <summary>
-        /// btnCancelSec control.
+        /// btnSecUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelSec;
+        protected global::System.Web.UI.WebControls.Button btnSecUpdate;
     }
 }

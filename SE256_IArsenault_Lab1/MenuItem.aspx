@@ -4,10 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container menu-item-section">
+        <%--Header Title--%>
         <h3 class="text-center">Menu Item</h3>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-default">
+                <%--Begin Panel--%>
+                <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
                         <fieldset>
                             <legend class="text-center">Fill out Menu Item</legend>
@@ -37,7 +39,7 @@
                             <div class="form-group">
                                 <asp:Label ID="lblPrice" runat="server" Text="Price" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control" placeholder="Price"></asp:TextBox><br />
+                                    <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control" placeholder="Price"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -73,24 +75,27 @@
                                 </div>
                             </div>
 
-                            <br />
 
                             <%-- Button Group--%>
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
+                                    <%-- Cancel--%>
+                                    <asp:Button ID="btnCancelMenuItem" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
                                     <%--Type="submit" ???--%>
                                     <%--Update--%>
                                     <asp:Button ID="btnUpdateMenuItem" runat="server" CssClass="btn btn-danger" Text="Update" />
                                 </div>
                                 <%-- Cancel--%>
-                                <div class="col-lg-12 text-center">
+                               <%-- <div class="col-lg-12 text-center">
                                     <asp:Button ID="btnCancelMenuItem" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
-                                </div>
+                                </div>--%>
                             </div>
                         </fieldset>
                     </div>
                 </div>
+                <%-- End Panel--%>
             </div>
         </div>
     </div>
+    <%-- End Container--%>
 </asp:Content>
