@@ -10,9 +10,9 @@
                             <legend class="text-center">Login Please</legend>
                            <%-- Email Text Input--%>
                             <div class="form-group">
-                                <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
+                                <asp:Label ID="lblUsername" runat="server" Text="Username" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                                    <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Username"></asp:TextBox>
                                 </div>
                             </div>
                             <%--Password Text Input--%>
@@ -33,11 +33,11 @@
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
                                     <%--Type="submit" ???--%>
-                                    <asp:Button ID="btnSignIn" runat="server" CssClass="btn btn-danger" Text="Button" />
+                                    <asp:Button ID="btnSignIn" runat="server" CssClass="btn btn-danger" Text="Log In" />
                                 </div>
-                                <br />
+                        
                                 <div class="col-lg-12 text-center">
-                                    <asp:Button ID="btnForgotPassword" runat="server" CssClass="btn btn-default" Text="Forgot Password?" />
+                                    <asp:Button ID="btnForgotPassword" PostBackUrl="~/ForgotPassword.aspx" runat="server" href="/Forgot-Password" CssClass="btn btn-default" Text="Forgot Password?" />
                                 </div>
                             </div>
                         </fieldset>
