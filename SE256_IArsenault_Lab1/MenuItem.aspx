@@ -18,6 +18,7 @@
                                 <asp:Label ID="lblMenuName" runat="server" Text="Name" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtMenuName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvMenuName" runat="server" ErrorMessage="* Please enter menu item name" CssClass="alert" ControlToValidate="txtMenuName"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <%-- Description Text Input--%>
@@ -25,6 +26,8 @@
                                 <asp:Label ID="lblDescription" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtDescription" runat="server" CssClass="form-control" placeholder="Description"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvDescription" runat="server" ErrorMessage="* Please enter a description" CssClass="alert" ControlToValidate="txtDescription"></asp:RequiredFieldValidator>
+
                                 </div>
                             </div>
                             <%-- Allergens Text Input--%>
@@ -40,6 +43,8 @@
                                 <asp:Label ID="lblPrice" runat="server" Text="Price" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control" placeholder="Price"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvPrice" runat="server" ErrorMessage="* Please enter price" CssClass="alert" ControlToValidate="txtPrice"></asp:RequiredFieldValidator>
+
                                 </div>
                             </div>
 
@@ -52,6 +57,8 @@
                                         <asp:ListItem Text="Lunch" Value="Lunch"></asp:ListItem>
                                         <asp:ListItem Text="Dinner" Value="Dinner"></asp:ListItem>
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="rfvMenu" runat="server" InitialValue="Please Select Menu..." ErrorMessage="* Please select menu section" CssClass="alert" ControlToValidate="ddlMenu"></asp:RequiredFieldValidator>
+
                                 </div>
                             </div>
 
@@ -64,6 +71,8 @@
                                         <asp:ListItem Text="Entrees" Value="Entrees"></asp:ListItem>
                                         <asp:ListItem Text="Desert" Value="Desert"></asp:ListItem>
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="rfvCategory" runat="server" InitialValue="Please Select Category..." ErrorMessage="* Please select menu category" CssClass="alert" ControlToValidate="ddlCategory"></asp:RequiredFieldValidator>
+
                                 </div>
                             </div>
 

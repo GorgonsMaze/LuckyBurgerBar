@@ -17,19 +17,14 @@ namespace SE256_IArsenault_Lab1
                 ddlStates.SelectedIndex = 0;
                 // Changes Color of selected index 
                 ddlStates.Items[0].Attributes["style"] = "color:grey";
+                // Set index 0 to disabled
                 ddlStates.Items[0].Attributes["disabled"] = "true";
 
-                //foreach (ListItem item in ddlStates.Items)
-                //{
-                //    item.Attributes.Add("style", "color: #000000");
-                //}
             }
 
             // Makes password hidden when entered 
             txtPassword.Attributes["type"] = "password";
             txtConfirmPassword.Attributes["type"] = "password";
-
-          
           
             //ddlStates.Items[1].Attributes["style"] = "color:black";
             //ddlStates.Items[2].Attributes["style"] = "color:black";

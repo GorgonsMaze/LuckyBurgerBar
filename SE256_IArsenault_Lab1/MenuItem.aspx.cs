@@ -15,15 +15,24 @@ namespace SE256_IArsenault_Lab1
             {
                 ddlMenu.Items.Insert(0, "Please Select Menu...");
                 ddlCategory.Items.Insert(0, "Please Select Category...");
+
+                ddlMenu.SelectedIndex = 0;
+                ddlCategory.SelectedIndex = 0;
+
+                ddlCategory.Items[0].Attributes["disabled"] = "true";
+                ddlMenu.Items[0].Attributes["disabled"] = "true";
+
             }
+
+
             // Changes Color of selected index 
             //ddlStates.Items[0].Attributes["style"] = "color:grey";
-            ddlMenu.Items[1].Attributes["style"] = "color:black";
-            ddlMenu.Items[2].Attributes["style"] = "color:black";
-            ddlMenu.Items[3].Attributes["style"] = "color:black";
-            ddlCategory.Items[1].Attributes["style"] = "color:black";
-            ddlCategory.Items[2].Attributes["style"] = "color:black";
-            ddlCategory.Items[3].Attributes["style"] = "color:black";
+            //ddlMenu.Items[1].Attributes["style"] = "color:black";
+            //ddlMenu.Items[2].Attributes["style"] = "color:black";
+            //ddlMenu.Items[3].Attributes["style"] = "color:black";
+            //ddlCategory.Items[1].Attributes["style"] = "color:black";
+            //ddlCategory.Items[2].Attributes["style"] = "color:black";
+            //ddlCategory.Items[3].Attributes["style"] = "color:black";
 
         }
     }
