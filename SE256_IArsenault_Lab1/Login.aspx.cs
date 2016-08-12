@@ -11,7 +11,8 @@ namespace SE256_IArsenault_Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // Makes password input entry hidden from plain view
+            txtPassword.Attributes["type"] = "password";
         }
     }
 }

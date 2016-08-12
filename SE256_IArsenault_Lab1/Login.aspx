@@ -8,7 +8,7 @@
                     <div class="panel-body">
                         <fieldset>
                             <legend class="text-center">Login Please</legend>
-                           <%-- Email Text Input--%>
+                            <%-- Email Text Input--%>
                             <div class="form-group">
                                 <asp:Label ID="lblUsername" runat="server" Text="Username" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
@@ -35,7 +35,7 @@
                                     <%--Type="submit" ???--%>
                                     <asp:Button ID="btnSignIn" runat="server" CssClass="btn btn-danger" Text="Log In" />
                                 </div>
-                        
+
                                 <div class="col-lg-12 text-center">
                                     <asp:Button ID="btnForgotPassword" PostBackUrl="~/ForgotPassword.aspx" runat="server" href="/Forgot-Password" CssClass="btn btn-default" Text="Forgot Password?" />
                                 </div>
