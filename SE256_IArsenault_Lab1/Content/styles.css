@@ -253,6 +253,16 @@ input[type="checkbox"]:checked:after,
   vertical-align: baseline;
   border-radius: .25em;
 }
+
+
+.alert {
+    padding: 3px 5px 3px 5px !important;
+    background-color: rgba(255,0,0,0.1) !important;
+    color: #720505 !important;
+}
+
+
+
 /* About Section */
 
 /* Lunch Section */
@@ -397,7 +407,7 @@ body {
 
 .select-asp-styling {
     width: 100%;
-    color: #cfcfcf;
+    /*color: #cfcfcf;*/
     padding-bottom: 5px;
     margin-top: 5px;
 }

@@ -15,6 +15,7 @@
                                 <asp:Label ID="lblFName" runat="server" Text="First Name" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtFName" runat="server" CssClass="form-control" placeholder="First Name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvFName" runat="server" ErrorMessage="* Pleasee enter first name" CssClass="alert" ControlToValidate="txtFName"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <%-- Last Name Text Input--%>
@@ -22,6 +23,7 @@
                                 <asp:Label ID="lblLName" runat="server" Text="Last Name" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtLName" runat="server" CssClass="form-control" placeholder="Last Name"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="frvLName" runat="server" ErrorMessage="* Please enter last name" CssClass="alert" ControlToValidate="txtLName"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <%-- Address1 Text Input--%>
@@ -29,6 +31,7 @@
                                 <asp:Label ID="lblAddress1" runat="server" Text="Address" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtAddress1" runat="server" CssClass="form-control" placeholder="Address"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="rfvAddress1" runat="server" ErrorMessage="* Please enter street address" CssClass="alert" ControlToValidate="txtAddress1"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -45,6 +48,7 @@
                                 <asp:Label ID="lblCity" runat="server" Text="City" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtCity" runat="server" CssClass="form-control" placeholder="City"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="rfvCity" runat="server" ErrorMessage="* Please enter city" CssClass="alert" ControlToValidate="txtCity"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -57,6 +61,7 @@
                                         <asp:ListItem Text="Massachusetts" Value="MA"></asp:ListItem>
                                         <asp:ListItem Text="Connecticut" Value="CT"></asp:ListItem>
                                     </asp:DropDownList>
+                                     <asp:RequiredFieldValidator ID="rfvState" runat="server" ErrorMessage="* Please select a state" CssClass="alert" ControlToValidate="ddlStates"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>
@@ -66,6 +71,7 @@
                                 <asp:Label ID="lblZip" runat="server" Text="Zip" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtZip" runat="server" CssClass="form-control" placeholder="Zip Code"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="rfvZip" runat="server" ErrorMessage="* Please enter a zip code" CssClass="alert" ControlToValidate="txtZip"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -75,6 +81,7 @@
                                 <asp:Label ID="lblPassword" runat="server" Text="Password" CssClass="col-lg-2 control-label pwrd"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="* Please enter a password" CssClass="alert" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <%-- Confirm Password Text Input--%>
@@ -82,6 +89,7 @@
                                 <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password" CssClass="col-lg-2 control-label pwrd"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" placeholder="Re-enter Password"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="rfvConfirmPassword" runat="server" ErrorMessage="* Please re-enter password" CssClass="alert" ControlToValidate="txtConfirmPassword"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -90,6 +98,7 @@
                                 <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="* Please enter a email" CssClass="alert" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <%-- Confirm Email Text Input--%>
@@ -97,6 +106,7 @@
                                 <asp:Label ID="lblConfirmEmail" runat="server" Text="Confirm Email" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtConfirmEmail" runat="server" CssClass="form-control" placeholder="Re-enter Email"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="rfvConfirmEmail" runat="server" ErrorMessage="* Please re-enter email" CssClass="alert" ControlToValidate="txtConfirmEmail"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -105,6 +115,7 @@
                                 <asp:Label ID="lblPhone" runat="server" Text="Phone" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" placeholder="555-555-5555"></asp:TextBox>
+                                     <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="* Please enter phone number" CssClass="alert" ControlToValidate="txtPhone"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 

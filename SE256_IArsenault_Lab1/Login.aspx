@@ -15,7 +15,8 @@
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Username"></asp:TextBox>
                                     <%--email validator--%>
-                                    <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Please enter username" Display="None" CssClass="label label-danger" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="* Please enter username" 
+                                        CssClass=" alert" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>
@@ -27,8 +28,9 @@
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
                                     <%--password validator--%>
-                                    <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="Please enter password" Display="None" CssClass="label label-danger" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
-
+                                    <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="* Please enter password" 
+                                        CssClass=" alert alert-warning" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                                  
 
                                     <%--MAKE SURE THIS WORKS OR IS TAKEN OFF BEFORE FINAL--%>
                                     <div class="checkbox text-center">
@@ -39,12 +41,12 @@
                             </div>
 
                             <br />
-
+                           
                             <%-- Button Group--%>
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
                                     <%--Cancel--%>
-                                    <asp:Button ID="btnForgotPassword" PostBackUrl="~/ForgotPassword.aspx" runat="server" href="/Forgot-Password" CssClass="btn btn-default" Text="Forgot Password?" />
+                                    <asp:Button ID="btnForgotPassword"  CausesValidation="false" PostBackUrl="~/ForgotPassword.aspx" runat="server" href="/Forgot-Password" CssClass="btn btn-default" Text="Forgot Password?" />
 
                                     <%--Type="submit" ???--%>
                                     <%--Login/Signin--%>

@@ -13,6 +13,8 @@ namespace SE256_IArsenault_Lab1
         {
             // Makes password input entry hidden from plain view
             txtPassword.Attributes["type"] = "password";
+
+            //btnSignIn.Attributes["type"] = "submit";
         }
     }
 }

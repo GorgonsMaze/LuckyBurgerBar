@@ -31,6 +31,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtFName;
         
         /// <summary>
+        /// rfvFName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFName;
+        
+        /// <summary>
         /// lblLName control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtLName;
         
         /// <summary>
+        /// frvLName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator frvLName;
+        
+        /// <summary>
         /// lblAddress1 control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress1;
+        
+        /// <summary>
+        /// rfvAddress1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAddress1;
         
         /// <summary>
         /// lblAddress2 control.
@@ -103,6 +130,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtCity;
         
         /// <summary>
+        /// rfvCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity;
+        
+        /// <summary>
         /// lblStates control.
         /// </summary>
         /// <remarks>
@@ -119,6 +155,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlStates;
+        
+        /// <summary>
+        /// rfvState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvState;
         
         /// <summary>
         /// lblZip control.
@@ -139,6 +184,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtZip;
         
         /// <summary>
+        /// rfvZip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvZip;
+        
+        /// <summary>
         /// lblPassword control.
         /// </summary>
         /// <remarks>
@@ -155,6 +209,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        
+        /// <summary>
+        /// rfvPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassword;
         
         /// <summary>
         /// lblConfirmPassword control.
@@ -175,6 +238,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtConfirmPassword;
         
         /// <summary>
+        /// rfvConfirmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvConfirmPassword;
+        
+        /// <summary>
         /// lblEmail control.
         /// </summary>
         /// <remarks>
@@ -191,6 +263,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// rfvEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
         
         /// <summary>
         /// lblConfirmEmail control.
@@ -211,6 +292,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtConfirmEmail;
         
         /// <summary>
+        /// rfvConfirmEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvConfirmEmail;
+        
+        /// <summary>
         /// lblPhone control.
         /// </summary>
         /// <remarks>
@@ -227,6 +317,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        
+        /// <summary>
+        /// rfvPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhone;
         
         /// <summary>
         /// chkUserIsActive control.
