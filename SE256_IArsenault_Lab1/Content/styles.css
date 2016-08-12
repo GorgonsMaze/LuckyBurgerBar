@@ -130,9 +130,9 @@ ul > .nav > .navbar-nav > .navbar-right {
     transition: all 3s ease-in-out;
 }
 
-.jumbotron:hover {
-    background: transparent !important;
-}
+    .jumbotron:hover {
+        background: transparent !important;
+    }
 
 @media only screen and (max-width: 576px) {
     p {
@@ -266,13 +266,16 @@ input[type="checkbox"]:checked:after,
     Administration Pages Styling
 */
 body {
-    background-color: rgba(199,30,30,0.79); !important;
+    background-color: rgba(199,30,30,0.79);
+    !important;
 }
+
 .administration {
     padding: 0 !important;
     border-left: 5px solid rgba(255,0,0,0.42);
     border-right: 5px solid rgba(255,0,0,0.42);
 }
+
 .admin-content-section > .container > h1, h2, h3, h4, h5, h6 {
     color: #000;
 }
@@ -305,32 +308,36 @@ body {
     Menu Items Section
 */
 .menu-item-section {
-     height: 700px;
+    padding: 30px 0 60px 0;
 }
 
 /*
     Men Item Section
 */
 .menu-items-section {
-     height: 700px;
+    padding: 30px 0 60px 0;
+    height: 700px;
 }
 /*
     Sections section
 */
 .sections-container {
-     height: 700px;
+    padding: 30px 0 60px 0;
+    height: 700px;
 }
 
 /*
     Section section
 */
 .section-container {
-     height: 700px;
+    padding: 30px 0 60px 0;
+  
 }
 /*
     Tables Section
 */
 .tables-section {
+    padding: 30px 0 60px 0;
     height: 700px;
 }
 
@@ -338,6 +345,7 @@ body {
     Table Section
 */
 .table-section {
+    padding: 30px 0 60px 0;
     height: 700px;
 }
 
@@ -345,7 +353,8 @@ body {
     Reservation Management Section
 */
 .res-mgmt-section {
-     height: 700px;
+    padding: 30px 0 60px 0;
+    height: 700px;
 }
 
 /*
@@ -353,7 +362,8 @@ body {
 */
 /* User Section */
 .users-section {
-     height: 700px;
+    padding: 30px 0 60px 0;
+    height: 700px;
 }
 
 /*
@@ -361,4 +371,10 @@ body {
 */
 .user-section {
     padding: 30px 0 60px 0;
+}
+
+.select-asp-styling {
+    width: 100%;
+    color: #cfcfcf;
+    padding-bottom: 5px;
 }

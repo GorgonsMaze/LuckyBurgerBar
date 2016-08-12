@@ -52,10 +52,10 @@
                             <div class="form-group">
                                 <asp:Label ID="lblStates" runat="server" Text="States" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:DropDownList ID="ddlStates" runat="server">
-                                        <asp:ListItem Text="RI" Value="1"></asp:ListItem>
-                                        <asp:ListItem Text="MA" Value="2"></asp:ListItem>
-                                        <asp:ListItem Text="CT" Value="3"></asp:ListItem>
+                                    <asp:DropDownList ID="ddlStates" runat="server" CssClass="select-asp-styling">
+                                        <asp:ListItem Text="Rhode Island" Value="RI"></asp:ListItem>
+                                        <asp:ListItem Text="Massachusetts" Value="MA"></asp:ListItem>
+                                        <asp:ListItem Text="Connecticut" Value="CT"></asp:ListItem>
                                     </asp:DropDownList>
 
                                 </div>
@@ -65,7 +65,7 @@
                             <div class="form-group">
                                 <asp:Label ID="lblZip" runat="server" Text="Zip" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtZip" runat="server" CssClass="form-control" placeholder="02906 or 02906-4539"></asp:TextBox>
+                                    <asp:TextBox ID="txtZip" runat="server" CssClass="form-control" placeholder="Zip Code"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -81,7 +81,7 @@
                             <div class="form-group">
                                 <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password" CssClass="col-lg-2 control-label pwrd"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" placeholder="Re-enter Password"></asp:TextBox><br />
+                                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" placeholder="Re-enter Password"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -96,7 +96,7 @@
                             <div class="form-group">
                                 <asp:Label ID="lblConfirmEmail" runat="server" Text="Confirm Email" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtConfirmEmail" runat="server" CssClass="form-control" placeholder="Re-enter Email"></asp:TextBox><br />
+                                    <asp:TextBox ID="txtConfirmEmail" runat="server" CssClass="form-control" placeholder="Re-enter Email"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -104,7 +104,7 @@
                             <div class="form-group">
                                 <asp:Label ID="lblPhone" runat="server" Text="Phone" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" placeholder="555-555-5555"></asp:TextBox><br />
+                                    <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" placeholder="555-555-5555"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -112,7 +112,7 @@
                             <%--Is Active Checbox Input--%>
                             <div class="form-group">
                                 <div class="col-lg-12 checkbox text-center">
-                                    <asp:CheckBox ID="CheckBox1" runat="server" /><asp:Label ID="Label3" runat="server" Text="Is Active"></asp:Label>
+                                    <asp:CheckBox ID="chkUserIsActive" runat="server" /><asp:Label ID="lblUserIsActive" runat="server" Text="Is Active"></asp:Label>
                                 </div>
                             </div>
 

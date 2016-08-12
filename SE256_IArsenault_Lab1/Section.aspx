@@ -1,13 +1,55 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Section.aspx.cs" Inherits="SE256_IArsenault_Lab1.Section" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container section-container">
+        <h2 class="text-center">Section</h2>
         <div class="row">
-             <h2 class="text-center">Section</h2>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <fieldset>
+                            <legend class="text-center">Section Entry</legend>
+                            <%-- Name Text Input--%>
+                            <div class="form-group">
+                                <asp:Label ID="lblSecName" runat="server" Text="Name" CssClass="col-lg-2 control-label"></asp:Label>
+                                <div class="col-lg-12">
+                                    <asp:TextBox ID="txtSecName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                                </div>
+                            </div>
+                            <%-- Name Text Input--%>
+                            <div class="form-group">
+                                <asp:Label ID="lblDesc" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
+                                <div class="col-lg-12">
+                                    <asp:TextBox ID="txtDesc" runat="server" CssClass="form-control" placeholder="Description"></asp:TextBox>
+                                </div>
+
+
+                                <%--Is Active Checbox Input--%>
+                                <div class="form-group">
+                                    <div class="col-lg-12 checkbox text-center">
+                                        <asp:CheckBox ID="chkSecActive" runat="server" /><asp:Label ID="lblSecActive" runat="server" Text="Is Active"></asp:Label>
+                                    </div>
+                                </div>
+
+
+                                <%-- Button Group--%>
+                                <div class="form-group">
+                                    <div class="col-lg-12 text-center">
+                                        <%--Type="submit" ???--%>
+                                        <%--Update--%>
+                                        <asp:Button ID="btnUpdateSec" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                    </div>
+                                    <%-- Cancel--%>
+                                    <div class="col-lg-12 text-center">
+                                        <asp:Button ID="btnCancelSec" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
+                                    </div>
+                                </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </asp:Content>
