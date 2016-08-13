@@ -18,13 +18,8 @@ namespace SE256_IArsenault_Lab1
                 // Set the drop down of states to index 0
                 ddlStates.SelectedIndex = 0;
 
-                // Changes Color of selected index 
-                ddlStates.Items[0].Attributes["style"] = "color:grey";
-
                 // Disable index[0] as a choice in the drop down
                 ddlStates.Items[0].Attributes["disabled"] = "true";
-
-
 
             }
 
@@ -36,10 +31,12 @@ namespace SE256_IArsenault_Lab1
             //ddlStates.Items[2].Attributes["style"] = "color:black";
             //ddlStates.Items[3].Attributes["style"] = "color:black";
 
+        }
 
-
-
-
+        protected void btnCancelUser_Click(object sender, EventArgs e)
+        {
+            // On cancel button click redirect to Default Homepage.
+            Response.Redirect("/Home");
         }
     }
 }

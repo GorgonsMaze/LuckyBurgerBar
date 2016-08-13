@@ -193,6 +193,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvZip;
         
         /// <summary>
+        /// regexZip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexZip;
+        
+        /// <summary>
         /// lblPassword control.
         /// </summary>
         /// <remarks>
@@ -283,6 +292,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
         
         /// <summary>
+        /// regexEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexEmail;
+        
+        /// <summary>
         /// lblConfirmEmail control.
         /// </summary>
         /// <remarks>
@@ -344,6 +362,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhone;
+        
+        /// <summary>
+        /// regexPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexPhone;
         
         /// <summary>
         /// chkUserIsActive control.

@@ -112,6 +112,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrice;
         
         /// <summary>
+        /// cmpvPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cmpvPrice;
+        
+        /// <summary>
         /// lblMenu control.
         /// </summary>
         /// <remarks>

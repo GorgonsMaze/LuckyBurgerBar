@@ -18,6 +18,7 @@
                                 <asp:Label ID="lblTableName" runat="server" Text="Name" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtTableName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                                    <%-- Required Validator--%>
                                     <asp:RequiredFieldValidator ID="rfvTableName" runat="server" ErrorMessage="* Please enter table name" CssClass="alert" ControlToValidate="txtTableName"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -27,8 +28,8 @@
                                 <asp:Label ID="lblTableDesc" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtTableDesc" runat="server" CssClass="form-control" placeholder="Description"></asp:TextBox>
+                                    <%-- Required Validator--%>
                                     <asp:RequiredFieldValidator ID="rfvTableDesc" runat="server" ErrorMessage="* Please enter table description" CssClass="alert" ControlToValidate="txtTableDesc"></asp:RequiredFieldValidator>
-
                                 </div>
                             </div>
 
@@ -38,8 +39,10 @@
                                 <asp:Label ID="lblTableSeatCount" runat="server" Text="Seat Count" CssClass="col-lg-3 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtTableSeatCount" runat="server" CssClass="form-control" placeholder="Seat Count"></asp:TextBox>
+                                    <%-- Required Validator--%>
                                     <asp:RequiredFieldValidator ID="rfvTableSeatCount" runat="server" ErrorMessage="* Please enter seat count" CssClass="alert" ControlToValidate="txtTableSeatCount"></asp:RequiredFieldValidator>
-
+                                    <%--Compare validator--%>
+                                    <asp:CompareValidator ID="cmpvSeatCount" runat="server" ErrorMessage="* Seat count must be a whole number" Type="Integer" Operator="DataTypeCheck" ControlToValidate="txtTableSeatCount" CssClass="alert"></asp:CompareValidator>
                                 </div>
                             </div>
 
@@ -56,17 +59,11 @@
                             <%--  Table Button Group--%>
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
-                                    <%--Type="submit" ???--%>
                                     <%-- Cancel--%>
-                                    <asp:Button ID="btnTableCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" CausesValidation="false" Text="Cancel"/>
-
+                                    <asp:Button ID="btnTableCancel" runat="server" href="" CssClass="btn btn-default" CausesValidation="false" Text="Cancel" OnClick="btnTableCancel_Click" />
                                     <%--Update--%>
                                     <asp:Button ID="btnTableUpdate" runat="server" CssClass="btn btn-danger" Text="Update" />
                                 </div>
-                                <%-- Cancel--%>
-                                <%--  <div class="col-lg-12 text-center">
-                                    <asp:Button ID="btnTableCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
-                                </div>--%>
                             </div>
                         </fieldset>
                     </div>

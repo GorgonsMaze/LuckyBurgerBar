@@ -16,7 +16,7 @@
                                     <%--Required validator--%>
                                     <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="* Please enter email" CssClass="alert" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
                                     <%--Regex for email--%>
-                                    <asp:RegularExpressionValidator ID="regexEmail" runat="server" ErrorMessage="* Invalid Email!"  cssClass="alert" ControlToValidate="txtEmail"  ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ></asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="regexEmail" runat="server" ErrorMessage="* Invalid Email!" CssClass="alert" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                 </div>
                             </div>
                             <%-- Confirm Email Text Input--%>
@@ -36,6 +36,7 @@
                                 <asp:Label ID="lblPassword" runat="server" Text="Password" CssClass="col-lg-12 control-label pwrd"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                                    <%--Required validator--%>
                                     <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="* Please enter password" CssClass=" alert" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
 
                                 </div>
@@ -45,7 +46,9 @@
                                 <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password" CssClass="col-lg-12 control-label pwrd"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" placeholder="Re-enter Password"></asp:TextBox>
+                                    <%--Required validator--%>
                                     <asp:RequiredFieldValidator ID="rfvConfirmPassword" runat="server" ErrorMessage="* Please re-enter password" CssClass=" alert" ControlToValidate="txtConfirmPassword"></asp:RequiredFieldValidator>
+                                    <%--Compare validator--%>
                                     <asp:CompareValidator ID="cmpvPassword" runat="server" ErrorMessage="* Passwords do not match " ControlToValidate="txtPassword" ControlToCompare="txtConfirmPassword" CssClass="alert alert-warning"></asp:CompareValidator>
                                 </div>
                             </div>

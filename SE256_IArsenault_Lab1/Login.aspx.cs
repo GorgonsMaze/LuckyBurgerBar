@@ -16,5 +16,11 @@ namespace SE256_IArsenault_Lab1
 
             //btnSignIn.Attributes["type"] = "submit";
         }
+
+        protected void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            // On Forgot Password? button click redirect to Forgot Password Form Page
+            Response.Redirect("/Forgot-Password");
+        }
     }
 }

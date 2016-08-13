@@ -70,19 +70,13 @@
                 </div>
                 <br />
                 <p><a type="button" class="btn btn-danger btn-lg" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Learn More!</a></p>
-
-
-
-            </div>
-
-
+                    cus vel augue laoreet rutrum faucibus." data-original-title="" title="">Learn More!</a></p>
+            </div> <%--End Jumbotron--%>
 
 
             <div class="red">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
-                                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Stuff Goes here." data-original-title="" title="">Bottom</button>
                 <br />
                 <hr />
                 <%--Footer--%>
@@ -93,8 +87,7 @@ sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title=
                         </div>
                     </div>
                 </footer>
-            </div>
-
+            </div> <%--End Main Content Section--%>
         </div>
     </form>
 </body>

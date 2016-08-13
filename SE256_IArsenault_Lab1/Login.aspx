@@ -45,7 +45,7 @@
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
                                     <%--Cancel--%>
-                                    <asp:Button ID="btnForgotPassword"  CausesValidation="false" PostBackUrl="~/ForgotPassword.aspx" runat="server" href="/Forgot-Password" CssClass="btn btn-default" Text="Forgot Password?" />
+                                    <asp:Button ID="btnForgotPassword"  CausesValidation="false" runat="server" CssClass="btn btn-default" Text="Forgot Password?" OnClick="btnForgotPassword_Click" />
 
                                     <%--Type="submit" ???--%>
                                     <%--Login/Signin--%>

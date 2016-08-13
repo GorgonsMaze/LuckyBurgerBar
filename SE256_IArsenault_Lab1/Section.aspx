@@ -16,6 +16,7 @@
                                 <asp:Label ID="lblSecName" runat="server" Text="Name" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtSecName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                                    <%-- Required Validator--%>
                                     <asp:RequiredFieldValidator ID="rfvSecName" runat="server" ErrorMessage="* Please enter section name" CssClass="alert" ControlToValidate="txtSecName"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -24,6 +25,7 @@
                                 <asp:Label ID="lblSecDesc" runat="server" Text="Description" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtSecDesc" runat="server" CssClass="form-control" placeholder="Description"></asp:TextBox>
+                                    <%-- Required Validator--%>
                                     <asp:RequiredFieldValidator ID="rfvSecDesc" runat="server" ErrorMessage="* Please eneter section description" CssClass="alert" ControlToValidate="txtSecDesc"></asp:RequiredFieldValidator>
 
                                 </div>
@@ -40,16 +42,13 @@
                                 <%-- Button Group--%>
                                 <div class="form-group">
                                     <div class="col-lg-12 text-center">
-                                        <asp:Button ID="btnSecCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" CausesValidation="false" />
+                                        <%--Cancel Buttton--%>
+                                        <asp:Button ID="btnSecCancel" runat="server" href="" CssClass="btn btn-default" Text="Cancel" CausesValidation="false" OnClick="btnSecCancel_Click" />
 
-                                        <%--Type="submit" ???--%>
-                                        <%--Update--%>
+                                        <%--Update Button--%>
                                         <asp:Button ID="btnSecUpdate" runat="server" CssClass="btn btn-danger" Text="Update" />
                                     </div>
-                                    <%-- Cancel--%>
-                                    <%--  <div class="col-lg-12 text-center">
-                                        <asp:Button ID="btnSecCancel" PostBackUrl="" runat="server" href="" CssClass="btn btn-default" Text="Cancel" />
-                                    </div>--%>
+
                                 </div>
                         </fieldset>
                     </div>

@@ -13,5 +13,11 @@ namespace SE256_IArsenault_Lab1
         {
 
         }
+
+        protected void btnSecCancel_Click(object sender, EventArgs e)
+        {
+            // On cancel button click redirect to Default Homepage.
+            Response.Redirect("/Home");
+        }
     }
 }
