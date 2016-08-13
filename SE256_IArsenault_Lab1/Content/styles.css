@@ -304,7 +304,7 @@ input[type="checkbox"]:checked:after,
 */
 body {
     background-color: rgba(199,30,30,0.79);
-    !important;
+
 }
 
 .administration {
