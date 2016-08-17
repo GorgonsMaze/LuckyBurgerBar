@@ -58,7 +58,7 @@
                                 <div class="col-lg-12">
                                     <asp:DropDownList ID="ddlMenu" runat="server" CssClass="select-asp-styling" AppendDataBoundItems="true" DataSourceID="sdsMenu" DataTextField="menu_name" DataValueField="menu_id">
                                         <%--Inital DDL Value that is disabled--%>
-                                        <asp:ListItem Value="0" Text="Please select a menu..." Selected="True"></asp:ListItem>
+                                        <asp:ListItem Value="0" Text="Please Select a Menu Type..." Selected="True"></asp:ListItem>
 
                                     </asp:DropDownList>
                                     <%--SQL Data Source--%>
