@@ -139,6 +139,15 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.DropDownList ddlMenu;
         
         /// <summary>
+        /// sdsMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsMenu;
+        
+        /// <summary>
         /// rfvMenu control.
         /// </summary>
         /// <remarks>
@@ -164,6 +173,15 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
+        
+        /// <summary>
+        /// sdsCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsCategory;
         
         /// <summary>
         /// rfvCategory control.

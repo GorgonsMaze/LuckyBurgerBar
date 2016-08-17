@@ -56,14 +56,15 @@
                             <div class="form-group">
                                 <asp:Label ID="lblMenu" runat="server" Text="Menu" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:DropDownList ID="ddlMenu" runat="server" CssClass="select-asp-styling">
-                                        <asp:ListItem Text="Breakfast" Value="Breakfast"></asp:ListItem>
-                                        <asp:ListItem Text="Lunch" Value="Lunch"></asp:ListItem>
-                                        <asp:ListItem Text="Dinner" Value="Dinner"></asp:ListItem>
-                                    </asp:DropDownList>
-                                    <%--Required Validator--%>
-                                    <asp:RequiredFieldValidator ID="rfvMenu" runat="server" InitialValue="Please Select Menu..." ErrorMessage="* Please select menu section" CssClass="alert" ControlToValidate="ddlMenu"></asp:RequiredFieldValidator>
+                                    <asp:DropDownList ID="ddlMenu" runat="server" CssClass="select-asp-styling" AppendDataBoundItems="true" DataSourceID="sdsMenu" DataTextField="menu_name" DataValueField="menu_id">
+                                        <%--Inital DDL Value that is disabled--%>
+                                        <asp:ListItem Value="0" Text="Please select a menu..." Selected="True"></asp:ListItem>
 
+                                    </asp:DropDownList>
+                                    <%--SQL Data Source--%>
+                                    <asp:SqlDataSource ID="sdsMenu" runat="server" ConnectionString='<%$ ConnectionStrings:se256_arsenaultiConnectionString %>' SelectCommand="menus_getall" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                                    <%--Required Validator--%>
+                                    <asp:RequiredFieldValidator ID="rfvMenu" runat="server" InitialValue="0" ErrorMessage="* Please select menu type" CssClass="alert" ControlToValidate="ddlMenu"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -71,13 +72,15 @@
                             <div class="form-group">
                                 <asp:Label ID="lblCategory" runat="server" Text="Category" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:DropDownList ID="ddlCategory" runat="server" CssClass="select-asp-styling">
-                                        <asp:ListItem Text="Appetizers" Value="Appetizers"></asp:ListItem>
-                                        <asp:ListItem Text="Entrees" Value="Entrees"></asp:ListItem>
-                                        <asp:ListItem Text="Desert" Value="Desert"></asp:ListItem>
+                                    <asp:DropDownList ID="ddlCategory" runat="server" CssClass="select-asp-styling" AppendDataBoundItems="true" DataSourceID="sdsCategory" DataTextField="cat_name" DataValueField="cat_id">
+                                        <%--Inital DDL Value that is disabled--%>
+                                        <asp:ListItem Value="0" Text="Please Select a Menu Category..." Selected="True"></asp:ListItem>
+
                                     </asp:DropDownList>
+                                    <%--SQL Data Source--%>
+                                    <asp:SqlDataSource ID="sdsCategory" runat="server" ConnectionString='<%$ ConnectionStrings:se256_arsenaultiConnectionString %>' SelectCommand="menu_categories_getall" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                                     <%--Required Validator--%>
-                                    <asp:RequiredFieldValidator ID="rfvCategory" runat="server" InitialValue="Please Select Category..." ErrorMessage="* Please select menu category" CssClass="alert" ControlToValidate="ddlCategory"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvCategory" runat="server" InitialValue="0" ErrorMessage="* Please select menu category" CssClass="alert" ControlToValidate="ddlCategory"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>

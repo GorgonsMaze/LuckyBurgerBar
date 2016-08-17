@@ -13,12 +13,12 @@ namespace SE256_IArsenault_Lab1
         {
             if (!IsPostBack)
             {
-                ddlMenu.Items.Insert(0, "Please Select Menu...");
-                ddlCategory.Items.Insert(0, "Please Select Category...");
+                //ddlMenu.Items.Insert(0, "Please Select Menu...");
+                //ddlCategory.Items.Insert(0, "Please Select Category...");
 
-                // Set the DDL to index 0
-                ddlMenu.SelectedIndex = 0;
-                ddlCategory.SelectedIndex = 0;
+                //// Set the DDL to index 0
+                //ddlMenu.SelectedIndex = 0;
+                //ddlCategory.SelectedIndex = 0;
 
                 // Disable index[0] as a choice in the drop down
                 ddlCategory.Items[0].Attributes["disabled"] = "true";

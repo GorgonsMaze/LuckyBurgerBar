@@ -67,6 +67,42 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTableDesc;
         
         /// <summary>
+        /// lblTableSection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTableSection;
+        
+        /// <summary>
+        /// ddlTableSection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTableSection;
+        
+        /// <summary>
+        /// sdsTableSection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sdsTableSection;
+        
+        /// <summary>
+        /// rfvMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMenu;
+        
+        /// <summary>
         /// lblTableSeatCount control.
         /// </summary>
         /// <remarks>

@@ -60,16 +60,17 @@
                             <div class="form-group">
                                 <asp:Label ID="lblStates" runat="server" Text="State" CssClass="col-lg-2 control-label"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:DropDownList ID="ddlStates" runat="server" CssClass="select-asp-styling">
-                                        <asp:ListItem Text="Rhode Island" Value="RI"></asp:ListItem>
-                                        <asp:ListItem Text="Massachusetts" Value="MA"></asp:ListItem>
-                                        <asp:ListItem Text="Connecticut" Value="CT"></asp:ListItem>
+                                    <asp:DropDownList ID="ddlStates" runat="server" CssClass="select-asp-styling" DataSourceID="sdsUserStates" DataTextField="state_display" DataValueField="state_id" AppendDataBoundItems="true">
+                                        <%--Inital DDL Value that is disabled--%>
+                                        <asp:ListItem Value="0" Text="Please select a state..." Selected="True"></asp:ListItem>
                                     </asp:DropDownList>
+                                    <%--SQL Data Source--%>
+                                    <asp:SqlDataSource ID="sdsUserStates" runat="server" ConnectionString='<%$ ConnectionStrings:se256_arsenaultiConnectionString %>' SelectCommand="states_getall" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                                     <%-- Required Validator--%>
-                                    <asp:RequiredFieldValidator ID="rfvState" runat="server" InitialValue="Please Select a State..." ErrorMessage="* Please select a state" CssClass="alert" ControlToValidate="ddlStates"></asp:RequiredFieldValidator>
-
+                                    <asp:RequiredFieldValidator ID="rfvState" runat="server" InitialValue="0" ErrorMessage="* Please select a state" CssClass="alert" ControlToValidate="ddlStates"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
+
 
                             <%-- Zip Code Text Input--%>
                             <div class="form-group">

@@ -13,10 +13,10 @@ namespace SE256_IArsenault_Lab1
         {
             if (!IsPostBack)
             {
-                ddlStates.Items.Insert(0, "Please Select a State...");
+                //ddlStates.Items.Insert(0, "Please Select a State...");
 
                 // Set the drop down of states to index 0
-                ddlStates.SelectedIndex = 0;
+                //ddlStates.SelectedIndex = 0;
 
                 // Disable index[0] as a choice in the drop down
                 ddlStates.Items[0].Attributes["disabled"] = "true";
@@ -26,7 +26,7 @@ namespace SE256_IArsenault_Lab1
             // Makes password hidden when entered 
             txtPassword.Attributes["type"] = "password";
             txtConfirmPassword.Attributes["type"] = "password";
-          
+
             //ddlStates.Items[1].Attributes["style"] = "color:black";
             //ddlStates.Items[2].Attributes["style"] = "color:black";
             //ddlStates.Items[3].Attributes["style"] = "color:black";
