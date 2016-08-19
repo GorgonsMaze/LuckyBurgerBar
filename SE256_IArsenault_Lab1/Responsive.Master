@@ -13,6 +13,7 @@
     <link type="text/css" href="Content/bootstrap.css" rel="stylesheet" />
     <%---- My Stylesheet ---%>
     <link type="text/css" href="Content/styles.css" rel="stylesheet" />
+    <%-- Monoton Font--%>
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
     <%--   - jQuery and Bootstrap JS ---%>
     <script type="text/javascript" src="../Scripts/jquery-1.9.1.js"></script>
@@ -74,7 +75,7 @@
             </div> <%--End Jumbotron--%>
 
 
-            <div class="red">
+            <div class="mainer">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
                 <br />
