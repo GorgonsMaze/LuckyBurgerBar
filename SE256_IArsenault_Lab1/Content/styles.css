@@ -192,7 +192,8 @@ ul > .nav > .navbar-nav > .navbar-right {
 }
 /* Card section with details about restaurant */
 .card-section {
-    background-color: rgba(0,0,0,1) !important;
+    /*background-color: rgba(0,0,0,1) !important;*/
+    background-color: #c30000 !important;
 }
 
 /*.red {
@@ -202,7 +203,8 @@ ul > .nav > .navbar-nav > .navbar-right {
 /* Main styling for all content pages load div */
 .mainer {
     padding-top: 50px;
-    background-color: rgb(42, 42, 42) !important;
+    background-color: #ff0101;
+    /*background-color: rgb(42, 42, 42) !important;*/
 }
 
 textarea:focus,
