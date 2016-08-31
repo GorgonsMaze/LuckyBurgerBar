@@ -27,9 +27,9 @@
                                 <div class="col-lg-12">
                                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
                                     <%--password validator--%>
-                                    <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="* Please enter password" 
+                                    <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="* Please enter password"
                                         CssClass=" alert alert-warning" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
-                                  
+
 
                                     <%--MAKE SURE THIS WORKS OR IS TAKEN OFF BEFORE FINAL--%>
                                     <div class="checkbox text-center">
@@ -40,16 +40,21 @@
                             </div>
 
                             <br />
-                           
+
+                            <%--  Label for error messages--%>
+                            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+
+                            <br />
+
                             <%-- Button Group--%>
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
                                     <%--Cancel--%>
-                                    <asp:Button ID="btnForgotPassword"  CausesValidation="false" runat="server" CssClass="btn btn-default" Text="Forgot Password?" OnClick="btnForgotPassword_Click" />
+                                    <asp:Button ID="btnForgotPassword" CausesValidation="false" runat="server" CssClass="btn btn-default" Text="Forgot Password?" OnClick="btnForgotPassword_Click" />
 
                                     <%--Type="submit" ???--%>
                                     <%--Login/Signin--%>
-                                    <asp:Button ID="btnSignIn" runat="server" CssClass="btn btn-danger" Text="Log In" />
+                                    <asp:Button ID="btnSignIn" runat="server" CssClass="btn btn-danger" Text="Log In" OnClick="btnSignIn_Click" />
                                 </div>
                                 <%--<div class="col-lg-12 text-center">
                                     <asp:Button ID="btnForgotPassword" PostBackUrl="~/ForgotPassword.aspx" runat="server" href="/Forgot-Password" CssClass="btn btn-default" Text="Forgot Password?" />
