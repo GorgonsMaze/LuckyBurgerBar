@@ -8,7 +8,6 @@ using System.Web.Security;
 using System.Collections;
 using System.Data;
 using System.Text;
-using System.Security.Principal;
 
 
 namespace SE256_IArsenault_Lab1
@@ -40,7 +39,7 @@ namespace SE256_IArsenault_Lab1
             if (!string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text))
             {
                 // Set string value to Class function that returns string
-                dt = User.Login(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+                dt = App_Code.User.Login(txtUsername.Text.Trim(), txtPassword.Text.Trim());
              
             }
             else
