@@ -41,8 +41,11 @@
 
                             <br />
 
-                            <%--  Label for error messages--%>
-                            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                            <div class="text-center">
+                                <%--  Label for error messages--%>
+                                <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                            </div>
+
 
                             <br />
 
