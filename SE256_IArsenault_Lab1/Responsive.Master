@@ -8,13 +8,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <%--Favicon--%>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
     <%--- Bootstrap Paper Theme Stylesheet ---%>
     <link type="text/css" href="Content/bootstrap.css" rel="stylesheet" />
     <%---- My Stylesheet ---%>
     <link type="text/css" href="Content/styles.css" rel="stylesheet" />
     <%-- Monoton Font--%>
-    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" />
     <%--   - jQuery and Bootstrap JS ---%>
     <script type="text/javascript" src="../Scripts/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="Scripts/Bootstrap.js"></script>
@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand img-brand hiden-sm hidden-xs" href="Home">
-                        <img alt="Brand" width="20" height="20" src="Images/Burger-Cafe-2-icon.png">
+                        <img alt="Brand" width="20" height="20" src="Images/Burger-Cafe-2-icon.png" />
                     </a>
                     <a class="navbar-brand" href="Home">Lucky Burger Bar</a>
                 </div>
@@ -54,12 +54,25 @@
                         <li class="nav-btn-hvr"><a href="Directions">Directions</a></li>
                         <li class="nav-btn-hvr"><a href="Contact-Us">Contact</a></li>
                     </ul>
+
                     <%--- Navbar right align --%>
                     <ul class="nav navbar-nav navbar-right">
-                        <%--  Login Button - Set to hide once login is authenticated--%>
-                        <li class="nav-btn-hvr"><a href="Sign-In"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;&nbsp;Login</a></li>
-                        <%-- Logout Button - Set to hide --%>
-                        <li class="nav-btn-hvr"><a href="Sign-Out"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;Logout</a></li>
+                        <li class="">
+                            <%--  Greeting Message to login user--%>
+                            <asp:Label ID="lblGreeting" runat="server" CssClass="greet-lbl"></asp:Label>
+                        </li>
+                        <li class="nav-btn-hvr">
+                            <%--  Login Button - Set to hide once login is authenticated--%>
+                            <asp:LinkButton ID="lbtnLogIn" runat="server" OnClick="lbtnLogIn_Click">
+                                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;&nbsp;Login
+                            </asp:LinkButton>
+                        </li>
+                        <%-- <li class="nav-btn-hvr"><a href="Sign-In"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;&nbsp;Login</a></li>--%>
+                        <li class="nav-btn-hvr">
+                            <%-- Logout Button - Set to hide --%>
+                            <asp:LinkButton ID="lbtnLogOut" runat="server" CssClass=""  CausesValidation="false" Text="<span class='glyphicon glyphicon-log-out' aria-hidden='true'></span>  Logout" OnClick="lbtnLogOut_Click"></asp:LinkButton>
+                        </li>
+                        <%-- <li class="nav-btn-hvr"><a href="Sign-Out"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;Logout</a></li>--%>
                     </ul>
                 </div>
                 <%--- /collapsible nav buttons --%>
@@ -73,7 +86,7 @@
                 </div>
                 <br />
                 <p>
-                    <a type="button" class="btn btn-danger btn-lg" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                    <a class="btn btn-danger btn-lg" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
                     cus vel augue laoreet rutrum faucibus."
                         data-original-title="" title="">Learn More!</a>
                 </p>
