@@ -24,10 +24,10 @@ namespace SE256_IArsenault_Lab1
                     lbtnLogOut.Visible = true;
                     // Generate a personalized text message to display on the site
                     // Grab the cookie
-                    if (Request.Cookies["Fullname"] != null)
+                    if (Session["Fullname"] != null)
                     {
                         //lblGreeting.Text = Request.Cookies["Fullname"].Value.ToString();
-                        lblGreeting.Text = String.Concat("Welcome ", Request.Cookies["Fullname"].Value.ToString());
+                        lblGreeting.Text = String.Concat("Welcome, ", Session["Fullname"].ToString());
                         //HttpCookie aCookie = Request.Cookies["Fullname"];
                         //lblGreeting.Text = "Welcome Fartstick";
                         // enable menu when user is authenticated
@@ -40,7 +40,7 @@ namespace SE256_IArsenault_Lab1
                     // Hide the logout button since the user is not authenticated
                     lbtnLogOut.Visible = false;
                     // Generate a generic text message to display on the site
-                    lblGreeting.Text = "Welcome Stranger!";
+                    lblGreeting.Text = "Welcome, Stranger!";
                 }
 
             }
@@ -51,8 +51,6 @@ namespace SE256_IArsenault_Lab1
         {
             // When the Login button is clicked - send them to login page
             Response.Redirect("~/Sign-In");
-
-
         }
 
         protected void lbtnLogOut_Click(object sender, EventArgs e)
@@ -65,7 +63,7 @@ namespace SE256_IArsenault_Lab1
             Session["Fullname"] = null;
 
             // When the Logout button is clicked - Log them out - send back home
-            Response.Redirect("~/Home");
+            Response.Redirect("Home");
 
         }
 

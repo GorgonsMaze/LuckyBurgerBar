@@ -57,9 +57,9 @@
 
                     <%--- Navbar right align --%>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="">
+                        <li class="greetLabel">
                             <%--  Greeting Message to login user--%>
-                            <asp:Label ID="lblGreeting" runat="server" CssClass="greet-lbl"></asp:Label>
+                           
                         </li>
                         <li class="nav-btn-hvr">
                             <%--  Login Button - Set to hide once login is authenticated--%>
@@ -70,16 +70,29 @@
                         <%-- <li class="nav-btn-hvr"><a href="Sign-In"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;&nbsp;Login</a></li>--%>
                         <li class="nav-btn-hvr">
                             <%-- Logout Button - Set to hide --%>
-                            <asp:LinkButton ID="lbtnLogOut" runat="server" CssClass=""  CausesValidation="false" Text="<span class='glyphicon glyphicon-log-out' aria-hidden='true'></span>  Logout" OnClick="lbtnLogOut_Click"></asp:LinkButton>
+                            <asp:LinkButton ID="lbtnLogOut" runat="server" CssClass="" CausesValidation="false" Text="<span class='glyphicon glyphicon-log-out' aria-hidden='true'></span>  Logout" OnClick="lbtnLogOut_Click"></asp:LinkButton>
                         </li>
                         <%-- <li class="nav-btn-hvr"><a href="Sign-Out"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;Logout</a></li>--%>
                     </ul>
                 </div>
                 <%--- /collapsible nav buttons --%>
+              
             </nav>
+           <%--  <div class="alert alert-dismissible alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+                </div>--%>
             <%---- /navigation ---%>
+
+             <ul class="list-group fixed-greeting">
+                    <li class="list-group-item">
+                       <%-- <span class="badge">1 Reservation Open</span>--%>
+                        <asp:Label ID="lblGreeting" runat="server" CssClass="greet-lbl"></asp:Label>
+                    </li>
+                </ul>
             <div class="parallax"></div>
             <div class="jumbotron dark-overlay">
+              
                 <div class="text-shadow">
                     <h1 class="Monoton">Lucky Burger Bar</h1>
                     <h5>Top Notch, Constitutional Burgers and Beer!</h5>
