@@ -26,7 +26,7 @@
                         </div>
                         <div class="modal-body">
 
-                            <form class="openSans">
+                            <div class="openSans">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Name</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
@@ -40,7 +40,7 @@
                                     <textarea id="textArea1" class="form-control" rows="6" placeholder="Type your message here..."></textarea>
                                     <%--<input type="text" class="form-control" rows="6" placeholder="Type your message here.....">--%>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <%--<button type="button" class="btn btn-default" data-dismiss="modal">Send</button>--%>
@@ -51,4 +51,6 @@
             </div>
         </section>
     </div>
+
+
 </asp:Content>

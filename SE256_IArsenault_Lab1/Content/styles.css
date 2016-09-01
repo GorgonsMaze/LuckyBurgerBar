@@ -28,9 +28,9 @@ h6,
     transition: box-shadow 0.4s ease-in-out, border 0.12s ease-in-out;
 }
 
-.hoverable-dark:hover {
-    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-}
+    .hoverable-dark:hover {
+        box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    }
 
 .dark-overlay h1 {
     font-size: 5.9vw;
@@ -102,17 +102,80 @@ ul > .nav > .navbar-nav > .navbar-right {
     padding-right: 0 !important;
 }
 
-.nav-btn-hvr a {
+.nav-btn-hvr {
     -webkit-transition: all 0.6s ease-in-out !important;
     -o-transition: all 0.6s ease-in-out !important;
     transition: all 0.6s ease-in-out !important;
 }
 
-    .nav-btn-hvr a:hover {
+    .nav-btn-hvr:hover {
         background-color: #e9e8e8 !important;
         text-decoration: underline !important;
     }
 
+/*.lbtns {
+    -webkit-transition: all 0.6s ease-in-out !important;
+    -o-transition: all 0.6s ease-in-out !important;
+    transition: all 0.6s ease-in-out !important;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+    .lbtns:hover {
+        text-decoration: underline !important;
+        background-color: rgba(0, 0, 0, 0.22) !important;
+    }*/
+.navbar-nav .navbar-right > li > .greet-lbl {
+    padding-top: 20.5px !important;
+    padding-bottom: 20.5px;
+}
+
+@media (min-width: 768px) and (max-width: 778px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+        .navbar-collapse.collapse.in {
+            display: block !important;
+        }
+
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-default .navbar-toggle {
+        display: block !important;
+    }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 3px !important;
+}
+
+.greetLabel {
+    margin-top: 20.5px;
+}
+
+/*.list-group-item > .badge {
+    float: right;
+    margin: 0 0 0 10px;
+}*/
+
+.list-group-item {
+    padding: 15px;
+    /*display: inline-block;*/
+    background-color: transparent !important;
+}
+
+.fixed-greeting {
+    position: fixed;
+    z-index: 1000;
+    top: 64px;
+    right: 5px;
+    color: #fff !important;
+}
 /* Parrallax / Banner Styling  */
 .parallax {
     /* Free use hi-res images from unsplash.com */
@@ -250,16 +313,16 @@ input[type="checkbox"]:checked:after,
 }
 /* Required Field Label */
 .label {
-  display: inline;
-  padding: .2em .6em .3em;
-  font-size: 75%;
-  font-weight: bold;
-  line-height: 1;
-  color: #ffffff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
 }
 
 
@@ -307,7 +370,6 @@ input[type="checkbox"]:checked:after,
 */
 body {
     background-color: rgba(199,30,30,0.79);
-
 }
 
 .administration {
@@ -371,7 +433,6 @@ body {
 */
 .section-container {
     padding: 30px 0 60px 0;
-  
 }
 /*
     Tables Section

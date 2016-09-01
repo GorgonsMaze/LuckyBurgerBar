@@ -16,8 +16,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             // Constructor logic goes here
         }
 
-        public static DataTable Login(string username, 
-            string password)
+        public static DataTable Login(string useremail, string password)
         {
             // Create SQL connection object
             // get connection string from web.config
@@ -26,14 +25,14 @@ namespace SE256_IArsenault_Lab1.App_Code
             // Create SQL Command
             // type as stored procedure
             // Give stored procedure name
-            SqlCommand cmd = new SqlCommand("spUserLogin", cn);
+            SqlCommand cmd = new SqlCommand("users_login", cn);
 
             // Mark the SQL Command as a Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
 
-            // Add Parameters to Stored Procedure                 ~~~~~~~ NOT SURE IF USER_EMAIL SHOULD BE @UserName  ????????????????????????
-            SqlParameter pUsername = new SqlParameter("@user_email", SqlDbType.VarChar, 50);
-            pUsername.Value = username;
+            // Add Parameters to Stored Procedure                
+            SqlParameter pUsername = new SqlParameter("@user_email", SqlDbType.VarChar, 100);
+            pUsername.Value = useremail;
             cmd.Parameters.Add(pUsername);
             
             // Add Parameters to Stored Procedure

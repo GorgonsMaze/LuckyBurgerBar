@@ -25,7 +25,7 @@
                             <div class="form-group">
                                 <asp:Label ID="lblPassword" runat="server" Text="Password" CssClass="col-lg-2 control-label pwrd"></asp:Label>
                                 <div class="col-lg-12">
-                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" Placeholder="Password"></asp:TextBox>
                                     <%--password validator--%>
                                     <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="* Please enter password"
                                         CssClass=" alert alert-warning" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
@@ -41,8 +41,11 @@
 
                             <br />
 
-                            <%--  Label for error messages--%>
-                            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                            <div class="text-center">
+                                <%--  Label for error messages--%>
+                                <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                            </div>
+
 
                             <br />
 
@@ -52,7 +55,6 @@
                                     <%--Cancel--%>
                                     <asp:Button ID="btnForgotPassword" CausesValidation="false" runat="server" CssClass="btn btn-default" Text="Forgot Password?" OnClick="btnForgotPassword_Click" />
 
-                                    <%--Type="submit" ???--%>
                                     <%--Login/Signin--%>
                                     <asp:Button ID="btnSignIn" runat="server" CssClass="btn btn-danger" Text="Log In" OnClick="btnSignIn_Click" />
                                 </div>

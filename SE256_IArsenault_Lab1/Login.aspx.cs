@@ -52,27 +52,27 @@ namespace SE256_IArsenault_Lab1
             {
                 // Use .NET built in security system to set the UserId
                 // within a client-side Cookie
-                FormsAuthenticationTicket t =
-                    new FormsAuthenticationTicket(
-                        1,
-                        dt.Rows[0]["UserID"].ToString(),
-                        DateTime.Now,
-                        DateTime.Now.AddMinutes(480), // value of time out property
-                        false, // value of IsPersistent property
-                        "Admin");
+                FormsAuthenticationTicket t = new FormsAuthenticationTicket(1, 
+                    dt.Rows[0]["user_id"].ToString(), DateTime.Now, DateTime.Now.AddMinutes(480), false,"Admin");
+
+                //FormsAuthenticationTicket t = new FormsAuthenticationTicket( 1,
+                //        dt.Rows[0]["user_id"].ToString(),
+                //        DateTime.Now,
+                //        DateTime.Now.AddMinutes(480), // value of time out property
+                //        false, // value of IsPersistent property
+                //        "Admin");
 
                 // For security reasons we may hash the cookies
                 string encryptedTicked = FormsAuthentication.Encrypt(t);
-                HttpCookie c = new HttpCookie(
-                    FormsAuthentication.FormsCookieName, encryptedTicked);
+                HttpCookie c = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicked);
                 // Add cookie to response
                 Response.Cookies.Add(c);
 
                 // Set the username to a client side cookie for future reference
-                Session["FullName"] = dt.Rows[0]["UserFName"].ToString();
+                Session["Fullname"] = dt.Rows[0]["Fullname"].ToString();
 
                 // Redirect the browser back to the home page
-                Response.Redirect("~/Default.aspx");
+                Response.Redirect("~/Home");
 
             }
             else
