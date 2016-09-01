@@ -154,29 +154,6 @@ ul > .nav > .navbar-nav > .navbar-right {
     height: 3px !important;
 }
 
-/*@media (min-width: 778px) {
-  .navbar-collapse {
-    width: auto !important;
-    border-top: 0 !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-  }
-  .navbar-collapse.collapse {
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0 !important;
-    overflow: visible !important;
-  }
-  .navbar-collapse.in {
-    overflow-y: visible !important;
-  }
-  .navbar-fixed-top .navbar-collapse,
-  .navbar-static-top .navbar-collapse,
-  .navbar-fixed-bottom .navbar-collapse {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}*/
 .greetLabel {
     margin-top: 20.5px;
 }
