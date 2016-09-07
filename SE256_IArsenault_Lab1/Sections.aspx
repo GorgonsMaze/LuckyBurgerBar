@@ -3,12 +3,27 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container sections-container">
+
+     <div class="container  sections-containe">
         <div class="row">
-            <h2 class="text-center">Sections</h2>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
+            <div class="col-md-12">
+                 <h2 class="text-center">Sections</h2>
+            </div>
+            <div class="col-md-12">
+
+                <asp:GridView ID="gvSections" runat="server">
+                    <Columns>
+
+
+                        <asp:BoundField />
+
+                        <asp:BoundField />
+
+
+                    </Columns>
+                </asp:GridView>
+
+            </div><%-- End Col--%>
+        </div> <%-- End Row--%>
+    </div> <%--End Container--%>
 </asp:Content>

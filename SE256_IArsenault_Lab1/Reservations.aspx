@@ -3,65 +3,28 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid">
-        <section class="reservations">
-              <h1 class="text-center">Reservation List....</h1>
-            <div class="well well-lg">
-                <table class="table table-striped table-hover ">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Column heading</th>
-                    <th>Column heading</th>
-                    <th>Column heading</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="info">
-                    <td>3</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="success">
-                    <td>4</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="danger">
-                    <td>5</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="warning">
-                    <td>6</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr class="active">
-                    <td>7</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <%-- Resrevations Header Title--%>
+                <h2 class="text-center">Reservations</h2>
             </div>
-        </section>
-    </div>
+
+            <div class="col-md-12">
+                <%--Reservations Gridview --%>
+                <asp:GridView ID="gvReservations" runat="server">
+                    <%--Columns--%>
+                    <Columns>
+
+                        <asp:BoundField />
+
+                        <asp:BoundField />
+
+                    </Columns>
+
+                </asp:GridView>
+
+            </div> <%--End Gridview Column--%>
+        </div> <%--End Row --%>
+    </div> <%-- End Container--%>
 </asp:Content>

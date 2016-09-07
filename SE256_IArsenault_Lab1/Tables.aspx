@@ -5,10 +5,25 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container tables-section">
          <div class="row">
-            <h2 class="text-center">Tables list</h2>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
+             <div class="col-md-4">
+                <%-- Tables Header Title--%>
+                 <h2 class="text-center">Tables</h2>
+             </div>
+           
+            <div class="col-md-12">
+               <%-- Tables Gridview--%>
+                <asp:GridView ID="gvTables" runat="server">
+                    <%--Columns--%>
+                    <Columns>
+
+                        <asp:BoundField />
+
+                        <asp:BoundField />
+
+                    </Columns>
+                </asp:GridView>
+
+            </div><%-- End Col--%>
+        </div> <%--End Row--%>
+    </div> <%--End Container --%>
 </asp:Content>

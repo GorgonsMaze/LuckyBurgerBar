@@ -5,10 +5,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container menu-items-section">
         <div class="row">
-            <h2 class="text-center">Menu Items</h2>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
+            <div class="col-md-12">
+                <%-- Header Title for Menu Items --%>
+                <h2 class="text-center">Menu Items</h2>
+            </div>
+
+            <div class="col-md-12">
+                <%-- Gridview Control--%>
+                <asp:GridView ID="gvMenuItems" runat="server">
+                    <%--Columns--%>
+                    <Columns>
+                        <asp:BoundField />
+                        <asp:BoundField />
+                    </Columns>
+                </asp:GridView>
+
+            </div><%-- End Col--%>
+        </div> <%--End Row--%>
+    </div><%-- End Container--%>
 </asp:Content>
