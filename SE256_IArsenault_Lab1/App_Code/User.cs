@@ -12,14 +12,27 @@ namespace SE256_IArsenault_Lab1.App_Code
     public class User
     {
 
-        //#region properties
-        //#endregion
+        #region properties
+        public int userID { get; set; }
+        public string userEmail { get; set; }
+        public string userFirst { get; set; }
+        public string userLast { get; set; }
+        public string userAdd1 { get; set; }
+        public string userAdd2 { get; set; }
+        public string userCity { get; set; }
+        public string userState { get; set}
+        public string userZip { get; set; }
+        public string userSalt { get; set; }
+        public string userPwd { get; set; }
+        public string userPhone { get; set; }
+        public bool userActive { get; set; }
+        #endregion
 
-        //#region constructors
-        //#endregion
+        #region constructors
+        #endregion
 
-        //#region methods
-        //#endregion
+        #region methods
+        #endregion
 
 
         public User()
