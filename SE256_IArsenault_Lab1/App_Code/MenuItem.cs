@@ -7,5 +7,13 @@ namespace SE256_IArsenault_Lab1.App_Code
 {
     public class MenuItem
     {
+        //#region properties
+        //#endregion
+
+        //#region constructors
+        //#endregion
+
+        //#region methods
+        //#endregion
     }
 }
