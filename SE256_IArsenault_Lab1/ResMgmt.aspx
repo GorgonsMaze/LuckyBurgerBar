@@ -21,7 +21,8 @@
                                     <asp:BoundField DataField="guest_id" HeaderText="guest_id" SortExpression="guest_id" />
                                     <asp:BoundField DataField="tbl_id" HeaderText="tbl_id" SortExpression="tbl_id" />
                                     <asp:BoundField DataField="user_id" HeaderText="user_id" SortExpression="user_id" />
-                                    <asp:BoundField DataField="res_date" HeaderText="res_date" SortExpression="res_date" />
+                                      <%--Hyperlink Column--%>
+                                    <asp:HyperLinkField DataTextField="res_date" DataNavigateUrlFields="res_id" DataNavigateUrlFormatString="~/Admin/Reservation/{0}" HeaderText="Reservation Date" SortExpression="res_date" />     
                                     <asp:BoundField DataField="res_time" HeaderText="res_time" SortExpression="res_time" />
                                     <asp:BoundField DataField="res_guest_cnt" HeaderText="res_guest_cnt" SortExpression="res_guest_cnt" />
                                     <asp:BoundField DataField="res_spec_req" HeaderText="res_spec_req" SortExpression="res_spec_req" />

@@ -34,22 +34,28 @@ namespace SE256_IArsenault_Lab1
             routes.MapPageRoute("Forgot-Password", "Forgot-Password", "~/ForgotPassword.aspx");
             routes.MapPageRoute("Sign-Up", "Sign-Up", "~/Signup.aspx");
             //Amin pages 
-            routes.MapPageRoute("MenuItems", "Admin/Menu-Items", "~/MenuItems.aspx");
-            routes.MapPageRoute("MenuItem", "Admin/Menu-Item", "~/MenuItem.aspx");
-            routes.MapPageRoute("Sections", "Admin/Sections", "~/Sections.aspx");
-            routes.MapPageRoute("Section", "Admin/Section", "~/Section.aspx");
-            routes.MapPageRoute("Tables", "Admin/Tables", "~/Tables.aspx");
-            routes.MapPageRoute("Table", "Admin/Table", "~/Table.aspx");
-            routes.MapPageRoute("Reservation-Management", "Admin/Res-Mgmt", "~/ResMgmt.aspx");
-            routes.MapPageRoute("Users", "Admin/Users", "~/Users.aspx");
-            routes.MapPageRoute("User", "Admin/User", "~/User.aspx");
+            routes.MapPageRoute("Admin/MenuItems", "Admin/Menu-Items", "~/MenuItems.aspx");
+            routes.MapPageRoute("Admin/MenuItem", "Admin/Menu-Item", "~/MenuItem.aspx");
+            routes.MapPageRoute("Admin/Sections", "Admin/Sections", "~/Sections.aspx");
+            routes.MapPageRoute("Admin/Section", "Admin/Section", "~/Section.aspx");
+            routes.MapPageRoute("Admin/Tables", "Admin/Tables", "~/Tables.aspx");
+            routes.MapPageRoute("Admin/Table", "Admin/Table", "~/Table.aspx");
+            routes.MapPageRoute("Admin/Reservation-Management", "Admin/Res-Mgmt", "~/ResMgmt.aspx");
+            routes.MapPageRoute("Admin/Users", "Admin/Users", "~/Users.aspx");
+            routes.MapPageRoute("Admin/User", "Admin/User", "~/User.aspx");
 
             // Map Dynamic Pages
-            routes.MapPageRoute("menu-item", "Admin/Menu-Item/{item_id}", "~/MenuItem.aspx", false,
+            routes.MapPageRoute("MenuItem", "Admin/Menu-Item/{item_id}", "~/MenuItem.aspx", false,
                 new RouteValueDictionary { { "item_id", "-1" } });
-            routes.MapPageRoute("userid", "Admin/User/{user_id}", "~/User.aspx", false,
+            routes.MapPageRoute("User", "Admin/User/{user_id}", "~/User.aspx", false,
                 new RouteValueDictionary { { "user_id", "-1" } });
-
+            routes.MapPageRoute("Table", "Admin/Table/{table_id}", "~/Table.aspx", false,
+                new RouteValueDictionary { { "table_id", "-1" } });
+            routes.MapPageRoute("Section", "Admin/Section/{sect_id}", "~/Section.aspx", false,
+                new RouteValueDictionary { { "sect_id", "-1"} });
+            // Purposefully misspelled Reservation due to param name already taken -- change later if needed
+            routes.MapPageRoute("Resrvation", "Admin/Reservation/{res_id}", "~/Reservation.aspx", false,
+                new RouteValueDictionary { { "res_id", "-1"} });
         }
 
         protected void Session_Start(object sender, EventArgs e)

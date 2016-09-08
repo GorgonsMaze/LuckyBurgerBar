@@ -21,7 +21,7 @@
                                 <Columns>
                                     <asp:BoundField DataField="item_id" HeaderText="item_id" InsertVisible="False" ReadOnly="True" SortExpression="item_id" />
                                     <%-- Hyperlink Column--%>
-                                    <asp:HyperLinkField DataTextField="item_name" DataNavigateUrlFields="item_id" DataNavigateUrlFormatString="~/Admin/Menu-Item/{0}" HeaderText="Name" />
+                                    <asp:HyperLinkField DataTextField="item_name" DataNavigateUrlFields="item_id" DataNavigateUrlFormatString="~/Admin/Menu-Item/{0}" HeaderText="Name"  SortExpression="item_name" />
                                     <asp:BoundField DataField="item_desc" HeaderText="item_desc" SortExpression="item_desc" />
                                     <asp:BoundField DataField="item_price" HeaderText="item_price" SortExpression="item_price" />
                                     <asp:CheckBoxField DataField="item_gluten_free" HeaderText="item_gluten_free" SortExpression="item_gluten_free" />

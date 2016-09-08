@@ -18,8 +18,9 @@
                             <asp:GridView ID="gvTables" runat="server" CssClass="table" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="tbl_id" DataSourceID="sdsTables" PageSize="10">
                                 <Columns>
                                     <asp:BoundField DataField="tbl_id" HeaderText="tbl_id" InsertVisible="False" ReadOnly="True" SortExpression="tbl_id" />
-                                    <asp:BoundField DataField="sect_id" HeaderText="sect_id" SortExpression="sect_id" />
-                                    <asp:BoundField DataField="tbl_name" HeaderText="tbl_name" SortExpression="tbl_name" />
+
+                                    <%-- Hyperlink Column--%>
+                                    <asp:HyperLinkField DataTextField="tbl_name" DataNavigateUrlFields="tbl_id" DataNavigateUrlFormatString="~/Admin/Table/{0}" HeaderText="Table Name" SortExpression="tbl_name" />
                                     <asp:BoundField DataField="tbl_desc" HeaderText="tbl_desc" SortExpression="tbl_desc" />
                                     <asp:BoundField DataField="tbl_seat_cnt" HeaderText="tbl_seat_cnt" SortExpression="tbl_seat_cnt" />
                                     <asp:CheckBoxField DataField="tbl_active" HeaderText="tbl_active" SortExpression="tbl_active" />
