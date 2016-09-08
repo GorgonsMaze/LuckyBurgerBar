@@ -44,6 +44,12 @@ namespace SE256_IArsenault_Lab1
             routes.MapPageRoute("Users", "Admin/Users", "~/Users.aspx");
             routes.MapPageRoute("User", "Admin/User", "~/User.aspx");
 
+            // Map Dynamic Pages
+            routes.MapPageRoute("menu-item", "Admin/Menu-Item/{item_id}", "~/MenuItem.aspx", false,
+                new RouteValueDictionary { { "item_id", "-1" } });
+            routes.MapPageRoute("userid", "Admin/User/{user_id}", "~/User.aspx", false,
+                new RouteValueDictionary { { "user_id", "-1" } });
+
         }
 
         protected void Session_Start(object sender, EventArgs e)
