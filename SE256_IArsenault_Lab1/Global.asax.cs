@@ -54,8 +54,10 @@ namespace SE256_IArsenault_Lab1
             routes.MapPageRoute("Section", "Admin/Section/{sect_id}", "~/Section.aspx", false,
                 new RouteValueDictionary { { "sect_id", "-1"} });
             // Purposefully misspelled Reservation due to param name already taken -- change later if needed
-            routes.MapPageRoute("Resrvation", "Admin/Reservation/{res_id}", "~/Reservation.aspx", false,
+            routes.MapPageRoute("Resrvation", "Reservation/{res_id}", "~/Reservation.aspx", false,
                 new RouteValueDictionary { { "res_id", "-1"} });
+            routes.MapPageRoute("ResMngmt", "Admin/Reservation/{res_id}", "~/Reservation.aspx", false,
+                new RouteValueDictionary { {"res_id", "-1"} });
         }
 
         protected void Session_Start(object sender, EventArgs e)

@@ -33,26 +33,26 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand img-brand hiden-sm hidden-xs" href="Home">
-                        <img alt="Brand" width="20" height="20" src="Images/Burger-Cafe-2-icon.png" />
+                        <img alt="Brand" width="20" height="20" src="../Images/Burger-Cafe-2-icon.png" />
                     </a>
-                    <a class="navbar-brand" href="Home">Lucky Burger Bar</a>
+                    <a class="navbar-brand" href="../Home">Lucky Burger Bar</a>
                 </div>
                 <%--- /navbar collapsable icon ---%>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="nav-btn-hvr"><a href="About">About Us <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-btn-hvr"><a href="../About">About Us <span class="sr-only">(current)</span></a></li>
                         <li class="dropdown nav-btn-hvr">
                             <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-trigger="hover" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="Lunch-Menu">Luch Menu</a></li>
+                                <li><a href="../Lunch-Menu">Luch Menu</a></li>
                                 <li class="divider"></li>
-                                <li><a href="Dinner-Menu">Dinner Menu</a></li>
+                                <li><a href="../Dinner-Menu">Dinner Menu</a></li>
                             </ul>
                         </li>
-                        <li class="nav-btn-hvr"><a href="Reservations">Reservations</a></li>
-                        <li class="nav-btn-hvr"><a href="Directions">Directions</a></li>
-                        <li class="nav-btn-hvr"><a href="Contact-Us">Contact</a></li>
+                        <li class="nav-btn-hvr"><a href="../Reservations">Reservations</a></li>
+                        <li class="nav-btn-hvr"><a href="../Directions">Directions</a></li>
+                        <li class="nav-btn-hvr"><a href="../Contact-Us">Contact</a></li>
                     </ul>
 
                     <%--- Navbar right align --%>
