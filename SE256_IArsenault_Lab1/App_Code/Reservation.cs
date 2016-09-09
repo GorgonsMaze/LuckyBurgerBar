@@ -139,7 +139,6 @@ namespace SE256_IArsenault_Lab1.App_Code
 
 
         // Update
-
         public static bool UpdateReservation(Reservation ur)
         {
             //declare return variable
@@ -183,8 +182,6 @@ namespace SE256_IArsenault_Lab1.App_Code
             }
             return blnSuccess;
         }
-
-
 
         #endregion
     }
