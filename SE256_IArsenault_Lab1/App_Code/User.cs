@@ -104,7 +104,7 @@ namespace SE256_IArsenault_Lab1.App_Code
         }
 
         ////Insert
-        public static bool InsertCategory(User uc)
+        public static bool InsertUser(User iu)
         {
             //declare return variable
             bool blnSuccess = false;
@@ -118,18 +118,18 @@ namespace SE256_IArsenault_Lab1.App_Code
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Add Parameters to Stored Procedure
-            cmd.Parameters.Add("@user_email", SqlDbType.VarChar).Value = uc.userEmail;
-            cmd.Parameters.Add("@user_first", SqlDbType.VarChar).Value = uc.userFirst;
-            cmd.Parameters.Add("@user_last", SqlDbType.VarChar).Value = uc.userLast;
-            cmd.Parameters.Add("@user_add1", SqlDbType.VarChar).Value = uc.userAdd1;
-            cmd.Parameters.Add("@user_add2", SqlDbType.VarChar).Value = uc.userAdd2;
-            cmd.Parameters.Add("@user_city", SqlDbType.VarChar).Value = uc.userCity;
-            cmd.Parameters.Add("@state_id", SqlDbType.VarChar).Value = uc.userState;
-            cmd.Parameters.Add("@user_zip", SqlDbType.VarChar).Value = uc.userZip;
-            cmd.Parameters.Add("@user_salt", SqlDbType.VarChar).Value = uc.userSalt;
-            cmd.Parameters.Add("@user_pwd", SqlDbType.VarChar).Value = uc.userPwd;
-            cmd.Parameters.Add("@user_phone", SqlDbType.VarChar).Value = uc.userPhone;
-            cmd.Parameters.Add("@user_active", SqlDbType.Bit).Value = uc.userActive;
+            cmd.Parameters.Add("@user_email", SqlDbType.VarChar).Value = iu.userEmail;
+            cmd.Parameters.Add("@user_first", SqlDbType.VarChar).Value = iu.userFirst;
+            cmd.Parameters.Add("@user_last", SqlDbType.VarChar).Value = iu.userLast;
+            cmd.Parameters.Add("@user_add1", SqlDbType.VarChar).Value = iu.userAdd1;
+            cmd.Parameters.Add("@user_add2", SqlDbType.VarChar).Value = iu.userAdd2;
+            cmd.Parameters.Add("@user_city", SqlDbType.VarChar).Value = iu.userCity;
+            cmd.Parameters.Add("@state_id", SqlDbType.VarChar).Value = iu.userState;
+            cmd.Parameters.Add("@user_zip", SqlDbType.VarChar).Value = iu.userZip;
+            cmd.Parameters.Add("@user_salt", SqlDbType.VarChar).Value = iu.userSalt;
+            cmd.Parameters.Add("@user_pwd", SqlDbType.VarChar).Value = iu.userPwd;
+            cmd.Parameters.Add("@user_phone", SqlDbType.VarChar).Value = iu.userPhone;
+            cmd.Parameters.Add("@user_active", SqlDbType.Bit).Value = iu.userActive;
 
             // Open the database connection and execute the command
             try
@@ -157,7 +157,7 @@ namespace SE256_IArsenault_Lab1.App_Code
 
         ////Update
 
-        public static bool UpdateCategory(User uc)
+        public static bool UpdateUser(User uu)
         {
             //declare return variable
             bool blnSuccess = false;
@@ -171,19 +171,19 @@ namespace SE256_IArsenault_Lab1.App_Code
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Add Parameters to Stored Procedure
-            cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = uc.userID;
-            cmd.Parameters.Add("@user_email", SqlDbType.VarChar).Value = uc.userEmail;
-            cmd.Parameters.Add("@user_first", SqlDbType.VarChar).Value = uc.userFirst;
-            cmd.Parameters.Add("@user_last", SqlDbType.VarChar).Value = uc.userLast;
-            cmd.Parameters.Add("@user_add1", SqlDbType.VarChar).Value = uc.userAdd1;
-            cmd.Parameters.Add("@user_add2", SqlDbType.VarChar).Value = uc.userAdd2;
-            cmd.Parameters.Add("@user_city", SqlDbType.VarChar).Value = uc.userCity;
-            cmd.Parameters.Add("@state_id", SqlDbType.VarChar).Value = uc.userState;
-            cmd.Parameters.Add("@user_zip", SqlDbType.VarChar).Value = uc.userZip;
-            cmd.Parameters.Add("@user_salt", SqlDbType.VarChar).Value = uc.userSalt;
-            cmd.Parameters.Add("@user_pwd", SqlDbType.VarChar).Value = uc.userPwd;
-            cmd.Parameters.Add("@user_phone", SqlDbType.VarChar).Value = uc.userPhone;
-            cmd.Parameters.Add("@user_active", SqlDbType.Bit).Value = uc.userActive;
+            cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = uu.userID;
+            cmd.Parameters.Add("@user_email", SqlDbType.VarChar).Value = uu.userEmail;
+            cmd.Parameters.Add("@user_first", SqlDbType.VarChar).Value = uu.userFirst;
+            cmd.Parameters.Add("@user_last", SqlDbType.VarChar).Value = uu.userLast;
+            cmd.Parameters.Add("@user_add1", SqlDbType.VarChar).Value = uu.userAdd1;
+            cmd.Parameters.Add("@user_add2", SqlDbType.VarChar).Value = uu.userAdd2;
+            cmd.Parameters.Add("@user_city", SqlDbType.VarChar).Value = uu.userCity;
+            cmd.Parameters.Add("@state_id", SqlDbType.VarChar).Value = uu.userState;
+            cmd.Parameters.Add("@user_zip", SqlDbType.VarChar).Value = uu.userZip;
+            cmd.Parameters.Add("@user_salt", SqlDbType.VarChar).Value = uu.userSalt;
+            cmd.Parameters.Add("@user_pwd", SqlDbType.VarChar).Value = uu.userPwd;
+            cmd.Parameters.Add("@user_phone", SqlDbType.VarChar).Value = uu.userPhone;
+            cmd.Parameters.Add("@user_active", SqlDbType.Bit).Value = uu.userActive;
 
             // Open the database connection and execute the command
             try
