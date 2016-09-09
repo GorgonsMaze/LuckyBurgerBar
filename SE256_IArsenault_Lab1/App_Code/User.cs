@@ -20,7 +20,7 @@ namespace SE256_IArsenault_Lab1.App_Code
         public string userAdd1 { get; set; }
         public string userAdd2 { get; set; }
         public string userCity { get; set; }
-        public string userState { get; set}
+        public string userState { get; set; }
         public string userZip { get; set; }
         public string userSalt { get; set; }
         public string userPwd { get; set; }
@@ -29,16 +29,185 @@ namespace SE256_IArsenault_Lab1.App_Code
         #endregion
 
         #region constructors
+        // Default Constructor
+        public User() { }
+        // Overloaded Constructor
+        // Will return object instatiated from active row returned
+        // from data base fitlered by unique identifier
+        /**************** Changed userID to userId **** Different from properties userID ****/
+        public User(int userId)
+        {
+            DataTable dt = new DataTable();
+            dt = GetUserById(userId);
+            if (dt.Rows.Count > 0)
+            {
+                this.userID = Convert.ToInt32(dt.Rows[0]["user_id"].ToString());
+                this.userEmail = dt.Rows[0]["user_email"].ToString();
+                this.userFirst = dt.Rows[0]["user_first"].ToString();
+                this.userLast = dt.Rows[0]["user_last"].ToString();
+                this.userAdd1 = dt.Rows[0]["user_add1"].ToString();
+                this.userAdd2 = dt.Rows[0]["user_add2"].ToString();
+                this.userCity = dt.Rows[0]["user_city"].ToString();
+                this.userState = dt.Rows[0]["state_id"].ToString();
+                this.userZip = dt.Rows[0]["user_zip"].ToString();
+                this.userSalt = dt.Rows[0]["user_salt"].ToString();
+                this.userPwd = dt.Rows[0]["user_pwd"].ToString();
+                this.userPhone = dt.Rows[0]["user_phone"].ToString();
+                this.userActive = Convert.ToBoolean(dt.Rows[0]["user_active"].ToString());
+            }
+        }
         #endregion
 
         #region methods
-        #endregion
-
-
-        public User()
+        //Get
+        private static DataTable GetUserById(int id)
         {
-            // Constructor logic goes here
+            //This example will use embedded SQL
+            //connection object - ConfigurationManager namespace allows for runtime 
+            //access to web.config setting, specifically connection strings and key values
+            SqlConnection cn = new SqlConnection(
+                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+            //connection object
+            SqlCommand cmd = new SqlCommand("users_getbyid", cn);
+            //Create datatable to hold result set
+            DataTable dt = new DataTable();
+            // Mark the Command as  text type
+            //command type is an enumeration: Stored procedure, text(embedded SQL) or table direct
+            cmd.CommandType = CommandType.StoredProcedure;
+            // Add Parameters to Stored Procedure
+            cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = id;
+            // Open the database connection and execute the command
+            try
+            {
+                //opens connection to database, most failures happen here
+                //check connection string for proper settings
+                cn.Open();
+                //data adapter object is trasport link between data source and 
+                //data destination
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                //fill method, for multiple tables use dataset
+                da.Fill(dt);
+            }
+            catch (Exception exc)
+            {
+                //just put here to make debugging easier, can look at error directly
+                exc.ToString();
+            }
+            finally
+            {
+                //must always close connections
+                cn.Close();
+            }
+
+            // Return the datatable
+            return dt;
         }
+
+        ////Insert
+        public static bool InsertCategory(User uc)
+        {
+            //declare return variable
+            bool blnSuccess = false;
+            //back to stored procedures :)
+            //connection object - ConfigurationManager namespace allows for runtime 
+            //access to web.config setting, specifically connection strings and key values
+            SqlConnection cn = new SqlConnection(
+                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("users_insert", cn);
+            // Mark the Command as a Stored Procedure
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Add Parameters to Stored Procedure
+            cmd.Parameters.Add("@user_email", SqlDbType.VarChar).Value = uc.userEmail;
+            cmd.Parameters.Add("@user_first", SqlDbType.VarChar).Value = uc.userFirst;
+            cmd.Parameters.Add("@user_last", SqlDbType.VarChar).Value = uc.userLast;
+            cmd.Parameters.Add("@user_add1", SqlDbType.VarChar).Value = uc.userAdd1;
+            cmd.Parameters.Add("@user_add2", SqlDbType.VarChar).Value = uc.userAdd2;
+            cmd.Parameters.Add("@user_city", SqlDbType.VarChar).Value = uc.userCity;
+            cmd.Parameters.Add("@state_id", SqlDbType.VarChar).Value = uc.userState;
+            cmd.Parameters.Add("@user_zip", SqlDbType.VarChar).Value = uc.userZip;
+            cmd.Parameters.Add("@user_salt", SqlDbType.VarChar).Value = uc.userSalt;
+            cmd.Parameters.Add("@user_pwd", SqlDbType.VarChar).Value = uc.userPwd;
+            cmd.Parameters.Add("@user_phone", SqlDbType.VarChar).Value = uc.userPhone;
+            cmd.Parameters.Add("@user_active", SqlDbType.Bit).Value = uc.userActive;
+
+            // Open the database connection and execute the command
+            try
+            {
+                cn.Open();
+                //This is not a query so just issue the command to execute the stored procedure
+                cmd.ExecuteNonQuery();
+                // Set boolean successvariable to true
+                blnSuccess = true;
+            }
+            catch (Exception exc)
+            {
+                //if error,notify user
+                exc.ToString();
+                // Set boolean to sucess variable to false
+                blnSuccess = false;
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return blnSuccess;
+        }
+
+
+        ////Update
+
+        public static bool UpdateCategory(User uc)
+        {
+            //declare return variable
+            bool blnSuccess = false;
+            //back to stored procedures :)
+            //connection object - ConfigurationManager namespace allows for runtime 
+            //access to web.config setting, specifically connection strings and key values
+            SqlConnection cn = new SqlConnection(
+                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("users_update", cn);
+            // Mark the Command as a Stored Procedure
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            // Add Parameters to Stored Procedure
+            cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = uc.userID;
+            cmd.Parameters.Add("@user_email", SqlDbType.VarChar).Value = uc.userEmail;
+            cmd.Parameters.Add("@user_first", SqlDbType.VarChar).Value = uc.userFirst;
+            cmd.Parameters.Add("@user_last", SqlDbType.VarChar).Value = uc.userLast;
+            cmd.Parameters.Add("@user_add1", SqlDbType.VarChar).Value = uc.userAdd1;
+            cmd.Parameters.Add("@user_add2", SqlDbType.VarChar).Value = uc.userAdd2;
+            cmd.Parameters.Add("@user_city", SqlDbType.VarChar).Value = uc.userCity;
+            cmd.Parameters.Add("@state_id", SqlDbType.VarChar).Value = uc.userState;
+            cmd.Parameters.Add("@user_zip", SqlDbType.VarChar).Value = uc.userZip;
+            cmd.Parameters.Add("@user_salt", SqlDbType.VarChar).Value = uc.userSalt;
+            cmd.Parameters.Add("@user_pwd", SqlDbType.VarChar).Value = uc.userPwd;
+            cmd.Parameters.Add("@user_phone", SqlDbType.VarChar).Value = uc.userPhone;
+            cmd.Parameters.Add("@user_active", SqlDbType.Bit).Value = uc.userActive;
+
+            // Open the database connection and execute the command
+            try
+            {
+                cn.Open();
+                //This is not a query so just issue the command to execute the stored procedure
+                cmd.ExecuteNonQuery();
+                blnSuccess = true;
+            }
+            catch (Exception exc)
+            {
+                //if error,notify user
+                exc.ToString();
+                blnSuccess = false;
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return blnSuccess;
+        }
+
+
+
 
         public static DataTable Login(string useremail, string password)
         {
@@ -58,7 +227,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             SqlParameter pUsername = new SqlParameter("@user_email", SqlDbType.VarChar, 100);
             pUsername.Value = useremail;
             cmd.Parameters.Add(pUsername);
-            
+
             // Add Parameters to Stored Procedure
             cmd.Parameters.Add("@user_pwd", SqlDbType.VarChar).Value = password;
 
@@ -87,6 +256,12 @@ namespace SE256_IArsenault_Lab1.App_Code
             return dt;
 
         }
+        #endregion
+
+
+
+
+
     }
 
    
