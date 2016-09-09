@@ -93,7 +93,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             //access to web.config setting, specifically connection strings and key values
             SqlConnection cn = new SqlConnection(
                 ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("tables_insert", cn);
+            SqlCommand cmd = new SqlCommand("sections_insert", cn);
             // Mark the Command as a Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -137,7 +137,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             //access to web.config setting, specifically connection strings and key values
             SqlConnection cn = new SqlConnection(
                 ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("tables_update", cn);
+            SqlCommand cmd = new SqlCommand("sections_update", cn);
             // Mark the Command as a Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
 
