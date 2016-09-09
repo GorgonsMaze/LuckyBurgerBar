@@ -43,7 +43,7 @@ namespace SE256_IArsenault_Lab1.App_Code
         #endregion
 
         #region methods
-        //Get
+        // Get
         private static DataTable GetTableById(int id)
         {
             //This example will use embedded SQL
@@ -87,7 +87,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             return dt;
         }
 
-        ////Insert
+        // Insert
         public static bool InsertTable(Table it)
         {
             //declare return variable
@@ -132,8 +132,7 @@ namespace SE256_IArsenault_Lab1.App_Code
         }
 
 
-        ////Update
-
+        // Update
         public static bool UpdateTable(Table ut)
         {
             //declare return variable
