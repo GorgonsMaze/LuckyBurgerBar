@@ -66,7 +66,6 @@ namespace SE256_IArsenault_Lab1
                     txtTableDesc.Text = tb.tblDesc;
                     txtTableSeatCount.Text = tb.tblSeatCnt.ToString();
                     chkTableIsActive.Checked = tb.tblActive;
-
                 }
             }
             else
@@ -102,7 +101,7 @@ namespace SE256_IArsenault_Lab1
             tb.tblName = txtTableName.Text.Trim();
             tb.tblDesc = txtTableDesc.Text.Trim();
             tb.tblSeatCnt = Convert.ToInt32(txtTableSeatCount.Text.Trim());
-            tb.tblActive = Convert.ToBoolean(chkTableIsActive.Checked);
+            tb.tblActive = Convert.ToBoolean(chkTableIsActive.Checked.ToString());
 
             //if id>0, that means it is a current role for updating
             //else it is a new role for inserting
