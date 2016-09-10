@@ -13,6 +13,15 @@ namespace SE256_IArsenault_Lab1 {
     public partial class MenuItem {
         
         /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
         /// lblMenuName control.
         /// </summary>
         /// <remarks>
@@ -191,6 +200,24 @@ namespace SE256_IArsenault_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCategory;
+        
+        /// <summary>
+        /// chkGluten control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkGluten;
+        
+        /// <summary>
+        /// lblGlutenFree control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGlutenFree;
         
         /// <summary>
         /// chkMenuIsActive control.

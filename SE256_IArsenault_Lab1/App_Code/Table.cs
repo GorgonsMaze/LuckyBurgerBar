@@ -25,7 +25,7 @@ namespace SE256_IArsenault_Lab1.App_Code
         // Overloaded Constructor
         // Will return object instatiated from active row returned
         // from data base fitlered by unique identifier
-        /**************** Changed userID to tbl **** Different from properties userID ****/
+        /**************** Changed tblID to tblId **** Different from properties tblID ****/
         public Table(int tblId)
         {
             DataTable dt = new DataTable();
@@ -153,7 +153,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             cmd.Parameters.Add("@tbl_desc", SqlDbType.VarChar).Value = ut.tblDesc;
             cmd.Parameters.Add("@tbl_seat_cnt", SqlDbType.Int).Value = ut.tblSeatCnt;
             cmd.Parameters.Add("@tbl_active", SqlDbType.Bit).Value = ut.tblActive;
-
+    
             // Open the database connection and execute the command
             try
             {

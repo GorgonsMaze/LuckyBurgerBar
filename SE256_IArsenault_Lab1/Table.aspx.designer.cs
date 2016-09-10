@@ -13,6 +13,15 @@ namespace SE256_IArsenault_Lab1 {
     public partial class Table {
         
         /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
         /// lblTableName control.
         /// </summary>
         /// <remarks>
@@ -166,12 +175,12 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.Button btnTableCancel;
         
         /// <summary>
-        /// btnTableUpdate control.
+        /// btnAddUpdateTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTableUpdate;
+        protected global::System.Web.UI.WebControls.Button btnAddUpdateTable;
     }
 }

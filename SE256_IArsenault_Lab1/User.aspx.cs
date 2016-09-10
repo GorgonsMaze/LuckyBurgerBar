@@ -24,7 +24,6 @@ namespace SE256_IArsenault_Lab1
             {
                 // If request is not authenticated redirect to login
                 Response.Redirect("~/Login.aspx");
-
             }
             int intID;
             // Use the request namespace to determine a query string value
@@ -119,6 +118,7 @@ namespace SE256_IArsenault_Lab1
             us.userCity = txtCity.Text.Trim();
             us.userState = ddlStates.SelectedValue;
             us.userZip = txtZip.Text.Trim();
+            us.userSalt = "Salt";
             us.userPwd = txtPassword.Text.Trim();
             //us.userPwd = txtConfirmPassword.Text.Trim();
             us.userEmail = txtEmail.Text.Trim();
@@ -143,7 +143,7 @@ namespace SE256_IArsenault_Lab1
             {
                 if (App_Code.User.InsertUser(us))
                 {
-                    Response.Redirect("~/Users");
+                    Response.Redirect("~/Admin/Users");
                 }
                 else
                 {

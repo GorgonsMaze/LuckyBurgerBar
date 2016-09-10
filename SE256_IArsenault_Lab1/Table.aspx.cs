@@ -11,33 +11,133 @@ namespace SE256_IArsenault_Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+
+            ddlTableSection.Items[0].Attributes["disabled"] = "true";
+
+            // Standard check for authenticated user
+            // check for authenticated user send to login
+            // page if not authenticated      
+            if (!Request.IsAuthenticated)
             {
-                // Insert please select list item to index 0
-                //ddlTableSection.Items.Insert(0, "Please Select Table Section...");
+                // If request is not authenticated redirect to login
+                Response.Redirect("~/Login.aspx");
 
-                //// Set the DDL to index 0
-                //ddlTableSection.SelectedIndex = 0;
+            }
+            int intID;
+            // Use the request namespace to determin a query string value
+            if (RouteData.Values["tbl_id"] != null)
+            {
+                // request.QueryString gets items from query string
+                // convert the query string to the proper data type
+                intID = Convert.ToInt32(RouteData.Values["tbl_id"].ToString());
 
-                // Disable index[0] as a choice in the drop down
-                ddlTableSection.Items[0].Attributes["disabled"] = "true";
+            }
+            else
+            {
+                // .... or set it to a number that will never be a value value (good for conditional population of data on the page...
+                intID = -1;
             }
 
-            // Changes Color of selected index 
-            //ddlTableSection.Items[1].Attributes["style"] = "color:black";
-            //ddlTableSection.Items[2].Attributes["style"] = "color:black";
-            //ddlTableSection.Items[3].Attributes["style"] = "color:black";
-            //ddlTableSection.Items[4].Attributes["style"] = "color:black";
-            //ddlTableSection.Items[5].Attributes["style"] = "color:black";
+            if (!IsPostBack)
+            {
+                BindData(intID);
 
+            }
         }
 
 
+        private void BindData(int intID)
+        {
+            // Render the page according to query string variable
+            // If in edit mode
+            if (intID != -1)
+            {
+                // change the text of our multipurpose button to appropriate function
+                btnAddUpdateTable.Text = "Update";
+                // Instatiate a class object to hold the data
+                App_Code.Table tb = new App_Code.Table(intID);
 
+                // Call class function to retrieve current data and store in DataTable
+                // use data to populate form controls - textboxes - dropdownlists etc.
+                if (tb != null)
+                {
+                    ddlTableSection.SelectedIndex = tb.sectID;
+                    txtTableName.Text = tb.tblName;
+                    txtTableDesc.Text = tb.tblDesc;
+                    txtTableSeatCount.Text = tb.tblSeatCnt.ToString();
+                    chkTableIsActive.Checked = tb.tblActive;
+
+                }
+            }
+            else
+            {
+                // If in add mode no need to get data, so we'll just show a blank form 
+                // changing the button text to appropriate function - Add
+                btnAddUpdateTable.Text = "Add";
+            }
+        }
+
+        // Add Update Table button Click
+        protected void btnAddUpdateTable_Click(object sender, EventArgs e)
+        {
+            // Handle Add or Update function
+            // If in edit mode
+            // Instatiate class object
+            App_Code.Table tb;
+            if (RouteData.Values["tbl_id"] != null)
+            {
+                //- request.QueryString gets items from the query string
+                //- convert the query string to the proper data type       
+                tb = new App_Code.Table(Convert.ToInt32(
+                    RouteData.Values["tbl_id"].ToString()));
+
+            }
+            else
+            {
+                // - or set it to a number that will never be a valid value (good for conditional population of the data on the page,
+                tb = new App_Code.Table();
+            }
+
+            tb.sectID = Convert.ToInt32(ddlTableSection.SelectedIndex);
+            tb.tblName = txtTableName.Text.Trim();
+            tb.tblDesc = txtTableDesc.Text.Trim();
+            tb.tblSeatCnt = Convert.ToInt32(txtTableSeatCount.Text.Trim());
+            tb.tblActive = Convert.ToBoolean(chkTableIsActive.Checked);
+
+            //if id>0, that means it is a current role for updating
+            //else it is a new role for inserting
+            if (tb.tblID > 0)
+            {
+                if (App_Code.Table.UpdateTable(tb))
+                {
+                    Response.Redirect("~/Admin/Tables");
+                }
+                else
+                {
+                    lblMessage.Text = "Table update failed. Try again!";
+                }
+            }
+            else
+            {
+                if (App_Code.Table.InsertTable(tb))
+                {
+                    Response.Redirect("~/Admin/Tables");
+                }
+                else
+                {
+                    lblMessage.Text = "Table insert failed. Try again!";
+                }
+            }
+
+
+        }
+
+        // Cancel Table BUtton Clcik
         protected void btnTableCancel_Click(object sender, EventArgs e)
         {
             // On cancel button click redirect to Default Homepage.
             Response.Redirect("/Home");
         }
+
     }
 }

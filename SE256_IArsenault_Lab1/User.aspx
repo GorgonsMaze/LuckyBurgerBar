@@ -10,7 +10,7 @@
                     <%--Error message for Update or Add--%>
                     <asp:Label ID="lblMessage" runat="server" Text="" CssClass=""></asp:Label>
                 </div>
-
+                <%-- Begin Panel--%>
                 <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
                         <fieldset>
@@ -146,7 +146,7 @@
                                 </div>
                             </div>
 
-                         
+
 
                             <%--Is Active Checbox Input--%>
                             <div class="form-group">

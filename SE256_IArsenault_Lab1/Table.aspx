@@ -8,6 +8,10 @@
 
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+                <div class="text-center">
+                    <%--Error message for Update or Add--%>
+                    <asp:Label ID="lblMessage" runat="server" Text="" CssClass=""></asp:Label>
+                </div>
                 <%-- Begin Panel--%>
                 <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
@@ -77,7 +81,7 @@
                                     <%-- Cancel--%>
                                     <asp:Button ID="btnTableCancel" runat="server" href="" CssClass="btn btn-default" CausesValidation="false" Text="Cancel" OnClick="btnTableCancel_Click" />
                                     <%--Update--%>
-                                    <asp:Button ID="btnTableUpdate" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                    <asp:Button ID="btnAddUpdateTable" runat="server" CssClass="btn btn-danger" Text="" OnClick="btnAddUpdateTable_Click" />
                                 </div>
                             </div>
                         </fieldset>
