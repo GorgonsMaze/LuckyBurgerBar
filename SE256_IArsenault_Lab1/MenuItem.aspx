@@ -100,7 +100,7 @@
                                     <%-- Cancel--%>
                                     <asp:Button ID="btnCancelMenuItem" CausesValidation="false" runat="server" href="" CssClass="btn btn-default" Text="Cancel" OnClick="btnCancelMenuItem_Click" />
                                     <%--Update--%>
-                                    <asp:Button ID="btnUpdateMenuItem" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                    <asp:Button ID="btnAddUpdateMenuItem" runat="server" CssClass="btn btn-danger" Text="Update" OnClick="btnAddUpdateMenuItem_Click" />
                                 </div>
                             </div>
                         </fieldset>

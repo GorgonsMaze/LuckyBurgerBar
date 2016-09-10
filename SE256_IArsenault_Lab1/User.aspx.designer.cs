@@ -13,6 +13,15 @@ namespace SE256_IArsenault_Lab1 {
     public partial class User {
         
         /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
         /// lblFName control.
         /// </summary>
         /// <remarks>
@@ -409,12 +418,12 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.Button btnCancelUser;
         
         /// <summary>
-        /// btnUpdateUser control.
+        /// btnAddUpdateUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateUser;
+        protected global::System.Web.UI.WebControls.Button btnAddUpdateUser;
     }
 }

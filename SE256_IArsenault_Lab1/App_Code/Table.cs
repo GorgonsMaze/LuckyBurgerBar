@@ -50,7 +50,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             //connection object - ConfigurationManager namespace allows for runtime 
             //access to web.config setting, specifically connection strings and key values
             SqlConnection cn = new SqlConnection(
-                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["se256_arsenaultiConnectionString"].ConnectionString);
             //connection object
             SqlCommand cmd = new SqlCommand("tables_getbyid", cn);
             //Create datatable to hold result set
@@ -96,7 +96,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             //connection object - ConfigurationManager namespace allows for runtime 
             //access to web.config setting, specifically connection strings and key values
             SqlConnection cn = new SqlConnection(
-                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["se256_arsenaultiConnectionString"].ConnectionString);
             SqlCommand cmd = new SqlCommand("tables_insert", cn);
             // Mark the Command as a Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
@@ -141,7 +141,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             //connection object - ConfigurationManager namespace allows for runtime 
             //access to web.config setting, specifically connection strings and key values
             SqlConnection cn = new SqlConnection(
-                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["se256_arsenaultiConnectionString"].ConnectionString);
             SqlCommand cmd = new SqlCommand("tables_update", cn);
             // Mark the Command as a Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
