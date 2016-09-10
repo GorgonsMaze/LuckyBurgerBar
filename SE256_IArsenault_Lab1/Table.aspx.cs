@@ -24,7 +24,7 @@ namespace SE256_IArsenault_Lab1
 
             }
             int intID;
-            // Use the request namespace to determin a query string value
+            // Use the request namespace to determine a query string value
             if (RouteData.Values["tbl_id"] != null)
             {
                 // request.QueryString gets items from query string

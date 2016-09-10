@@ -43,7 +43,6 @@
                                 <div class="col-lg-12">
                                     <asp:DropDownList ID="ddlTableSection" runat="server" CssClass="select-asp-styling" AppendDataBoundItems="true" DataSourceID="sdsTableSection" DataTextField="sect_name" DataValueField="sect_id">
                                         <asp:ListItem Text="Please Select a Table Section..." Value="0" Selected="True"></asp:ListItem>
-
                                     </asp:DropDownList>
                                     <%--SQL Data Source--%>
                                     <asp:SqlDataSource ID="sdsTableSection" runat="server" ConnectionString='<%$ ConnectionStrings:se256_arsenaultiConnectionString %>' SelectCommand="sections_getall" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
