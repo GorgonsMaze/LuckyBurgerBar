@@ -11,7 +11,7 @@ namespace SE256_IArsenault_Lab1.App_Code
     public class Table
     {
         #region properties
-        public int tblID { get; set; }
+        public int tableID { get; set; }
         public int sectID { get; set; }
         public string tblName { get; set; }
         public string tblDesc { get; set; }
@@ -26,16 +26,16 @@ namespace SE256_IArsenault_Lab1.App_Code
         // Overloaded Constructor
         // Will return object instatiated from active row returned
         // from data base fitlered by unique identifier
-        public Table(int id)
+        public Table(int tableId)
         {
             //Creating a new instance of a datatable
             DataTable dt = new DataTable();
             //setting datatable equal to the function GetReservationByID
-            dt = GetTableById(id);
+            dt = GetTableById(tableId);
             //If the rows count is greater than zero -- set the properties equal to whats in those columns
             if (dt.Rows.Count > 0)
             {
-                this.tblID = Convert.ToInt32(dt.Rows[0]["tbl_id"].ToString());
+                this.tableID = Convert.ToInt32(dt.Rows[0]["tbl_id"].ToString());
                 this.sectID = Convert.ToInt32(dt.Rows[0]["sect_id"].ToString());
                 this.tblName = dt.Rows[0]["tbl_name"].ToString();
                 this.tblDesc = dt.Rows[0]["tbl_desc"].ToString();
@@ -151,7 +151,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Add Parameters to Stored Procedure
-            cmd.Parameters.Add("@tbl_id", SqlDbType.Int).Value = table.tblID;
+            cmd.Parameters.Add("@tbl_id", SqlDbType.Int).Value = table.tableID;
             cmd.Parameters.Add("@sect_id", SqlDbType.Int).Value = table.sectID;
             cmd.Parameters.Add("@tbl_name", SqlDbType.VarChar).Value = table.tblName;
             cmd.Parameters.Add("@tbl_desc", SqlDbType.VarChar).Value = table.tblDesc;

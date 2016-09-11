@@ -21,9 +21,10 @@ namespace SE256_IArsenault_Lab1
             {
                 // If request is not authenticated redirect to login
                 Response.Redirect("~/Login.aspx");
-
             }
+
             int intID;
+
             // Use the request namespace to determine a query string value
             if (RouteData.Values["tbl_id"] != null)
             {
@@ -105,7 +106,7 @@ namespace SE256_IArsenault_Lab1
 
             //if id>0, that means it is a current role for updating
             //else it is a new role for inserting
-            if (tb.tblID > 0)
+            if (tb.tableID > 0)
             {
                 if (App_Code.Table.UpdateTable(tb))
                 {
