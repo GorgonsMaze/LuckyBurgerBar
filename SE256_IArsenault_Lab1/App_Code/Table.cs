@@ -11,7 +11,7 @@ namespace SE256_IArsenault_Lab1.App_Code
     public class Table
     {
         #region properties
-        public int tblID { get; set; }
+        public int tableID { get; set; }
         public int sectID { get; set; }
         public string tblName { get; set; }
         public string tblDesc { get; set; }
@@ -22,17 +22,20 @@ namespace SE256_IArsenault_Lab1.App_Code
         #region constructors
         // Default Constructor
         public Table() { }
+
         // Overloaded Constructor
         // Will return object instatiated from active row returned
         // from data base fitlered by unique identifier
-        /**************** Changed userID to tbl **** Different from properties userID ****/
-        public Table(int tblId)
+        public Table(int tableId)
         {
+            //Creating a new instance of a datatable
             DataTable dt = new DataTable();
-            dt = GetTableById(tblId);
+            //setting datatable equal to the function GetReservationByID
+            dt = GetTableById(tableId);
+            //If the rows count is greater than zero -- set the properties equal to whats in those columns
             if (dt.Rows.Count > 0)
             {
-                this.tblID = Convert.ToInt32(dt.Rows[0]["tbl_id"].ToString());
+                this.tableID = Convert.ToInt32(dt.Rows[0]["tbl_id"].ToString());
                 this.sectID = Convert.ToInt32(dt.Rows[0]["sect_id"].ToString());
                 this.tblName = dt.Rows[0]["tbl_name"].ToString();
                 this.tblDesc = dt.Rows[0]["tbl_desc"].ToString();
@@ -50,7 +53,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             //connection object - ConfigurationManager namespace allows for runtime 
             //access to web.config setting, specifically connection strings and key values
             SqlConnection cn = new SqlConnection(
-                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+                           ConfigurationManager.ConnectionStrings["se256_arsenaultiConnectionString"].ConnectionString);
             //connection object
             SqlCommand cmd = new SqlCommand("tables_getbyid", cn);
             //Create datatable to hold result set
@@ -60,6 +63,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             cmd.CommandType = CommandType.StoredProcedure;
             // Add Parameters to Stored Procedure
             cmd.Parameters.Add("@tbl_id", SqlDbType.Int).Value = id;
+
             // Open the database connection and execute the command
             try
             {
@@ -88,7 +92,7 @@ namespace SE256_IArsenault_Lab1.App_Code
         }
 
         // Insert
-        public static bool InsertTable(Table it)
+        public static bool InsertTable(Table table)
         {
             //declare return variable
             bool blnSuccess = false;
@@ -96,17 +100,17 @@ namespace SE256_IArsenault_Lab1.App_Code
             //connection object - ConfigurationManager namespace allows for runtime 
             //access to web.config setting, specifically connection strings and key values
             SqlConnection cn = new SqlConnection(
-                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["se256_arsenaultiConnectionString"].ConnectionString);
             SqlCommand cmd = new SqlCommand("tables_insert", cn);
             // Mark the Command as a Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Add Parameters to Stored Procedure
-            cmd.Parameters.Add("@sect_id", SqlDbType.Int).Value = it.sectID; 
-            cmd.Parameters.Add("@tbl_name", SqlDbType.VarChar).Value = it.tblName;
-            cmd.Parameters.Add("@tbl_desc", SqlDbType.VarChar).Value = it.tblDesc;
-            cmd.Parameters.Add("@tbl_seat_cnt", SqlDbType.Int).Value = it.tblSeatCnt;
-            cmd.Parameters.Add("@tbl_active", SqlDbType.Bit).Value = it.tblActive;
+            cmd.Parameters.Add("@sect_id", SqlDbType.Int).Value = table.sectID; 
+            cmd.Parameters.Add("@tbl_name", SqlDbType.VarChar).Value = table.tblName;
+            cmd.Parameters.Add("@tbl_desc", SqlDbType.VarChar).Value = table.tblDesc;
+            cmd.Parameters.Add("@tbl_seat_cnt", SqlDbType.Int).Value = table.tblSeatCnt;
+            cmd.Parameters.Add("@tbl_active", SqlDbType.Bit).Value = table.tblActive;
 
             // Open the database connection and execute the command
             try
@@ -133,7 +137,7 @@ namespace SE256_IArsenault_Lab1.App_Code
 
 
         // Update
-        public static bool UpdateTable(Table ut)
+        public static bool UpdateTable(Table table)
         {
             //declare return variable
             bool blnSuccess = false;
@@ -141,19 +145,19 @@ namespace SE256_IArsenault_Lab1.App_Code
             //connection object - ConfigurationManager namespace allows for runtime 
             //access to web.config setting, specifically connection strings and key values
             SqlConnection cn = new SqlConnection(
-                ConfigurationManager.ConnectionStrings["SE256_ArsenaultICS"].ConnectionString);
+                ConfigurationManager.ConnectionStrings["se256_arsenaultiConnectionString"].ConnectionString);
             SqlCommand cmd = new SqlCommand("tables_update", cn);
             // Mark the Command as a Stored Procedure
             cmd.CommandType = CommandType.StoredProcedure;
 
             // Add Parameters to Stored Procedure
-            cmd.Parameters.Add("@tbl_id", SqlDbType.Int).Value = ut.tblID;
-            cmd.Parameters.Add("@sect_id", SqlDbType.Int).Value = ut.sectID;
-            cmd.Parameters.Add("@tbl_name", SqlDbType.VarChar).Value = ut.tblName;
-            cmd.Parameters.Add("@tbl_desc", SqlDbType.VarChar).Value = ut.tblDesc;
-            cmd.Parameters.Add("@tbl_seat_cnt", SqlDbType.Int).Value = ut.tblSeatCnt;
-            cmd.Parameters.Add("@tbl_active", SqlDbType.Bit).Value = ut.tblActive;
-
+            cmd.Parameters.Add("@tbl_id", SqlDbType.Int).Value = table.tableID;
+            cmd.Parameters.Add("@sect_id", SqlDbType.Int).Value = table.sectID;
+            cmd.Parameters.Add("@tbl_name", SqlDbType.VarChar).Value = table.tblName;
+            cmd.Parameters.Add("@tbl_desc", SqlDbType.VarChar).Value = table.tblDesc;
+            cmd.Parameters.Add("@tbl_seat_cnt", SqlDbType.Int).Value = table.tblSeatCnt;
+            cmd.Parameters.Add("@tbl_active", SqlDbType.Bit).Value = table.tblActive;
+    
             // Open the database connection and execute the command
             try
             {
@@ -177,3 +181,5 @@ namespace SE256_IArsenault_Lab1.App_Code
         #endregion
     }
 }
+
+

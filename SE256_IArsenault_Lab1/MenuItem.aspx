@@ -8,6 +8,10 @@
         <h3 class="text-center">Menu Item</h3>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+                <div class="text-center">
+                    <%--Error message for Update or Add--%>
+                    <asp:Label ID="lblMessage" runat="server" Text="" CssClass=""></asp:Label>
+                </div>
                 <%--Begin Panel--%>
                 <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
@@ -84,7 +88,12 @@
 
                                 </div>
                             </div>
-
+                            <%--Is Active Checbox Input--%>
+                            <div class="form-group">
+                                <div class="col-lg-12 checkbox text-center">
+                                    <asp:CheckBox ID="chkGluten" runat="server" /><asp:Label ID="lblGlutenFree" runat="server" Text="Gluten Free"></asp:Label>
+                                </div>
+                            </div>
 
                             <%--Is Active Checbox Input--%>
                             <div class="form-group">
@@ -100,7 +109,7 @@
                                     <%-- Cancel--%>
                                     <asp:Button ID="btnCancelMenuItem" CausesValidation="false" runat="server" href="" CssClass="btn btn-default" Text="Cancel" OnClick="btnCancelMenuItem_Click" />
                                     <%--Update--%>
-                                    <asp:Button ID="btnUpdateMenuItem" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                    <asp:Button ID="btnAddUpdateMenuItem" runat="server" CssClass="btn btn-danger" Text="Update" OnClick="btnAddUpdateMenuItem_Click" />
                                 </div>
                             </div>
                         </fieldset>

@@ -13,6 +13,15 @@ namespace SE256_IArsenault_Lab1 {
     public partial class Section {
         
         /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
         /// lblSecName control.
         /// </summary>
         /// <remarks>
@@ -94,12 +103,12 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.Button btnSecCancel;
         
         /// <summary>
-        /// btnSecUpdate control.
+        /// btnAddUpdateSection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSecUpdate;
+        protected global::System.Web.UI.WebControls.Button btnAddUpdateSection;
     }
 }

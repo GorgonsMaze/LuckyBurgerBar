@@ -6,6 +6,11 @@
     <div class="container user-section">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+                <div class="text-center">
+                    <%--Error message for Update or Add--%>
+                    <asp:Label ID="lblMessage" runat="server" Text="" CssClass=""></asp:Label>
+                </div>
+                <%-- Begin Panel--%>
                 <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
                         <fieldset>
@@ -136,10 +141,11 @@
                                     <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" placeholder="555-555-5555"></asp:TextBox>
                                     <%-- Required Validator--%>
                                     <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="* Please enter phone number" CssClass="alert" ControlToValidate="txtPhone"></asp:RequiredFieldValidator>
-                                    <%--  Regex for phone--%>
-                                    <asp:RegularExpressionValidator ID="regexPhone" runat="server" ErrorMessage="* Invalid Phone! Ex. 555-555-5555" CssClass="alert" ControlToValidate="txtPhone" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"></asp:RegularExpressionValidator>
+                                    <%--  Regex for phone--%>    <%--\d{3}\d{3}\d{4}\b--%>  <%-- ((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}--%>
+                                    <asp:RegularExpressionValidator ID="regexPhone" runat="server" ErrorMessage="* Invalid Phone! Ex. 4015552343" CssClass="alert" ControlToValidate="txtPhone" ValidationExpression="\d{3}\d{3}\d{4}\b"></asp:RegularExpressionValidator>
                                 </div>
                             </div>
+
 
 
                             <%--Is Active Checbox Input--%>
@@ -159,7 +165,7 @@
                                     <asp:Button ID="btnCancelUser" CausesValidation="false" runat="server" href="" CssClass="btn btn-default" Text="Cancel" OnClick="btnCancelUser_Click" />
 
                                     <%--Update--%>
-                                    <asp:Button ID="btnUpdateUser" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                    <asp:Button ID="btnAddUpdateUser" runat="server" CssClass="btn btn-danger" Text="" OnClick="btnAddUpdateUser_Click" />
                                 </div>
                             </div>
                         </fieldset>

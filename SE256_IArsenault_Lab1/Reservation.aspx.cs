@@ -11,6 +11,10 @@ namespace SE256_IArsenault_Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Disables the first index of ddl from selection
+            ddlGuest.Items[0].Attributes["disabled"] = "true";
+            ddlTable.Items[0].Attributes["disabled"] = "true";
+            ddlUser.Items[0].Attributes["disabled"] = "true";
 
         }
     }

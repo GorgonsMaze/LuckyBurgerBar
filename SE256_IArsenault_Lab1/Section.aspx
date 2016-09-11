@@ -7,6 +7,10 @@
         <h2 class="text-center">Section</h2>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+                <div class="text-center">
+                    <%--Error message for Update or Add--%>
+                    <asp:Label ID="lblMessage" runat="server" Text="" CssClass=""></asp:Label>
+                </div>
                 <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
                         <fieldset>
@@ -46,7 +50,7 @@
                                         <asp:Button ID="btnSecCancel" runat="server" href="" CssClass="btn btn-default" Text="Cancel" CausesValidation="false" OnClick="btnSecCancel_Click" />
 
                                         <%--Update Button--%>
-                                        <asp:Button ID="btnSecUpdate" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                        <asp:Button ID="btnAddUpdateSection" runat="server" CssClass="btn btn-danger" Text="" OnClick="btnAddUpdateSection_Click" />
                                     </div>
 
                                 </div>

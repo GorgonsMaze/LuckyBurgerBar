@@ -8,6 +8,10 @@
 
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+                <div class="text-center">
+                    <%--Error message for Update or Add--%>
+                    <asp:Label ID="lblMessage" runat="server" Text="" CssClass=""></asp:Label>
+                </div>
                 <%-- Begin Panel--%>
                 <div class="panel panel-default hoverable-dark">
                     <div class="panel-body">
@@ -39,7 +43,6 @@
                                 <div class="col-lg-12">
                                     <asp:DropDownList ID="ddlTableSection" runat="server" CssClass="select-asp-styling" AppendDataBoundItems="true" DataSourceID="sdsTableSection" DataTextField="sect_name" DataValueField="sect_id">
                                         <asp:ListItem Text="Please Select a Table Section..." Value="0" Selected="True"></asp:ListItem>
-
                                     </asp:DropDownList>
                                     <%--SQL Data Source--%>
                                     <asp:SqlDataSource ID="sdsTableSection" runat="server" ConnectionString='<%$ ConnectionStrings:se256_arsenaultiConnectionString %>' SelectCommand="sections_getall" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
@@ -77,7 +80,7 @@
                                     <%-- Cancel--%>
                                     <asp:Button ID="btnTableCancel" runat="server" href="" CssClass="btn btn-default" CausesValidation="false" Text="Cancel" OnClick="btnTableCancel_Click" />
                                     <%--Update--%>
-                                    <asp:Button ID="btnTableUpdate" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                    <asp:Button ID="btnAddUpdateTable" runat="server" CssClass="btn btn-danger" Text="" OnClick="btnAddUpdateTable_Click" />
                                 </div>
                             </div>
                         </fieldset>
