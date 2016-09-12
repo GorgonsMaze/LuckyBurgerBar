@@ -115,6 +115,7 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\script.js" />
     <Content Include="Section.aspx" />
     <Content Include="Sections.aspx" />
     <Content Include="Table.aspx" />

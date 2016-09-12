@@ -15,13 +15,13 @@
                     <div class="panel-body">
                         <div class="table-responsive">
                             <%-- Sections Gridview--%>
-                            <asp:GridView ID="gvSections" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="sect_id" DataSourceID="sdsSections" CssClass="table" PageSize="10">
+                            <asp:GridView ID="gvSections" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="sect_id" DataSourceID="sdsSections" CssClass="table text-center" PageSize="10">
                                 <Columns>
-                                    <asp:BoundField DataField="sect_id" HeaderText="sect_id" InsertVisible="False" ReadOnly="True" SortExpression="sect_id" />
+                                    <asp:BoundField DataField="sect_id" HeaderText="Section ID" InsertVisible="False" ReadOnly="True" SortExpression="sect_id" HeaderStyle-CssClass="text-center" />
                                     <%--Hyperlink Column--%>
-                                    <asp:HyperLinkField DataTextField="sect_name" DataNavigateUrlFields="sect_id" DataNavigateUrlFormatString="~/Admin/Section/{0}" HeaderText="Section Name" SortExpression="sect_name" />
-                                    <asp:BoundField DataField="sect_desc" HeaderText="sect_desc" SortExpression="sect_desc" />
-                                    <asp:CheckBoxField DataField="sect_active" HeaderText="sect_active" SortExpression="sect_active" />
+                                    <asp:HyperLinkField DataTextField="sect_name" DataNavigateUrlFields="sect_id" DataNavigateUrlFormatString="~/Admin/Section/{0}" HeaderText="Section Name" SortExpression="sect_name" HeaderStyle-CssClass="text-center"/>
+                                    <asp:BoundField DataField="sect_desc" HeaderText="Section Description" SortExpression="sect_desc" HeaderStyle-CssClass="text-center"/>
+                                    <asp:CheckBoxField DataField="sect_active" HeaderText="Is Active" SortExpression="sect_active" HeaderStyle-CssClass="text-center"/>
                                 </Columns>
                                 <PagerSettings Mode="Numeric" Position="TopAndBottom" PageButtonCount="14" />
                                 <PagerStyle HorizontalAlign="Center" />

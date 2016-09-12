@@ -15,15 +15,14 @@
                     <div class="panel-body">
                         <div class="table-responsive">
                             <%-- Tables Gridview--%>
-                            <asp:GridView ID="gvTables" runat="server" CssClass="table" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="tbl_id" DataSourceID="sdsTables" PageSize="10">
+                            <asp:GridView ID="gvTables" runat="server" CssClass="table text-center" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="tbl_id" DataSourceID="sdsTables" PageSize="10">
                                 <Columns>
-                                    <asp:BoundField DataField="tbl_id" HeaderText="tbl_id" InsertVisible="False" ReadOnly="True" SortExpression="tbl_id" />
-
+                                    <asp:BoundField DataField="tbl_id" HeaderText="Table ID" InsertVisible="False" ReadOnly="True" SortExpression="tbl_id" HeaderStyle-CssClass="text-center"/>
                                     <%-- Hyperlink Column--%>
-                                    <asp:HyperLinkField DataTextField="tbl_name" DataNavigateUrlFields="tbl_id" DataNavigateUrlFormatString="~/Admin/Table/{0}" HeaderText="Table Name" SortExpression="tbl_name" />
-                                    <asp:BoundField DataField="tbl_desc" HeaderText="tbl_desc" SortExpression="tbl_desc" />
-                                    <asp:BoundField DataField="tbl_seat_cnt" HeaderText="tbl_seat_cnt" SortExpression="tbl_seat_cnt" />
-                                    <asp:CheckBoxField DataField="tbl_active" HeaderText="tbl_active" SortExpression="tbl_active" />
+                                    <asp:HyperLinkField DataTextField="tbl_name" DataNavigateUrlFields="tbl_id" DataNavigateUrlFormatString="~/Admin/Table/{0}" HeaderText="Table Name" SortExpression="tbl_name" HeaderStyle-CssClass="text-center"/>
+                                    <asp:BoundField DataField="tbl_desc" HeaderText="Table Description" SortExpression="tbl_desc" HeaderStyle-CssClass="text-center"/>
+                                    <asp:BoundField DataField="tbl_seat_cnt" HeaderText="Seat Count" SortExpression="tbl_seat_cnt" HeaderStyle-CssClass="text-center"/>
+                                    <asp:CheckBoxField DataField="tbl_active" HeaderText="Is Active" SortExpression="tbl_active" HeaderStyle-CssClass="text-center"/>
                                 </Columns>
                                 <PagerSettings Mode="Numeric" Position="TopAndBottom" PageButtonCount="14" />
                                 <PagerStyle HorizontalAlign="Center" />

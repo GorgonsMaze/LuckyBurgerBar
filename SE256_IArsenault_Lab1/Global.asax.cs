@@ -49,8 +49,8 @@ namespace SE256_IArsenault_Lab1
                 new RouteValueDictionary { { "item_id", "-1" } });
             routes.MapPageRoute("User", "Admin/User/{user_id}", "~/User.aspx", false,
                 new RouteValueDictionary { { "user_id", "-1" } });
-            routes.MapPageRoute("Table", "Admin/Table/{table_id}", "~/Table.aspx", false,
-                new RouteValueDictionary { { "table_id", "-1" } });
+            routes.MapPageRoute("Table", "Admin/Table/{tbl_id}", "~/Table.aspx", false,
+                new RouteValueDictionary { { "tbl_id", "-1" } });
             routes.MapPageRoute("Section", "Admin/Section/{sect_id}", "~/Section.aspx", false,
                 new RouteValueDictionary { { "sect_id", "-1"} });
             // Purposefully misspelled Reservation due to param name already taken -- change later if needed

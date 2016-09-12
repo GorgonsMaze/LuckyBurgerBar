@@ -112,10 +112,10 @@
                             <div class="form-group">
                                 <div class="col-lg-12 text-center">
                                     <%--Cancel Buttton--%>
-                                    <asp:Button ID="btnCancelRes" runat="server" href="" CssClass="btn btn-default" Text="Cancel" CausesValidation="false" />
+                                    <asp:Button ID="btnCancelRes" runat="server" href="" CssClass="btn btn-default" Text="Cancel" CausesValidation="false" OnClick="btnCancelRes_Click" />
 
                                     <%--Update Button--%>
-                                    <asp:Button ID="btnAddUpdateRes" runat="server" CssClass="btn btn-danger" Text="Update" />
+                                    <asp:Button ID="btnAddUpdateRes" runat="server" CssClass="btn btn-danger" Text="Update" OnClick="btnAddUpdateRes_Click" />
                                 </div>
 
                             </div>

@@ -1,8 +1,8 @@
 ﻿/* Ian Arsenaults Stylesheet */
 
-.main {
+/*.main {
     margin-right: -20px;
-}
+}*/
 
 h1,
 h2,
@@ -46,6 +46,15 @@ h6,
     margin-right: 0;
 }
 
+.icon:not(nav) {
+    color: #f39721 !important;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+}
+.icon:hover {
+     color: #ff0000 !important;
+}
 .Monoton {
     font-family: 'Monoton', cursive;
 }
@@ -66,9 +75,9 @@ h1, h5 {
     background-color: #ffffff;
     border: 3px solid transparent !important;
     border-radius: 3px;
-    -webkit-transition: border 0.5s ease-in-out;
-    -o-transition: border 0.5s ease-in-out;
-    transition: border 0.5s ease-in-out;
+    -webkit-transition: border 0.3s ease-in-out;
+    -o-transition: border 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out;
 }
 
 a.thumbnail:hover,
@@ -103,9 +112,9 @@ ul > .nav > .navbar-nav > .navbar-right {
 }
 
 .nav-btn-hvr {
-    -webkit-transition: all 0.6s ease-in-out !important;
-    -o-transition: all 0.6s ease-in-out !important;
-    transition: all 0.6s ease-in-out !important;
+    -webkit-transition: all 0.3s ease-in-out !important;
+    -o-transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
 }
 
     .nav-btn-hvr:hover {
@@ -190,18 +199,19 @@ ul > .nav > .navbar-nav > .navbar-right {
     z-index: -1 !important;
     margin-bottom: 0 !important;
 }
-
+/** Jumbotron Parallax Section */
 .jumbotron {
     padding-top: 100px;
     padding-left: 30px !important;
     margin-top: 50px !important;
     height: 500px;
     background: rgba(0,0,0,0.35) !important;
-    /* background: url("https://hd.unsplash.com/photo-1428660386617-8d277e7deaf2") no-repeat !important; */
     margin-bottom: 0 !important;
-    transition: all 3s ease-in-out;
+    transition: all 2s ease-in-out;
 }
-
+/** Changes the opacity overlay to clear on
+    mouse hover over jumotron section
+*/
     .jumbotron:hover {
         background: transparent !important;
     }
@@ -352,12 +362,53 @@ input[type="checkbox"]:checked:after,
     height: 600px !important;
 }
 /* Directions Section */
-.directions {
-    height: 500px;
+.directions { }
+
+/* Set a size for our map container, the Google Map will take up 100% of this container */
+#map {
+    height: 510px;
+    width: 100%;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffffff;
+    margin-bottom: 100px;
+}
+.direction-sec {
+    background-color: #ececec !important;
+}
+.direct-title {
+    color: #383838 !important;
 }
 /* Contact Section */
-.contact {
-    height: 500px;
+.contact { }
+
+/** Contact List-group */
+.list-group {
+    margin-bottom: 20px;
+    padding-left: 0;
+    border: 1px solid #d8d8d8;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #ffffff;
+    border: none!important
+}
+/* First child of list group border */
+.topper {
+    font-weight:500;
+    border-bottom: 1px solid #d8d8d8 !important;
+}
+.glyphicon-send, .glyphicon-earphone, .glyphicon-envelope {
+    margin: 0 0 0 20px !important;
+}
+.glyphicon-user, .mail-icon, .glyphicon-comment {
+    margin: 0 10px 0 0 !important;
+}
+/* Paragraph & Detail box */
+.contact-details {
+    margin-bottom: 60px;
 }
 /* Login Section */
 /* Signup Section */
@@ -419,14 +470,12 @@ body {
 */
 .menu-items-section {
     padding: 30px 0 60px 0;
-    height: 700px;
 }
 /*
     Sections section
 */
 .sections-container {
     padding: 30px 0 60px 0;
-    height: 700px;
 }
 
 /*
@@ -440,7 +489,7 @@ body {
 */
 .tables-section {
     padding: 30px 0 60px 0;
-    height: 700px;
+  
 }
 
 /*
@@ -448,7 +497,6 @@ body {
 */
 .table-section {
     padding: 30px 0 60px 0;
-    height: 700px;
 }
 
 /*
@@ -456,7 +504,6 @@ body {
 */
 .res-mgmt-section {
     padding: 30px 0 60px 0;
-    height: 700px;
 }
 
 /*
@@ -465,7 +512,6 @@ body {
 /* User Section */
 .users-section {
     padding: 30px 0 60px 0;
-    height: 700px;
 }
 
 /*
@@ -481,3 +527,9 @@ body {
     padding-bottom: 5px;
     margin-top: 5px;
 }
+
+/** Gridview Column Styling */
+/* Center text in columns*/
+ .colHeader-center {
+        text-align:center!important;
+    }
