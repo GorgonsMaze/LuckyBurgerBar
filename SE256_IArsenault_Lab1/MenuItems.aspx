@@ -16,16 +16,16 @@
                     <div class="panel-body">
                         <div class="table-responsive">
                             <%-- Gridview Control--%>
-                            <asp:GridView ID="gvMenuItems" runat="server" AllowPaging="True" AllowSorting="True" DataSourceID="sdsMenuItems" AutoGenerateColumns="False" DataKey Names="item_id" CssClass="table" PageSize="8">
+                            <asp:GridView ID="gvMenuItems" runat="server" AllowPaging="True" AllowSorting="True" DataSourceID="sdsMenuItems" AutoGenerateColumns="False" DataKeyNames="item_id" CssClass="table text-center" PageSize="8">
                                 <%--Columns--%>
                                 <Columns>
-                                    <asp:BoundField DataField="item_id" HeaderText="item_id" InsertVisible="False" ReadOnly="True" SortExpression="item_id" />
+                                    <asp:BoundField DataField="item_id" HeaderText="Item ID" InsertVisible="False" ReadOnly="True" SortExpression="item_id" HeaderStyle-CssClass="text-center"/>
                                     <%-- Hyperlink Column--%>
-                                    <asp:HyperLinkField DataTextField="item_name" DataNavigateUrlFields="item_id" DataNavigateUrlFormatString="~/Admin/Menu-Item/{0}" HeaderText="Name"  SortExpression="item_name" />
-                                    <asp:BoundField DataField="item_desc" HeaderText="item_desc" SortExpression="item_desc" />
-                                    <asp:BoundField DataField="item_price" HeaderText="item_price" SortExpression="item_price" />
-                                    <asp:CheckBoxField DataField="item_gluten_free" HeaderText="item_gluten_free" SortExpression="item_gluten_free" />
-                                    <asp:CheckBoxField DataField="item_active" HeaderText="item_active" SortExpression="item_active" />
+                                    <asp:HyperLinkField DataTextField="item_name" DataNavigateUrlFields="item_id" DataNavigateUrlFormatString="~/Admin/Menu-Item/{0}" HeaderText="Item Name"  SortExpression="item_name" HeaderStyle-CssClass="text-center"/>
+                                    <asp:BoundField DataField="item_desc" HeaderText="Item Desription" SortExpression="item_desc" HeaderStyle-CssClass="text-center" />
+                                    <asp:BoundField DataField="item_price" HeaderText="Item Price" SortExpression="item_price" HeaderStyle-CssClass="text-center"/>
+                                    <asp:CheckBoxField DataField="item_gluten_free" HeaderText="Gluten Free" SortExpression="item_gluten_free" HeaderStyle-CssClass="text-center"/>
+                                    <asp:CheckBoxField DataField="item_active" HeaderText="Is Active" SortExpression="item_active" HeaderStyle-CssClass="text-center"/>
                                 </Columns>
                                 <PagerSettings Mode="Numeric" Position="TopAndBottom" PageButtonCount="14" />
                                 <PagerStyle HorizontalAlign="Center" />

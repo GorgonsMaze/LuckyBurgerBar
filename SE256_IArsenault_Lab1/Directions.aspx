@@ -3,9 +3,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container-fluid">
+    <div class="container-fluid direction-sec">
         <section class="directions">
-            <h1 class="text-center">Directions & Google Maps Here</h1>
+            <h1 class="text-center direct-title">Directions</h1>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                     <div id="map"></div>
+                </div>
+            </div>
+            
         </section>
     </div>
 </asp:Content>

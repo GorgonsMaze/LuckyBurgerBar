@@ -5,52 +5,58 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
         <section class="contact">
-
-
             <h1 class="text-center">Contact Us!</h1>
-            <%-- Button trigger modal --%>
-            <div class="text-center">
-                <button type="button" class="btn btn-default btn-lg" id="mbtn1" data-toggle="modal" data-target="#myModal">
-                    Contact Us
-                <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-                </button>
-            </div>
-
-            <%--Modal--%>
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Send us a message!</h4>
-                        </div>
-                        <div class="modal-body">
-
+            <!-- CONTACT US FORM -->
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-5 col-md-offset-2 col-lg-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
                             <div class="openSans">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Name</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                                    <label for="contactname"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Name</label>
+                                    <input type="text" class="form-control" id="contactname" placeholder="Name" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="yourname@example.com">
+                                    <label for="contactemail"><span class="glyphicon glyphicon-envelope mail-icon" aria-hidden="true"></span>Email address</label>
+                                    <input type="email" class="form-control" id="contactemail" placeholder="yourname@example.com" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="textArea1">Message</label>
-                                    <textarea id="textArea1" class="form-control" rows="6" placeholder="Type your message here..."></textarea>
+                                    <label for="contactmessage"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Message</label>
+                                    <textarea id="contactmessage" class="form-control" rows="4" placeholder="Type your message here..."></textarea>
                                     <%--<input type="text" class="form-control" rows="6" placeholder="Type your message here.....">--%>
+                                </div>
+                                <div class="form-group">
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-danger">Send<span class="glyphicon glyphicon-send" aria-hidden="true"></span></button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <%--<button type="button" class="btn btn-default" data-dismiss="modal">Send</button>--%>
-                            <button type="button" class="btn btn-danger">Send</button>
-                        </div>
                     </div>
                 </div>
+                <%-- Other Contact Methods & Address--%>
+                <div class="col-sm-12 col-md-8 col-lg-5 col-md-offset-2 contact-details">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <h5>Contact Info</h5>
+                            </div>
+                            <%--  Email or Phone--%>
+                            <ul class="list-group">
+                                <li class="list-group-item"><span>Email: </span>LuckyBurgerBar@gmail.com<a href="#!" class="icon"><span class="glyphicon glyphicon-send" aria-hidden="true"></span></a></li>
+                                <li class="list-group-item"><span>Phone: </span>1.401.555.5555<a href="#!" class="icon"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a></li>
+                            </ul>
+                            <%-- Address for snail mail--%>
+                            <ul class="list-group">
+                                <li class="list-group-item topper"><span>Mail:</span><a href="#!" class="icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+                                <li class="list-group-item">Lucky Burger Bar</li>
+                                <li class="list-group-item">324 Washington Street</li>
+                                <li class="list-group-item">Providence, RI 02906</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </section>
-    </div>
-
-
 </asp:Content>
