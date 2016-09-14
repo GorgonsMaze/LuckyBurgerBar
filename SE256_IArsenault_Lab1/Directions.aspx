@@ -6,7 +6,13 @@
     <div class="container-fluid direction-sec">
         <section class="directions">
             <h1 class="text-center direct-title">Directions</h1>
+            <hr />
             <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="">
+
+                    </div>
+                </div>
                 <div class="col-md-8 col-md-offset-2">
                      <div id="map"></div>
                 </div>

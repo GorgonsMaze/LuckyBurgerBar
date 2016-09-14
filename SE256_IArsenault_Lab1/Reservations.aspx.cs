@@ -11,13 +11,7 @@ namespace SE256_IArsenault_Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //statndard check for authenticated user
-            //check for authenticated user send to login page if not 
-            //authenticated       
-            if (!Request.IsAuthenticated)
-            {
-                Response.Redirect("~/Login.aspx");
-            }
+          
         }
     }
 }
