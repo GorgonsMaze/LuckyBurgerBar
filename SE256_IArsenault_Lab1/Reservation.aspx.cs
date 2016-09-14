@@ -21,7 +21,7 @@ namespace SE256_IArsenault_Lab1
             if (!Request.IsAuthenticated)
             {
                 // If request is not authenticated redirect to login
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Sign-in");
             }
             int intID;
             // Use the request namespace to determine a query string value
@@ -61,9 +61,9 @@ namespace SE256_IArsenault_Lab1
                 // use data to populate form controls - textboxes - dropdownlists etc.
                 if (res != null)
                 {
-                    ddlGuest.SelectedIndex = res.guestID;
-                    ddlTable.SelectedIndex = res.tblID;
-                    ddlUser.SelectedIndex = res.userId;
+                    ddlGuest.SelectedValue = Convert.ToString(res.guestID);
+                    ddlTable.SelectedValue = Convert.ToString(res.tblID);
+                    ddlUser.SelectedValue = Convert.ToString(res.userId);
                     txtResDate.Text = res.resDate.ToString();
                     txtResTime.Text = res.resTime.ToString();
                     txtGuestCount.Text = res.resGuestCount.ToString();
@@ -101,9 +101,9 @@ namespace SE256_IArsenault_Lab1
             }
 
             // Assign new updated values to class object
-            res.guestID = ddlGuest.SelectedIndex;
-            res.tblID = ddlTable.SelectedIndex;
-            res.userId = ddlUser.SelectedIndex;
+            res.guestID = Convert.ToInt32(ddlGuest.SelectedValue);
+            res.tblID = Convert.ToInt32(ddlTable.SelectedValue);
+            res.userId = Convert.ToInt32(ddlUser.SelectedValue);
             res.resDate = Convert.ToDateTime(txtResDate.Text.Trim());
             res.resTime = Convert.ToDateTime(txtResTime.Text.Trim());
             res.resGuestCount = Convert.ToInt32(txtGuestCount.Text.Trim());
