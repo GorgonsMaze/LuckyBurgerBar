@@ -64,8 +64,8 @@ namespace SE256_IArsenault_Lab1
                     ddlGuest.SelectedValue = Convert.ToString(res.guestID);
                     ddlTable.SelectedValue = Convert.ToString(res.tblID);
                     ddlUser.SelectedValue = Convert.ToString(res.userId);
-                    txtResDate.Text = res.resDate.ToString();
-                    txtResTime.Text = res.resTime.ToString();
+                    txtResDate.Text = res.resDate.ToString("yyyy-MM-dd");
+                    txtResTime.Text = res.resTime.ToString("hh:mm tt");
                     txtGuestCount.Text = res.resGuestCount.ToString();
                     txtSpecReq.Text = res.resSpecReq;
                 }
@@ -105,6 +105,9 @@ namespace SE256_IArsenault_Lab1
             res.tblID = Convert.ToInt32(ddlTable.SelectedValue);
             res.userId = Convert.ToInt32(ddlUser.SelectedValue);
             res.resDate = Convert.ToDateTime(txtResDate.Text.Trim());
+            //var ReservTime = txtResTime.Text.Trim();
+            //DateTime dtResTime = Convert.ToDateTime(ReservTime);
+            //res.resTime = DateTime.TryParse("hh:mm:ss.fffffff", dtResTime.ToString());
             res.resTime = Convert.ToDateTime(txtResTime.Text.Trim());
             res.resGuestCount = Convert.ToInt32(txtGuestCount.Text.Trim());
             res.resSpecReq = txtSpecReq.Text.Trim();

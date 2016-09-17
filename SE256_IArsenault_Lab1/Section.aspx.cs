@@ -61,7 +61,7 @@ namespace SE256_IArsenault_Lab1
                 {
                     txtSecName.Text = sec.sectName;
                     txtSecDesc.Text = sec.sectDesc;
-
+                    chkSecActive.Checked = sec.sectActive;
                 }
             }
             else
@@ -105,6 +105,7 @@ namespace SE256_IArsenault_Lab1
 
             sec.sectName = txtSecName.Text.Trim();
             sec.sectDesc = txtSecDesc.Text.Trim();
+            sec.sectActive = Convert.ToBoolean(chkSecActive.Checked.ToString());
 
             //if id>0, that means it is a current role for updating
             //else it is a new role for inserting

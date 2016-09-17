@@ -109,7 +109,7 @@ namespace SE256_IArsenault_Lab1.App_Code
             cmd.Parameters.Add("@guest_id", SqlDbType.Int).Value = ir.guestID;
             cmd.Parameters.Add("@tbl_id", SqlDbType.Int).Value = ir.guestID;
             cmd.Parameters.Add("@user_id", SqlDbType.Int).Value = ir.guestID;
-            cmd.Parameters.Add("@res_date", SqlDbType.Date).Value = ir.resDate;
+            cmd.Parameters.Add("@res_date", SqlDbType.DateTime).Value = ir.resDate;
             cmd.Parameters.Add("@res_time", SqlDbType.Time).Value = ir.resTime;
             cmd.Parameters.Add("@res_guest_cnt", SqlDbType.Int).Value = ir.resGuestCount;
             cmd.Parameters.Add("@res_spec_req", SqlDbType.VarChar).Value = ir.resSpecReq;
