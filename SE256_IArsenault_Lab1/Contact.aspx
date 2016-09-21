@@ -6,10 +6,20 @@
     <div class="container-fluid">
         <section class="contact">
             <h1 class="text-center">Contact Us!</h1>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <p class="white-text" style="margin: 30px 30px 60px 30px;">
+                        Whether you have a question about our menu items, or are curious about future promo's or events that are happening.
+                         Or if you have recommendations as to how we can improve upon our hospitality service, please feel free to contact 
+                        us in any of the following ways.
+                    </p>
+                </div>
+            </div>
+
             <!-- CONTACT US FORM -->
             <div class="row">
-                <div class="col-sm-12 col-md-8 col-lg-5 col-md-offset-2 col-lg-offset-1">
-                    <div class="panel panel-default">
+                <div class="col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
+                    <div class="panel panel-default hoverable-dark">
                         <div class="panel-body">
                             <div class="openSans">
                                 <div class="form-group">
@@ -36,8 +46,8 @@
                     </div>
                 </div>
                 <%-- Other Contact Methods & Address--%>
-                <div class="col-sm-12 col-md-8 col-lg-5 col-md-offset-2 contact-details">
-                    <div class="panel panel-default">
+                <div class="col-sm-12 col-md-6 col-lg-5 contact-details">
+                    <div class="panel panel-default hoverable-dark">
                         <div class="panel-body">
                             <div class="row">
                                 <h5>Contact Info</h5>

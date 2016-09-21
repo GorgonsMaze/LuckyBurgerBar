@@ -349,11 +349,11 @@ input[type="checkbox"]:checked:after,
 
 /* Lunch Section */
 .lunch {
-    height: 500px !important;
+  
 }
 /* Dinner Section */
 .dinner {
-    height: 500px !important;
+
 }
 /* Reservations Section */
 .reservations {

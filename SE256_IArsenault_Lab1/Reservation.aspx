@@ -64,6 +64,9 @@
                                 <div class="col-lg-12">
                                     <%--Input field for a Reservation Date --%>
                                     <asp:TextBox ID="txtResDate" CssClass="form-control" runat="server" placeholder="MM/DD/YYYY"></asp:TextBox>
+
+                                    <asp:Calendar ID="cldrResDate" runat="server"></asp:Calendar>
+
                                     <%-- Reservation Date  Required Field Validator -- To make sure a Reservation Date is entered--%>
                                     <asp:RequiredFieldValidator ID="rfvResDate" runat="server" ErrorMessage="A Reservation Date is Required" ControlToValidate="txtResDate" CssClass="alert-danger"></asp:RequiredFieldValidator>
                                     <%--Reservation Date Compare Validator -- To make sure a proper Res Date is entered--%>
