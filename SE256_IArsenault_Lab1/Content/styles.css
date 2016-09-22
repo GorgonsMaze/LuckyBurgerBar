@@ -342,9 +342,11 @@ input[type="checkbox"]:checked:after,
     background-color: rgba(255,0,0,0.2) !important;
     color: #720505 !important;
 }
-
-
-
+.alert-danger {
+  background-color: rgba(255,0,0,0.8) !important;
+  border-color: #f7a4af;
+  color: white!important;
+}
 /* About Section */
 
 /* Lunch Section */
@@ -373,9 +375,9 @@ input[type="checkbox"]:checked:after,
     background-color: #ffffff;
     margin-bottom: 100px;
 }
-.direction-sec {
+/*.direction-sec {
     background-color: #ececec !important;
-}
+}*/
 .direct-title {
     color: #383838 !important;
 }

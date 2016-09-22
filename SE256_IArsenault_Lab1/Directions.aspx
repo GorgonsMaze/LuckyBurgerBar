@@ -5,10 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid direction-sec">
         <section class="directions">
-            <h1 class="text-center direct-title">Directions</h1>
+            <h1 class="text-center white-text">Directions</h1>
             <hr />
             <div class="row">
-                <h4 class="text-center">How to get to Lucky Burger Bar</h4>
+                <h4 class="text-center white-text">How to get to Lucky Burger Bar</h4>
                 <div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-heading">Coming from Cape Cod</div>
@@ -24,7 +24,7 @@
                             </ul>
                         </div>
                     </div>
-            
+
                 </div>
                 <div class="col-sm-8 col-md-4">
                     <div class="panel panel-default">
@@ -41,7 +41,7 @@
                             </ul>
                         </div>
                     </div>
-                
+
                 </div>
                 <div class="col-md-8 col-md-offset-2">
                     <div id="map"></div>

@@ -15,7 +15,7 @@
                             <%--Guest ID Form Group--%>
                             <div class="form-group">
                                 <%--Guest ID Label--%>
-                                <asp:Label ID="lblGuest" CssClass="col-lg-2 control-label" runat="server" Text="Guest"></asp:Label>
+                                <asp:Label ID="lblGuest" CssClass="col-lg-3 control-label" runat="server" Text="Guest"></asp:Label>
                                 <div class="col-lg-12">
                                     <%--Input field for Guest--%>
                                     <asp:DropDownList ID="ddlGuest" runat="server" CssClass="select-asp-styling" DataSourceID="sdsGuest" DataTextField="guest_email" DataValueField="guest_id" AppendDataBoundItems="True">
@@ -30,7 +30,7 @@
                             <%--Table ID Form Group--%>
                             <div class="form-group">
                                 <%--Table ID Label--%>
-                                <asp:Label ID="lblTable" CssClass="col-lg-2 control-label" runat="server" Text="Table"></asp:Label>
+                                <asp:Label ID="lblTable" CssClass="col-lg-3 control-label" runat="server" Text="Table"></asp:Label>
                                 <div class="col-lg-12">
                                     <%--Input field for Tablet--%>
                                     <asp:DropDownList ID="ddlTable" runat="server" CssClass="select-asp-styling" AppendDataBoundItems="True" DataSourceID="sdsTable" DataTextField="tbl_name" DataValueField="tbl_id">
@@ -45,7 +45,7 @@
                             <%--User ID Form Group--%>
                             <div class="form-group">
                                 <%--User ID Label--%>
-                                <asp:Label ID="lblUser" CssClass="col-lg-2 control-label" runat="server" Text="User"></asp:Label>
+                                <asp:Label ID="lblUser" CssClass="col-lg-3 control-label" runat="server" Text="User"></asp:Label>
                                 <div class="col-lg-12">
                                     <%--Input field for Guest--%>
                                     <asp:DropDownList ID="ddlUser" runat="server" CssClass="select-asp-styling" DataSourceID="sdsUser" DataTextField="user_email" DataValueField="user_id" AppendDataBoundItems="True">
@@ -60,12 +60,10 @@
                             <%--Reservation Date Form Group--%>
                             <div class="form-group">
                                 <%-- Reservation Date  Label--%>
-                                <asp:Label ID="lblResDate" CssClass="col-lg-2 control-label" runat="server" Text="Reservation Date"></asp:Label>
+                                <asp:Label ID="lblResDate" CssClass="col-lg-3 control-label" runat="server" Text="Reservation Date"></asp:Label>
                                 <div class="col-lg-12">
                                     <%--Input field for a Reservation Date --%>
-                                    <asp:TextBox ID="txtResDate" CssClass="form-control" runat="server" placeholder="MM/DD/YYYY"></asp:TextBox>
-
-                                    <asp:Calendar ID="cldrResDate" runat="server"></asp:Calendar>
+                                    <asp:TextBox ID="txtResDate" CssClass="form-control datepicker" runat="server" placeholder="MM/DD/YYYY"></asp:TextBox>
 
                                     <%-- Reservation Date  Required Field Validator -- To make sure a Reservation Date is entered--%>
                                     <asp:RequiredFieldValidator ID="rfvResDate" runat="server" ErrorMessage="A Reservation Date is Required" ControlToValidate="txtResDate" CssClass="alert-danger"></asp:RequiredFieldValidator>
@@ -77,10 +75,10 @@
                             <%--Reservation Time Form Group--%>
                             <div class="form-group">
                                 <%-- Reservation Time  Label--%>
-                                <asp:Label ID="lblResTime" CssClass="col-lg-2 control-label" runat="server" Text="Reservation Time"></asp:Label>
+                                <asp:Label ID="lblResTime" CssClass="col-lg-3 control-label" runat="server" Text="Reservation Time"></asp:Label>
                                 <div class="col-lg-12">
                                     <%--Input field for a Reservation Time --%>
-                                    <asp:TextBox ID="txtResTime" CssClass="form-control" runat="server" placeholder="00:00AM/PM"></asp:TextBox>
+                                    <asp:TextBox ID="txtResTime" CssClass="form-control timepicker" runat="server" placeholder="00:00AM/PM"></asp:TextBox>
                                     <%-- Reservation Time  Required Field Validator -- To make sure a Reservation Date is entered--%>
                                     <asp:RequiredFieldValidator ID="rfvResTime" runat="server" ErrorMessage="A Reservation Time is Required" ControlToValidate="txtResTime" CssClass="alert-danger"></asp:RequiredFieldValidator>
                                 </div>
@@ -90,7 +88,7 @@
                             <%--Guest Count Form Group--%>
                             <div class="form-group">
                                 <%-- Seat Count Label--%>
-                                <asp:Label ID="lblGuestCount" CssClass="col-lg-2 control-label" runat="server" Text="Guest Count"></asp:Label>
+                                <asp:Label ID="lblGuestCount" CssClass="col-lg-3 control-label" runat="server" Text="Guest Count"></asp:Label>
                                 <div class="col-lg-12">
                                     <%--Input field for Guest Count --%>
                                     <asp:TextBox ID="txtGuestCount" CssClass="form-control" runat="server" placeholder="Guest Count"></asp:TextBox>
@@ -103,7 +101,7 @@
                             <%--Special Req. Form Group--%>
                             <div class="form-group">
                                 <%-- Special Req.  Label--%>
-                                <asp:Label ID="lblSpecReq" CssClass="col-lg-2 control-label" runat="server" Text="Special Requirements"></asp:Label>
+                                <asp:Label ID="lblSpecReq" CssClass="col-lg-3 control-label" runat="server" Text="Special Requirements"></asp:Label>
                                 <div class="col-lg-12">
                                     <%--Input field for a Special Req. --%>
                                     <asp:TextBox ID="txtSpecReq" CssClass="form-control" runat="server" placeholder="Special Requirements "></asp:TextBox>

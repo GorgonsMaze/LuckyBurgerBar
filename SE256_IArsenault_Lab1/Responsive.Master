@@ -15,9 +15,13 @@
     <link type="text/css" href="Content/styles.css" rel="stylesheet" />
     <%-- Monoton Font--%>
     <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" />
+    <%--Pickadate js css--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/themes/default.css" />
     <%--   - jQuery and Bootstrap JS ---%>
     <script type="text/javascript" src="../Scripts/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="Scripts/Bootstrap.js"></script>
+    <script type="text/javascript" src="Scripts/script.js"></script>
+    <%-- Pickadate.js--%>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/picker.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/picker.date.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/picker.time.js"></script>

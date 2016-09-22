@@ -148,15 +148,6 @@ namespace SE256_IArsenault_Lab1 {
         protected global::System.Web.UI.WebControls.TextBox txtResDate;
         
         /// <summary>
-        /// cldrResDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar cldrResDate;
-        
-        /// <summary>
         /// rfvResDate control.
         /// </summary>
         /// <remarks>
