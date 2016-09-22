@@ -383,18 +383,18 @@ input[type="checkbox"]:checked:after,
 .contact { }
 
 /** Contact List-group */
-.list-group {
+.list-group:not(.direct) {
     margin-bottom: 20px;
     padding-left: 0;
     border: 1px solid #d8d8d8;
 }
-.list-group-item {
+.list-group-item:not(.direct) {
     position: relative;
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
     background-color: #ffffff;
-    border: none!important
+    border: none;
 }
 /* First child of list group border */
 .topper {
