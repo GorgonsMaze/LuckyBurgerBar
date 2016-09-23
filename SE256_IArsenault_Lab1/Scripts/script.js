@@ -6,7 +6,8 @@
     // Initialize the pickAdate.js datepicker
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15 // Creates a dropdown of 15 years to control year
+        selectYears: 1, // Creates a dropdown of 1 year to control year
+        format: 'yyyy-mm-d'
     });
     $('.timepicker').pickatime()
 
